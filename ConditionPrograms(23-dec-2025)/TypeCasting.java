@@ -1,0 +1,16 @@
+import java.util.Scanner;
+class TypeCasting 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+			byte a=sc.nextByte();
+			int b=a;
+			double c=a;
+			byte d= (byte)b;
+				System.out.println(a);
+				System.out.println(b);
+				System.out.println(c);
+				System.out.println(d);
+	}
+}

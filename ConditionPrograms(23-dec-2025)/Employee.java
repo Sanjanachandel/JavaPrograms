@@ -1,0 +1,17 @@
+import java.util.Scanner;
+class  Employee
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the working hours btw 1-10");
+		int hours=sc.nextInt();
+		if(hours>8){System.out.println("Present");}
+		else if(hours>4 && hours<8){System.out.println("Half Day");}
+		else {System.out.println("Absent");}
+			
+	}
+}
+		
+		
+	

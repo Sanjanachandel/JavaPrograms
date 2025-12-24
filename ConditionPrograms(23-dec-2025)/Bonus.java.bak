@@ -1,0 +1,20 @@
+import java.util.Scanner;
+class Bonus 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter work experience: ");
+		double experience=sc.nextInt();
+		System.out.println("Enter performance rating1-5: ");
+		double rating=sc.nextInt();
+		if(experience >=5 && rating >=4){
+			System.out.println("get Bonus");
+		}
+		else
+		{
+			System.out.println("Not get bonus");
+		}
+		
+	}
+}
