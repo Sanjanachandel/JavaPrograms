@@ -1,0 +1,27 @@
+public class Solution1{
+    public static void main(String[] args)
+    {
+        Shoppingcart s=new Shoppingcart(2);
+        s.addItems(3);
+        s.removeItems(1);
+        s.display();
+    }
+}
+class Shoppingcart{
+    private int itemCount;
+    public Shoppingcart(int itemCount)
+    {
+        this.itemCount=itemCount;
+    }
+    public void addItems(int count)
+    {
+        itemCount+=count;
+    }
+    public void removeItems(int count){
+        itemCount-= count;
+    }
+    public void display()
+    {
+        System.out.println("Total Items in Cart: "+itemCount);
+    }
+}
