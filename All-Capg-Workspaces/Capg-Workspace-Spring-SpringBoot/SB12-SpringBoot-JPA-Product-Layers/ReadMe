@@ -1,0 +1,49 @@
+ Oracle
+
+
+SQL> INSERT INTO product_masters (pid, pname, price, mno) VALUES (10, 'i7', 5500, 'HP');
+
+1 row created.
+
+SQL> INSERT INTO product_masters (pid, pname, price, mno) VALUES (20, 'i7', 6000, 'DELL');
+.
+
+SQL> commit;
+
+
+Postman :
+get:
+http://localhost:9091/find/20 
+
+
+ UPDate :
+ 
+// Postman :PUT :   body  ram
+http://localhost:9091/update        
+
+	{
+	    "pid": 10,
+	    "pname": "Lenovo",
+	    "price": 50000.0,
+	    "mno": "Ryzen7"
+	}
+	
+
+Post Man :
+
+http://localhost:9092/find/20
+
+update
+http://localhost:9092/update
+body :
+    {
+    "pid": 10,
+    "pname": "HP",
+    "price": 50000.0,
+    "mno": "i5"
+}
+
+
+
+
+
