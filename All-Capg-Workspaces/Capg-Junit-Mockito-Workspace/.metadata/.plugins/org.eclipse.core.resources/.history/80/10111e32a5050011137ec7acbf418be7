@@ -1,0 +1,20 @@
+package com.capg.java;
+
+public class CalculationTest {
+	Calculation calculator;
+	protected  void setUp()
+	{
+		calculator =new Calculation();
+		
+	}
+	public void testAdd()
+	{
+		int res=calculator.addition(2, 3);
+	}
+	
+	protected void tearDown()
+	{
+		calculator =null;
+	}
+	
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libraryInfos>
+    <libraryInfo home="C:\Program Files\Java\jdk-17" version="17.0.12"/>
+    <libraryInfo home="C:\Users\HP\Downloads\eclipse-java-2023-06-R-win32-x86_64\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502" version="17.0.7"/>
+    <libraryInfo home="C:\Program Files\Java\jdk-25" version="25.0.1"/>
+    <libraryInfo home="C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot" version="17.0.17"/>
+    <libraryInfo home="C:\Users\HP\Downloads\eclipse-java-2023-06-R-win32-x86_64\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502\jre" version="17.0.7"/>
+    <libraryInfo home="C:\Program Files\Java\jre1.8.0_481" version="1.8.0_481">
+        <bootpath>
+            <entry path="C:\Program Files\Java\jre1.8.0_481\lib\resources.jar"/>
+            <entry path="C:\Program Files\Java\jre1.8.0_481\lib\rt.jar"/>
+            <entry path="C:\Program Files\Java\jre1.8.0_481\lib\jsse.jar"/>
+            <entry path="C:\Program Files\Java\jre1.8.0_481\lib\jce.jar"/>
+            <entry path="C:\Program Files\Java\jre1.8.0_481\lib\charsets.jar"/>
+            <entry path="C:\Program Files\Java\jre1.8.0_481\lib\jfr.jar"/>
+            <entry path="C:\Program Files\Java\jre1.8.0_481\classes"/>
+        </bootpath>
+        <extensionDirs>
+            <entry path="C:\Program Files\Java\jre1.8.0_481\lib\ext"/>
+            <entry path="C:\windows\Sun\Java\lib\ext"/>
+        </extensionDirs>
+        <endorsedDirs>
+            <entry path="C:\Program Files\Java\jre1.8.0_481\lib\endorsed"/>
+        </endorsedDirs>
+    </libraryInfo>
+</libraryInfos>

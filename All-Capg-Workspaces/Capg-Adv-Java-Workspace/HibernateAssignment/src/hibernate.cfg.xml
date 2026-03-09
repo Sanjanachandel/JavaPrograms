@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+ "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+ "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+ <session-factory>
+
+  <!-- Oracle JDBC Driver -->
+  <property name="hibernate.connection.driver_class">
+    oracle.jdbc.driver.OracleDriver
+  </property>
+
+  <!-- Oracle XE URL -->
+  <property name="hibernate.connection.url">
+    jdbc:oracle:thin:@localhost:1521:XE
+  </property>
+
+  <!-- Username -->
+  <property name="hibernate.connection.username">scott</property>
+
+  <!-- Password -->
+  <property name="hibernate.connection.password">tiger</property>
+
+  <!-- Oracle Dialect -->
+  <property name="hibernate.dialect">
+    org.hibernate.dialect.Oracle10gDialect
+  </property>
+
+  <!-- Auto create/update tables -->
+  <property name="hibernate.hbm2ddl.auto">update</property>
+
+  <!-- Show SQL in console -->
+  <property name="show_sql">true</property>
+
+  <!-- Mapping -->
+  <mapping class="com.capg.java.entity.Account"/>
+
+ </session-factory>
+</hibernate-configuration>

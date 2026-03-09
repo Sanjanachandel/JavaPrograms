@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;ResultSetNextExample.java&apos; to &apos;com.capg.java.Maven2_JDBC.App.java&apos;&#x0D;&#x0A;- Original project: &apos;JDBC_Development_Orcale&apos;&#x0D;&#x0A;- Destination element: &apos;com.capg.java.Maven2_JDBC.App.java&apos;&#x0D;&#x0A;- Original element: &apos;com.capg.jdbc.ResultSetNextExample.java&apos;" description="Copy compilation unit" destination="=Maven2_JDBC/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.capg.java.Maven2_JDBC{App.java" element1="/src&lt;com.capg.jdbc{ResultSetNextExample.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1771571289735" units="1" version="1.0"/>
+</session>

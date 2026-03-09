@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.capg.javacom.entity&apos; to &apos;com.capg.java.entity&apos;&#x0D;&#x0A;- Original project: &apos;HibernateAssignment&apos;&#x0D;&#x0A;- Original element: &apos;HibernateAssignment/src/com.capg.javacom.entity&apos;&#x0D;&#x0A;- Renamed element: &apos;HibernateAssignment/src/com.capg.java.entity&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.capg.javacom.entity&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;com.capg.javacom.entity" name="com.capg.java.entity" qualified="false" references="true" stamp="1771059254475" textual="false" version="1.0"/>
+</session>

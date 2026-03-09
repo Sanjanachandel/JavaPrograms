@@ -1,0 +1,35 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>    <!-- Step 7 -->
+<bean id="dataSourceRam"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName">     <!-- Step 8 -->
+			<value>oracle.jdbc.driver.OracleDriver</value>
+		</property>
+		<property name="url">
+			<value>jdbc:oracle:thin:@localhost:1521:XE</value>
+		</property>
+		<property name="username">
+			<value>scott</value>
+		</property>
+		<property name="password">
+			<value>tiger</value>
+		</property>
+	</bean>
+	           <!-- Step 4 -->        <!-- Step 9 -->
+	 <bean id="accountDao" class="AccountDaoImpl"  >
+		 <property name="dataSource">   <!-- Step 5   dataSource=dataSourceRam  -->
+			<ref bean="dataSourceRam" />  <!-- Step 6 -->
+		</property> 
+	</bean>  	
+	
+	
+	
+	
+	
+	
+	
+	<!-- dataSource  : whants data base connection  -->
+	
+	
+	
+</beans>

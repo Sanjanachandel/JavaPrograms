@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC
+    "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+           <!-- IOC : (Inversion of Controller) -->
+       <!-- ProductServiceImpl productService1=new ProductServiceImpl() -->  
+         <!-- Step-4 -->  
+    <bean id="employeeService1" class="com.java.springcore.EmployeeServiceIml">
+       <!-- Step-5 -->  
+        <constructor-arg>
+                  <value>sanjana</value>
+        </constructor-arg>  
+        <constructor-arg>
+                  <value>CEO</value>
+        </constructor-arg>  
+        <constructor-arg>
+                  <value>1</value>
+        </constructor-arg>  
+  
+    </bean>
+    <!-- ProductServiceImpl productService2=new ProductServiceImpl() -->
+            <!-- //Step-12 -->
+    <bean id="employeeService2" class="com.java.springcore.EmployeeServiceIml">
+             <!-- //Step-13 -->
+            <property name="name">
+              <value>Dishya</value>            
+            </property>
+            <property name="designation">
+              <value>employee</value>            
+            </property>
+            <property name="eid">
+              <value>2</value>            
+            </property>
+    </bean>
+</beans>

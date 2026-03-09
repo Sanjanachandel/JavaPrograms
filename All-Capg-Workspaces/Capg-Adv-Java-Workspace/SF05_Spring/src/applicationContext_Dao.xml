@@ -1,0 +1,29 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+    <!-- DataSource -->
+    <bean id="dataSourceRam"
+          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+
+        <property name="driverClassName"
+                  value="oracle.jdbc.driver.OracleDriver"/>
+
+        <property name="url"
+                  value="jdbc:oracle:thin:@localhost:1521:XE"/>
+
+        <property name="username" value="scott"/>
+        <property name="password" value="tiger"/>
+
+    </bean>
+
+    <!-- DAO Bean -->
+    <bean id="productDao"
+          class="com.java.spring.ProductDaoImpl">
+
+        <property name="dataSource" ref="dataSourceRam"/>
+
+    </bean>
+
+</beans>

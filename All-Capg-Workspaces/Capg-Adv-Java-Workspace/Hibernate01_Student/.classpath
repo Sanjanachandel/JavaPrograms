@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/All-jars/Hibernate-jar-oracle/1hibernate3.jar"/>
+	<classpathentry kind="lib" path="C:/All-jars/Hibernate-jar-oracle/2dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/All-jars/Hibernate-jar-oracle/3commons-logging-1.0.4.jar"/>
+	<classpathentry kind="lib" path="C:/All-jars/Hibernate-jar-oracle/4commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="C:/All-jars/Hibernate-jar-oracle/asm-3.1.jar"/>
+	<classpathentry kind="lib" path="C:/All-jars/Hibernate-jar-oracle/c3p0-0.9.1.jar"/>
+	<classpathentry kind="lib" path="C:/All-jars/Hibernate-jar-oracle/cglib-2.2.2.jar"/>
+	<classpathentry kind="lib" path="C:/All-jars/Hibernate-jar-oracle/jta-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/All-jars/Hibernate-jar-oracle/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="C:/All-jars/Hibernate-jar-oracle/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Capgemini-Traning\All-Capg-Workspaces\Capg-Adv-Java-Workspace\Maven3_Spring"/>
+			<item value="C:\Capgemini-Traning\All-Capg-Workspaces\Capg-Adv-Java-Workspace\Maven5-Junit4-Mockito"/>
+			<item value="C:\Capgemini-Traning\All-Capg-Workspaces\Capg-Adv-Java-Workspace\SF05_Spring\src\com\java\spring\ClientProductDao.java"/>
+			<item value="C:\Capgemini-Traning\All-Capg-Workspaces\Capg-Adv-Java-Workspace\JDBC_Development_Orcale\src\com\capg\jdbc\PreparedStatementEx1.java"/>
+			<item value="C:\Capgemini-Traning\All-Capg-Workspaces\Capg-Adv-Java-Workspace\Maven2_JDBC"/>
+			<item value="C:\Capgemini-Traning\All-Capg-Workspaces\Capg-Adv-Java-Workspace\Maven1_Java\src\test\java\com\capg\java\Maven1_Java\AppTest.java"/>
+			<item value="C:\Capgemini-Traning\All-Capg-Workspaces\Capg-Adv-Java-Workspace\CoreJava\src\com\string\practice.java"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="internal"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="com.capg.junit4"/>
+			<item value="com.capg.junit5"/>
+			<item value="com.capg.junit4.mockito.Maven5_Junit4_Mockito"/>
+		</list>
+		<list key="groupId">
+			<item value="com.capg.junit4.mockito"/>
+			<item value="com.capg.junit5.mockito"/>
+		</list>
+		<list key="artifactId">
+			<item value="Maven4-Junit4"/>
+			<item value="Maven6-Junit5"/>
+			<item value="Maven5-Junit4-Mockito"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

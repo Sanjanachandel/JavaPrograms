@@ -1,0 +1,32 @@
+package com.capg.java;
+
+import junit.framework.TestCase;
+
+public class CalculationTest extends TestCase{
+	Calculation calculator;
+	//Runs before each test method
+	protected  void setUp()
+	{
+		calculator =new Calculation();
+		
+	}
+	//test method (name  start with test
+	public void testALL()
+	{
+		int res=calculator.addition(2, 3);
+		assertEquals(5,res);
+		int r1=calculator.subtraction(4, 2);
+		assertEquals(2,res);
+		int r2=calculator.multiplication(4, 2);
+		assertEquals(8,res);
+		int r3=calculator.division(4, 2);
+		assertEquals(2,res);
+	}
+	
+	//run after each test case
+	protected void tearDown()
+	{
+		calculator =null;
+	}
+	
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="true"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\HP\Downloads\Relation_Assessment\Relation_Assessment"/>
+			<item value="C:\Users\HP\Downloads\Hibernate11_JPAManyToManyBI-20260221T060918Z-3-001\Hibernate11_JPAManyToManyBI"/>
+			<item value="C:\Users\HP\Downloads\Hibernate10_JPAOneToManyBI-20260221T060908Z-3-001\Hibernate10_JPAOneToManyBI"/>
+			<item value="C:\Users\HP\Downloads\SF04-Spring-with-DAO-20260220T105943Z-3-001\SF04-Spring-with-DAO"/>
+			<item value="C:\Users\HP\Downloads\Hibernate09_JPAOneToOneBI-20260216T054022Z-3-001"/>
+			<item value="C:\Users\HP\Downloads\Hibernate08_JPAOneToOneUni-20260216T054022Z-3-001"/>
+			<item value="C:\Users\HP\Downloads\Assement_Hibernate_01\Assement_Hibernate_01"/>
+			<item value="C:\Users\HP\Downloads\Hibernate05_Layers_CURD-20260214T065543Z-3-001\Hibernate05_Layers_CURD"/>
+			<item value="C:\Users\HP\Downloads\Hibernate07_JPA_Emp_CURD_Oracle-20260214T063517Z-3-001\Hibernate07_JPA_Emp_CURD_Oracle"/>
+			<item value="C:\Users\HP\Downloads\Hibernate06_JPAStarter-Oracle-20260214T054030Z-3-001"/>
+			<item value="C:\Users\HP\Downloads\LA01-BookLayers-JDBC_Oracle"/>
+			<item value="C:\Users\HP\Downloads\Hibernate03_CURD_Oracle-20260212T083818Z-3-001"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+			<item value="C:\Capgemini-Traning\All-Capg-Workspaces\Capg-Adv-Java-Workspace\Hibernate06_JPAStarter-Oracle\src\META-INF\persistence.xml"/>
+		</list>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="611"/>
+		<item key="DIALOG_Y_ORIGIN" value="299"/>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
+	</section>
+</section>
