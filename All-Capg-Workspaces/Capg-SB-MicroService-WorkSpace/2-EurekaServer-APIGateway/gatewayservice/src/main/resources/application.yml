@@ -1,0 +1,93 @@
+#
+#spring:
+#  application:
+#    name: GATEWAY-SERVICE
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: employee-service
+#          uri: lb://EMPLOYEE-SERVICE
+#          predicates:
+#            - Path=/employee/**
+#            
+#        - id: help-service
+#          uri: lb://HELP-SERVICE
+#          predicates:
+#            - Path=/help/**
+#            
+#        - id: admin-service
+#          uri: lb://ADMIN-SERVICE
+#          predicates:
+#            - Path=/admin/** 
+#           
+#  
+#
+#eureka:
+#  client:
+#    register-with-eureka: true
+#    fetchRegistry: true
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka
+#  instance:
+#    hostname: localhost
+#    
+#server:
+#  port: 8989
+#4. For Loans -  http://localhost:8989/loans
+#5. For Demat Accounts -  http://localhost:8989/demataccounts
+#6. For Customer 
+#  1. getAllCust - http://localhost:8989/customer/getallcust
+#  2. getCustById - http://localhost:8989/customer/getcust/101
+#  3. addCust - http://localhost:8989/customer/addcust  with JSON object
+spring:
+  application:
+    name: GATEWAY-SERVICE
+  cloud:
+    gateway:
+      routes:
+        - id: employee-service
+          uri: lb://EMPLOYEE-SERVICE
+          predicates:
+            - Path=/employee/**
+            
+        - id: help-service
+          uri: lb://HELP-SERVICE
+          predicates:
+            - Path=/help/**
+            
+        - id: admin-service
+          uri: lb://ADMIN-SERVICE
+          predicates:
+            - Path=/admin/** 
+
+        - id: loan-service
+          uri: lb://loanservice
+          predicates:
+            - Path=/loans/**
+
+        - id: demataccount-service
+          uri: lb://demataccountservice
+          predicates:
+            - Path=/demataccounts/**
+
+        - id: customer-service
+          uri: lb://customerservice
+          predicates:
+            - Path=/customer/**
+
+       
+           
+  
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
+    
+server:
+  port: 8989
+  

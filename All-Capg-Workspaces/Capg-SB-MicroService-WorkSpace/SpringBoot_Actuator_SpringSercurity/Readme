@@ -1,0 +1,88 @@
+http://localhost:9091/hello
+
+Hello Actuator!
+
+http://localhost:9091/actuator/health
+
+{
+"groups": [
+"liveness",
+"readiness"
+],
+"status": "UP"
+}
+
+
+Application Info
+http://localhost:9091/actuator/info
+(Default empty unless configured)
+    oput is  :  { }
+Beans Loaded in Application
+package com.capg.springboot.controller;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.Customizer;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.web.SecurityFilterChain;
+
+@Configuration
+@EnableWebSecurity
+public class SecurityConfig {
+
+    @Bean
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+
+        http
+            .csrf(csrf -> csrf.disable())
+            .authorizeHttpRequests(auth -> auth
+                .requestMatchers("/actuator/health").permitAll()
+                .requestMatchers("/actuator/**").hasRole("ADMIN")
+                .anyRequest().authenticated()
+            )
+            // Correct for Spring Security 6
+            .httpBasic(Customizer.withDefaults());
+
+        return http.build();
+    }
+
+    @Bean
+    public UserDetailsService userDetailsService() {
+
+        UserDetails user = User.withDefaultPasswordEncoder()
+                .username("user")
+                .password("user123")
+                .roles("USER")
+                .build();
+
+        UserDetails admin = User.withDefaultPasswordEncoder()
+                .username("admin")
+                .password("admin123")
+                .roles("ADMIN")
+                .build();
+
+        return new InMemoryUserDetailsManager(user, admin);
+    }
+}
+
+
+All Mappings (URLs)
+http://localhost:9091/actuator/mappings
+
+Environment Properties
+http://localhost:9091/actuator/env
+
+
+Important Actuator Endpoints (Student Table)
+Endpoint	             Purpose
+/actuator/health	     Check app health
+/actuator/info	         App information
+/actuator/beans	         Loaded Spring beans
+/actuator/mappings	     All URL mappings
+/actuator/env	         Environment properties
+/actuator/metrics       	Memory, CPU, requests
