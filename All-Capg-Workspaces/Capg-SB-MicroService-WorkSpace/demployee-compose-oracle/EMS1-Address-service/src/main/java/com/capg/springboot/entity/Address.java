@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 public class Address {
 
     @Id
-    @Column(name = "ADDRESS_ID")   // 🔥 matches DB column
+    @Column(name = "ADDRESS_ID")   
     private Long id;
 
     @Column(name = "NAME")

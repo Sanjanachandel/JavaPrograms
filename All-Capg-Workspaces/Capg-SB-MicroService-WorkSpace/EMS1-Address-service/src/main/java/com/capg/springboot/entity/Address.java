@@ -1,7 +1,4 @@
 package com.capg.springboot.entity;
-
-
-
 import jakarta.persistence.*;
 
 @Entity
