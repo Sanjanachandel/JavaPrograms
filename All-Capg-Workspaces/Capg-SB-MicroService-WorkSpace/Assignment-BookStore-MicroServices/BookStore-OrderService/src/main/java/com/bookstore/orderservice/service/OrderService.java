@@ -42,7 +42,6 @@ public class OrderService {
 		order.setTotalPrice(book.getPrice() * order.getQuantity());
 		order.setStatus("PLACED");
 		order.setOrderDate(LocalDate.now());
-		
 		return repository.save(order);
 	}
 	
