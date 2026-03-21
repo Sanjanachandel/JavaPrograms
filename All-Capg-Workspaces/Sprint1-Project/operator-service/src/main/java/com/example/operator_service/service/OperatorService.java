@@ -83,4 +83,68 @@ public class OperatorService {
 
         return dto;
     }
+
+    // --- ADMINISTRATIVE OPERATIONS FOR OPERATOR ---
+
+    public OperatorDto createOperator(OperatorDto operatorDto) {
+        Operator operator = new Operator();
+        operator.setName(operatorDto.getName());
+        operator.setType(operatorDto.getType());
+        operator.setCircle(operatorDto.getCircle());
+        
+        Operator savedOperator = operatorRepository.save(operator);
+        return mapToOperatorDto(savedOperator);
+    }
+
+    public OperatorDto updateOperator(Long id, OperatorDto operatorDto) {
+        Operator operator = operatorRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Operator not found"));
+
+        operator.setName(operatorDto.getName());
+        operator.setType(operatorDto.getType());
+        operator.setCircle(operatorDto.getCircle());
+
+        Operator updatedOperator = operatorRepository.save(operator);
+        return mapToOperatorDto(updatedOperator);
+    }
+
+    public void deleteOperator(Long id) {
+        Operator operator = operatorRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Operator not found"));
+        operatorRepository.delete(operator);
+    }
+
+    // --- ADMINISTRATIVE OPERATIONS FOR PLAN ---
+
+    public PlanDto createPlan(Long operatorId, PlanDto planDto) {
+        Operator operator = operatorRepository.findById(operatorId)
+                .orElseThrow(() -> new RuntimeException("Operator not found"));
+
+        Plan plan = new Plan();
+        plan.setAmount(planDto.getAmount());
+        plan.setValidity(planDto.getValidity());
+        plan.setDescription(planDto.getDescription());
+        plan.setOperator(operator);
+
+        Plan savedPlan = planRepository.save(plan);
+        return mapToPlanDto(savedPlan);
+    }
+
+    public PlanDto updatePlan(Long planId, PlanDto planDto) {
+        Plan plan = planRepository.findById(planId)
+                .orElseThrow(() -> new RuntimeException("Plan not found"));
+
+        plan.setAmount(planDto.getAmount());
+        plan.setValidity(planDto.getValidity());
+        plan.setDescription(planDto.getDescription());
+
+        Plan updatedPlan = planRepository.save(plan);
+        return mapToPlanDto(updatedPlan);
+    }
+
+    public void deletePlan(Long planId) {
+        Plan plan = planRepository.findById(planId)
+                .orElseThrow(() -> new RuntimeException("Plan not found"));
+        planRepository.delete(plan);
+    }
 }

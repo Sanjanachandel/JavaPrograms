@@ -1,47 +1,13 @@
 package com.example.operator_service.entity;
-//
-//import com.fasterxml.jackson.annotation.JsonIgnore;
-//import jakarta.persistence.*;
-//import lombok.AllArgsConstructor;
-//import lombok.Builder;
-//import lombok.Data;
-//import lombok.NoArgsConstructor;
-//
-//import java.math.BigDecimal;
-//
-//@Entity
-//@Table(name = "plans")
-//@Data
-//@NoArgsConstructor
-//@AllArgsConstructor
-//@Builder
-//public class Plan {
-//
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    private Long id;
-//
-//    @ManyToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "operator_id", nullable = false)
-//    @JsonIgnore
-//    private Operator operator;
-//
-//    @Column(nullable = false)
-//    private BigDecimal amount;
-//
-//    @Column(nullable = false)
-//    private Integer validity; // in days
-//
-//    private String description;
-//}package com.example.operator_service.entity;
 
 import jakarta.persistence.*;
 
 @Entity
 public class Plan {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "plan_seq")
+    @SequenceGenerator(name = "plan_seq", sequenceName = "plan_seq", allocationSize = 1)
     private Long id;
 
     private Double amount;

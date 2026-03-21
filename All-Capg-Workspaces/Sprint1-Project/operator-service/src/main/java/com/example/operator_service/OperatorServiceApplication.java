@@ -10,6 +10,7 @@ public class OperatorServiceApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(OperatorServiceApplication.class, args);
-        System.out.println("Server Started");
+        System.out.println("Operator service Server Started");
+        
     }
 }

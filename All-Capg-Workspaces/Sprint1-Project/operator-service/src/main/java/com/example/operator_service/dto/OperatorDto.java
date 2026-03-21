@@ -1,23 +1,4 @@
-//package com.example.operator_service.dto;
-//
-//import lombok.Builder;
-//import lombok.Data;
-//import java.util.List;
-//
-//import lombok.AllArgsConstructor;
-//import lombok.NoArgsConstructor;
-//
-//@Data
-//@Builder
-//@AllArgsConstructor
-//@NoArgsConstructor
-//public class OperatorDto {
-//    private Long id;
-//    private String name;
-//    private String type;
-//    private String circle;
-//    private List<PlanDto> plans;
-//}
+
 package com.example.operator_service.dto;
 
 import java.util.List;
