@@ -1,0 +1,126 @@
+2026-03-25 22:07:20 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.capg.rechargenova.controller.PaymentControllerTest]: PaymentControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-03-25 22:07:20 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.capg.rechargenova.PaymentServiceApplication for test class com.capg.rechargenova.controller.PaymentControllerTest
+2026-03-25 22:07:21 INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-25 22:07:21 INFO  com.capg.rechargenova.controller.PaymentControllerTest - Starting PaymentControllerTest using Java 17.0.12 with PID 16524 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\Sprint1-Project\Sprint-1\RechargeNova\payment-service)
+2026-03-25 22:07:21 INFO  com.capg.rechargenova.controller.PaymentControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-25 22:07:24 INFO  org.springframework.boot.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-03-25 22:07:24 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-03-25 22:07:24 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 2 ms
+2026-03-25 22:07:24 INFO  com.capg.rechargenova.controller.PaymentControllerTest - Started PaymentControllerTest in 3.04 seconds (process running for 4.401)
+2026-03-25 22:07:24 INFO  com.capg.rechargenova.controller.PaymentController - Received payment request for userId: 101
+2026-03-25 22:07:24 INFO  com.capg.rechargenova.controller.PaymentController - Payment processed successfully for userId: 101
+2026-03-25 22:07:24 INFO  com.capg.rechargenova.controller.PaymentController - Received payment request for userId: 101
+2026-03-25 22:07:24 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.capg.rechargenova.PaymentServiceApplicationTests]: PaymentServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-03-25 22:07:24 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.capg.rechargenova.PaymentServiceApplication for test class com.capg.rechargenova.PaymentServiceApplicationTests
+2026-03-25 22:07:24 INFO  com.capg.rechargenova.PaymentServiceApplicationTests - Starting PaymentServiceApplicationTests using Java 17.0.12 with PID 16524 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\Sprint1-Project\Sprint-1\RechargeNova\payment-service)
+2026-03-25 22:07:24 INFO  com.capg.rechargenova.PaymentServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-03-25 22:07:25 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-25 22:07:25 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 45 ms. Found 1 JPA repository interface.
+2026-03-25 22:07:25 INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=b5713171-d739-316e-bed1-04ac56aeef9d
+2026-03-25 22:07:25 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-25 22:07:25 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-25 22:07:25 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-25 22:07:25 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-25 22:07:25 INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-25 22:07:25 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-25 22:07:26 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-25 22:07:26 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-03-25 22:07:26 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-25 22:07:26 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-25 22:07:27 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-25 22:07:27 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-25 22:07:27 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-25 22:07:28 INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-03-25 22:07:28 WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-25 22:07:28 INFO  com.capg.rechargenova.PaymentServiceApplicationTests - Started PaymentServiceApplicationTests in 3.977 seconds (process running for 8.718)
+2026-03-25 22:07:28 INFO  com.capg.rechargenova.service.PaymentService - Processing payment for userId: 101
+2026-03-25 22:07:28 INFO  com.capg.rechargenova.service.PaymentService - Transaction saved with ID: 1
+2026-03-25 22:07:28 INFO  com.capg.rechargenova.service.PaymentService - Event sent to RabbitMQ for transactionId: 1
+2026-03-25 22:07:28 INFO  com.capg.rechargenova.service.PaymentService - Processing payment for userId: 101
+2026-03-25 22:07:28 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-25 22:07:28 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-25 22:07:28 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-25 22:59:18 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.capg.rechargenova.controller.PaymentControllerTest]: PaymentControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-03-25 22:59:18 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.capg.rechargenova.PaymentServiceApplication for test class com.capg.rechargenova.controller.PaymentControllerTest
+2026-03-25 22:59:18 INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-25 22:59:18 INFO  com.capg.rechargenova.controller.PaymentControllerTest - Starting PaymentControllerTest using Java 17.0.12 with PID 6308 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\Sprint1-Project\Sprint-1\RechargeNova\payment-service)
+2026-03-25 22:59:18 INFO  com.capg.rechargenova.controller.PaymentControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-25 22:59:21 INFO  org.springframework.boot.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-03-25 22:59:21 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-03-25 22:59:21 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2026-03-25 22:59:21 INFO  com.capg.rechargenova.controller.PaymentControllerTest - Started PaymentControllerTest in 2.94 seconds (process running for 4.277)
+2026-03-25 22:59:21 INFO  com.capg.rechargenova.controller.PaymentController - Received payment request for userId: 101
+2026-03-25 22:59:21 INFO  com.capg.rechargenova.controller.PaymentController - Payment processed successfully for userId: 101
+2026-03-25 22:59:21 INFO  com.capg.rechargenova.controller.PaymentController - Received payment request for userId: 101
+2026-03-25 22:59:21 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.capg.rechargenova.PaymentServiceApplicationTests]: PaymentServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-03-25 22:59:21 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.capg.rechargenova.PaymentServiceApplication for test class com.capg.rechargenova.PaymentServiceApplicationTests
+2026-03-25 22:59:21 INFO  com.capg.rechargenova.PaymentServiceApplicationTests - Starting PaymentServiceApplicationTests using Java 17.0.12 with PID 6308 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\Sprint1-Project\Sprint-1\RechargeNova\payment-service)
+2026-03-25 22:59:21 INFO  com.capg.rechargenova.PaymentServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-03-25 22:59:22 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-25 22:59:22 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 51 ms. Found 1 JPA repository interface.
+2026-03-25 22:59:23 INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=b5713171-d739-316e-bed1-04ac56aeef9d
+2026-03-25 22:59:23 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-25 22:59:23 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-25 22:59:23 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-25 22:59:23 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-25 22:59:23 INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-25 22:59:23 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-25 22:59:23 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-25 22:59:24 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-03-25 22:59:24 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-25 22:59:24 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-25 22:59:24 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-25 22:59:24 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-25 22:59:25 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-25 22:59:26 INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-03-25 22:59:26 WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-25 22:59:26 INFO  com.capg.rechargenova.PaymentServiceApplicationTests - Started PaymentServiceApplicationTests in 4.738 seconds (process running for 9.395)
+2026-03-25 22:59:26 INFO  com.capg.rechargenova.service.PaymentService - Processing payment for userId: 101
+2026-03-25 22:59:26 INFO  com.capg.rechargenova.service.PaymentService - Transaction saved with ID: 1
+2026-03-25 22:59:26 INFO  com.capg.rechargenova.service.PaymentService - Event sent to RabbitMQ for transactionId: 1
+2026-03-25 22:59:26 INFO  com.capg.rechargenova.service.PaymentService - Processing payment for userId: 101
+2026-03-25 22:59:26 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-25 22:59:26 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-25 22:59:26 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-26 14:31:42 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.capg.rechargenova.controller.PaymentControllerTest]: PaymentControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-03-26 14:31:42 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.capg.rechargenova.PaymentServiceApplication for test class com.capg.rechargenova.controller.PaymentControllerTest
+2026-03-26 14:31:43 INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-26 14:31:43 INFO  com.capg.rechargenova.controller.PaymentControllerTest - Starting PaymentControllerTest using Java 17.0.12 with PID 14216 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\Sprint1-Project\Sprint-1\RechargeNova\payment-service)
+2026-03-26 14:31:43 INFO  com.capg.rechargenova.controller.PaymentControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-26 14:31:46 INFO  org.springframework.boot.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-03-26 14:31:46 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-03-26 14:31:46 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 2 ms
+2026-03-26 14:31:46 INFO  com.capg.rechargenova.controller.PaymentControllerTest - Started PaymentControllerTest in 3.879 seconds (process running for 5.56)
+2026-03-26 14:31:47 INFO  com.capg.rechargenova.controller.PaymentController - Received payment request for userId: 101
+2026-03-26 14:31:47 INFO  com.capg.rechargenova.controller.PaymentController - Payment processed successfully for userId: 101
+2026-03-26 14:31:47 INFO  com.capg.rechargenova.controller.PaymentController - Received payment request for userId: 101
+2026-03-26 14:31:47 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.capg.rechargenova.PaymentServiceApplicationTests]: PaymentServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-03-26 14:31:47 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.capg.rechargenova.PaymentServiceApplication for test class com.capg.rechargenova.PaymentServiceApplicationTests
+2026-03-26 14:31:47 INFO  com.capg.rechargenova.PaymentServiceApplicationTests - Starting PaymentServiceApplicationTests using Java 17.0.12 with PID 14216 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\Sprint1-Project\Sprint-1\RechargeNova\payment-service)
+2026-03-26 14:31:47 INFO  com.capg.rechargenova.PaymentServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-03-26 14:31:48 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-26 14:31:48 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interface.
+2026-03-26 14:31:48 INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=b5713171-d739-316e-bed1-04ac56aeef9d
+2026-03-26 14:31:48 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-26 14:31:48 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-26 14:31:48 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-26 14:31:48 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-26 14:31:48 INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-26 14:31:49 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-26 14:31:49 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-26 14:31:49 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-03-26 14:31:49 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-26 14:31:49 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-26 14:31:50 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-26 14:31:50 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-26 14:31:51 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-26 14:31:52 INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-03-26 14:31:52 WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-26 14:31:52 INFO  com.capg.rechargenova.PaymentServiceApplicationTests - Started PaymentServiceApplicationTests in 5.186 seconds (process running for 11.134)
+2026-03-26 14:31:52 INFO  com.capg.rechargenova.service.PaymentService - Processing payment for userId: 101
+2026-03-26 14:31:52 INFO  com.capg.rechargenova.service.PaymentService - Transaction saved with ID: 1
+2026-03-26 14:31:52 INFO  com.capg.rechargenova.service.PaymentService - Event sent to RabbitMQ for transactionId: 1
+2026-03-26 14:31:52 INFO  com.capg.rechargenova.service.PaymentService - Processing payment for userId: 101
+2026-03-26 14:31:52 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-26 14:31:52 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-26 14:31:52 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

@@ -33,7 +33,7 @@ NOCYCLE;
 
 ## API Test Endpoints
 
-The `recharge-service` runs on `http://localhost:8085`. 
+The `recharge-service` runs on `http://localhost:8086`. 
 *Note: In a full microservice architecture, these are typically accessed via the API Gateway.*
 
 ### 1. Initiate a Recharge
@@ -78,7 +78,7 @@ The `recharge-service` runs on `http://localhost:8085`.
 - **URL**: `/recharges/user/{userId}`
 - **Method**: `GET`
 - **Description**: Retrieves a list of all recharge transactions associated with a specific user.
-- **Example URL**: `http://localhost:8085/recharges/user/1`
+- **Example URL**: `http://localhost:8086/recharges/user/1`
 - **Response**: `200 OK`
   ```json
   [

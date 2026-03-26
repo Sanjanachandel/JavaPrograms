@@ -1,0 +1,275 @@
+2026-03-25 14:40:38 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.notification_service.NotificationServiceApplicationTests]: NotificationServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-03-25 14:40:38 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.notification_service.NotificationServiceApplication for test class com.example.notification_service.NotificationServiceApplicationTests
+2026-03-25 14:40:39 INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-25 14:40:39 INFO  com.example.notification_service.NotificationServiceApplicationTests - Starting NotificationServiceApplicationTests using Java 17.0.12 with PID 19780 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\Sprint1-Project\Sprint-1\RechargeNova\notification-service)
+2026-03-25 14:40:39 DEBUG com.example.notification_service.NotificationServiceApplicationTests - Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-03-25 14:40:39 INFO  com.example.notification_service.NotificationServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-03-25 14:40:40 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-25 14:40:40 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 178 ms. Found 1 JPA repository interface.
+2026-03-25 14:40:41 INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=ff09db1d-58b8-306b-b434-62cd8b5d2667
+2026-03-25 14:40:41 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-25 14:40:41 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-25 14:40:41 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-25 14:40:41 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-25 14:40:42 INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-25 14:40:42 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-25 14:40:42 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-25 14:40:42 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-03-25 14:40:42 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-25 14:40:42 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-25 14:40:43 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-25 14:40:43 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-25 14:40:44 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-25 14:40:45 INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-03-25 14:40:45 WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-25 14:40:46 INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2026-03-25 14:40:46 INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#738b93a8:0/SimpleConnection@7677d320 [delegate=amqp://guest@127.0.0.1:5672/, localPort=49231]
+2026-03-25 14:40:46 INFO  com.example.notification_service.NotificationServiceApplicationTests - Started NotificationServiceApplicationTests in 7.686 seconds (process running for 9.315)
+2026-03-25 14:40:47 INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-25 14:40:47 INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-25 14:40:47 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-25 14:40:47 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-25 14:40:47 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-25 14:40:50 INFO  com.example.notification_service.service.NotificationListener - Received payment event ? RechargeId: 200, Status: SUCCESS
+2026-03-25 14:40:50 DEBUG com.example.notification_service.service.NotificationListener - Notification saved for userId: 101
+2026-03-25 14:40:53 INFO  com.example.notification_service.service.NotificationService - Fetching notification with ID: 1
+2026-03-25 14:40:53 ERROR com.example.notification_service.service.NotificationService - Notification not found: 1
+2026-03-25 14:40:53 INFO  com.example.notification_service.service.NotificationService - Fetching notification with ID: 1
+2026-03-25 14:40:53 INFO  com.example.notification_service.service.NotificationService - Fetching notifications for userId: 101
+2026-03-25 14:40:53 INFO  com.example.notification_service.service.NotificationService - Fetching all notifications
+2026-03-25 15:54:36 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.notification_service.NotificationServiceApplicationTests]: NotificationServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-03-25 15:54:41 INFO  com.capg.rechargenova.service.NotificationListener - Received payment event ? RechargeId: 200, Status: SUCCESS
+2026-03-25 15:54:48 INFO  com.capg.rechargenova.service.NotificationService - Fetching notification with ID: 1
+2026-03-25 15:54:48 ERROR com.capg.rechargenova.service.NotificationService - Notification not found: 1
+2026-03-25 15:54:48 INFO  com.capg.rechargenova.service.NotificationService - Fetching notification with ID: 1
+2026-03-25 15:54:48 INFO  com.capg.rechargenova.service.NotificationService - Fetching notifications for userId: 101
+2026-03-25 15:54:48 INFO  com.capg.rechargenova.service.NotificationService - Fetching all notifications
+2026-03-25 16:10:44 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.notification_service.NotificationServiceApplicationTests]: NotificationServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-03-25 16:10:47 INFO  com.capg.rechargenova.service.NotificationListener - Received payment event ? RechargeId: 200, Status: SUCCESS
+2026-03-25 16:10:49 INFO  com.capg.rechargenova.service.NotificationService - Fetching notification with ID: 1
+2026-03-25 16:10:49 ERROR com.capg.rechargenova.service.NotificationService - Notification not found: 1
+2026-03-25 16:10:49 INFO  com.capg.rechargenova.service.NotificationService - Fetching notification with ID: 1
+2026-03-25 16:10:49 INFO  com.capg.rechargenova.service.NotificationService - Fetching notifications for userId: 101
+2026-03-25 16:10:49 INFO  com.capg.rechargenova.service.NotificationService - Fetching all notifications
+2026-03-25 16:22:03 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.capg.rechargenova.NotificationServiceApplicationTests]: NotificationServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-03-25 16:22:03 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.capg.rechargenova.NotificationServiceApplication for test class com.capg.rechargenova.NotificationServiceApplicationTests
+2026-03-25 16:22:04 INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-25 16:22:04 INFO  com.capg.rechargenova.NotificationServiceApplicationTests - Starting NotificationServiceApplicationTests using Java 17.0.12 with PID 15068 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\Sprint1-Project\Sprint-1\RechargeNova\notification-service)
+2026-03-25 16:22:04 INFO  com.capg.rechargenova.NotificationServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-03-25 16:22:05 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-25 16:22:05 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 167 ms. Found 1 JPA repository interface.
+2026-03-25 16:22:05 INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=ff09db1d-58b8-306b-b434-62cd8b5d2667
+2026-03-25 16:22:05 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-25 16:22:05 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-25 16:22:06 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-25 16:22:06 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-25 16:22:06 INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-25 16:22:06 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-25 16:22:06 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-25 16:22:06 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-03-25 16:22:06 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-25 16:22:06 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-25 16:22:07 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-25 16:22:07 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-25 16:22:08 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-25 16:22:09 INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-03-25 16:22:09 WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-25 16:22:09 INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2026-03-25 16:22:09 INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#1e8c9083:0/SimpleConnection@545d772e [delegate=amqp://guest@127.0.0.1:5672/, localPort=62399]
+2026-03-25 16:22:09 INFO  com.capg.rechargenova.NotificationServiceApplicationTests - Started NotificationServiceApplicationTests in 6.172 seconds (process running for 7.614)
+2026-03-25 16:22:10 INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-25 16:22:10 INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-25 16:22:10 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-25 16:22:10 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-25 16:22:10 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-25 16:22:13 INFO  com.capg.rechargenova.service.NotificationListener - Received payment event ? RechargeId: 200, Status: SUCCESS
+2026-03-25 16:22:15 INFO  com.capg.rechargenova.service.NotificationService - Fetching notification with ID: 1
+2026-03-25 16:22:15 ERROR com.capg.rechargenova.service.NotificationService - Notification not found: 1
+2026-03-25 16:22:15 INFO  com.capg.rechargenova.service.NotificationService - Fetching notification with ID: 1
+2026-03-25 16:22:15 INFO  com.capg.rechargenova.service.NotificationService - Fetching notifications for userId: 101
+2026-03-25 16:22:15 INFO  com.capg.rechargenova.service.NotificationService - Fetching all notifications
+2026-03-25 16:24:10 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.capg.rechargenova.NotificationServiceApplicationTests]: NotificationServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-03-25 16:24:10 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.capg.rechargenova.NotificationServiceApplication for test class com.capg.rechargenova.NotificationServiceApplicationTests
+2026-03-25 16:24:10 INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-25 16:24:10 INFO  com.capg.rechargenova.NotificationServiceApplicationTests - Starting NotificationServiceApplicationTests using Java 17.0.12 with PID 18556 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\Sprint1-Project\Sprint-1\RechargeNova\notification-service)
+2026-03-25 16:24:10 INFO  com.capg.rechargenova.NotificationServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-03-25 16:24:11 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-25 16:24:12 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 143 ms. Found 1 JPA repository interface.
+2026-03-25 16:24:12 INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=ff09db1d-58b8-306b-b434-62cd8b5d2667
+2026-03-25 16:24:12 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-25 16:24:12 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-25 16:24:12 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-25 16:24:12 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-25 16:24:12 INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-25 16:24:13 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-25 16:24:13 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-25 16:24:13 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-03-25 16:24:13 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-25 16:24:13 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-25 16:24:14 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-25 16:24:14 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-25 16:24:15 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-25 16:24:15 INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-03-25 16:24:15 WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-25 16:24:15 INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2026-03-25 16:24:15 INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#1e8c9083:0/SimpleConnection@545d772e [delegate=amqp://guest@127.0.0.1:5672/, localPort=53529]
+2026-03-25 16:24:16 INFO  com.capg.rechargenova.NotificationServiceApplicationTests - Started NotificationServiceApplicationTests in 5.757 seconds (process running for 6.964)
+2026-03-25 16:24:16 INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-25 16:24:17 INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-25 16:24:17 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-25 16:24:17 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-25 16:24:17 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-25 16:24:19 INFO  com.capg.rechargenova.service.NotificationListener - Received payment event ? RechargeId: 200, Status: SUCCESS
+2026-03-25 16:24:21 INFO  com.capg.rechargenova.service.NotificationService - Fetching notification with ID: 1
+2026-03-25 16:24:21 ERROR com.capg.rechargenova.service.NotificationService - Notification not found: 1
+2026-03-25 16:24:21 INFO  com.capg.rechargenova.service.NotificationService - Fetching notification with ID: 1
+2026-03-25 16:24:21 INFO  com.capg.rechargenova.service.NotificationService - Fetching notifications for userId: 101
+2026-03-25 16:24:21 INFO  com.capg.rechargenova.service.NotificationService - Fetching all notifications
+2026-03-25 16:24:31 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.capg.rechargenova.NotificationServiceApplicationTests]: NotificationServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-03-25 16:24:31 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.capg.rechargenova.NotificationServiceApplication for test class com.capg.rechargenova.NotificationServiceApplicationTests
+2026-03-25 16:24:32 INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-25 16:24:32 INFO  com.capg.rechargenova.NotificationServiceApplicationTests - Starting NotificationServiceApplicationTests using Java 17.0.12 with PID 26272 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\Sprint1-Project\Sprint-1\RechargeNova\notification-service)
+2026-03-25 16:24:32 INFO  com.capg.rechargenova.NotificationServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-03-25 16:24:33 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-25 16:24:33 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 134 ms. Found 1 JPA repository interface.
+2026-03-25 16:24:34 INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=ff09db1d-58b8-306b-b434-62cd8b5d2667
+2026-03-25 16:24:34 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-25 16:24:34 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-25 16:24:34 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-25 16:24:34 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-25 16:24:34 INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-25 16:24:35 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-25 16:24:35 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-25 16:24:35 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-03-25 16:24:35 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-25 16:24:35 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-25 16:24:35 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-25 16:24:35 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-25 16:24:36 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-25 16:24:37 INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-03-25 16:24:37 WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-25 16:24:37 INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2026-03-25 16:24:37 INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#1e8c9083:0/SimpleConnection@545d772e [delegate=amqp://guest@127.0.0.1:5672/, localPort=57469]
+2026-03-25 16:24:37 INFO  com.capg.rechargenova.NotificationServiceApplicationTests - Started NotificationServiceApplicationTests in 5.839 seconds (process running for 7.016)
+2026-03-25 16:24:38 INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-25 16:24:38 INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-25 16:24:38 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-25 16:24:38 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-25 16:24:38 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-25 16:24:41 INFO  com.capg.rechargenova.service.NotificationListener - Received payment event ? RechargeId: 200, Status: SUCCESS
+2026-03-25 16:24:43 INFO  com.capg.rechargenova.service.NotificationService - Fetching notification with ID: 1
+2026-03-25 16:24:43 ERROR com.capg.rechargenova.service.NotificationService - Notification not found: 1
+2026-03-25 16:24:43 INFO  com.capg.rechargenova.service.NotificationService - Fetching notification with ID: 1
+2026-03-25 16:24:43 INFO  com.capg.rechargenova.service.NotificationService - Fetching notifications for userId: 101
+2026-03-25 16:24:43 INFO  com.capg.rechargenova.service.NotificationService - Fetching all notifications
+2026-03-25 16:29:44 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.capg.rechargenova.NotificationServiceApplicationTests]: NotificationServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-03-25 16:29:45 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.capg.rechargenova.NotificationServiceApplication for test class com.capg.rechargenova.NotificationServiceApplicationTests
+2026-03-25 16:29:45 INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-25 16:29:45 INFO  com.capg.rechargenova.NotificationServiceApplicationTests - Starting NotificationServiceApplicationTests using Java 17.0.12 with PID 21156 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\Sprint1-Project\Sprint-1\RechargeNova\notification-service)
+2026-03-25 16:29:45 INFO  com.capg.rechargenova.NotificationServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-03-25 16:29:46 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-25 16:29:46 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 154 ms. Found 1 JPA repository interface.
+2026-03-25 16:29:47 INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=ff09db1d-58b8-306b-b434-62cd8b5d2667
+2026-03-25 16:29:47 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-25 16:29:47 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-25 16:29:47 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-25 16:29:47 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-25 16:29:47 INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-25 16:29:47 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-25 16:29:48 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-25 16:29:48 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-03-25 16:29:48 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-25 16:29:48 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-25 16:29:48 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-25 16:29:48 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-25 16:29:49 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-25 16:29:50 INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-03-25 16:29:50 WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-25 16:29:50 INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2026-03-25 16:29:50 INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#30fffb53:0/SimpleConnection@56da2437 [delegate=amqp://guest@127.0.0.1:5672/, localPort=59346]
+2026-03-25 16:29:50 INFO  com.capg.rechargenova.NotificationServiceApplicationTests - Started NotificationServiceApplicationTests in 5.72 seconds (process running for 6.919)
+2026-03-25 16:29:51 INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-25 16:29:51 INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-25 16:29:51 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-25 16:29:51 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-25 16:29:51 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-25 16:29:54 INFO  com.capg.rechargenova.service.NotificationListener - Received payment event ? RechargeId: 200, Status: SUCCESS
+2026-03-25 16:29:56 INFO  com.capg.rechargenova.service.NotificationService - Fetching notification with ID: 1
+2026-03-25 16:29:56 ERROR com.capg.rechargenova.service.NotificationService - Notification not found: 1
+2026-03-25 16:29:56 INFO  com.capg.rechargenova.service.NotificationService - Fetching notification with ID: 1
+2026-03-25 16:29:56 INFO  com.capg.rechargenova.service.NotificationService - Fetching notifications for userId: 101
+2026-03-25 16:29:56 INFO  com.capg.rechargenova.service.NotificationService - Fetching all notifications
+2026-03-25 22:48:46 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.capg.rechargenova.NotificationServiceApplicationTests]: NotificationServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-03-25 22:48:46 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.capg.rechargenova.NotificationServiceApplication for test class com.capg.rechargenova.NotificationServiceApplicationTests
+2026-03-25 22:48:47 INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-25 22:48:47 INFO  com.capg.rechargenova.NotificationServiceApplicationTests - Starting NotificationServiceApplicationTests using Java 17.0.12 with PID 2460 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\Sprint1-Project\Sprint-1\RechargeNova\notification-service)
+2026-03-25 22:48:47 INFO  com.capg.rechargenova.NotificationServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-03-25 22:48:48 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-25 22:48:48 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 177 ms. Found 1 JPA repository interface.
+2026-03-25 22:48:48 INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=ff09db1d-58b8-306b-b434-62cd8b5d2667
+2026-03-25 22:48:49 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-25 22:48:49 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-25 22:48:49 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-25 22:48:49 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-25 22:48:49 INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-25 22:48:49 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-25 22:48:49 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-25 22:48:50 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-03-25 22:48:50 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-25 22:48:50 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-25 22:48:50 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-25 22:48:50 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-25 22:48:51 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-25 22:48:52 INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-03-25 22:48:52 WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-25 22:48:53 INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2026-03-25 22:48:53 INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#1e8c9083:0/SimpleConnection@545d772e [delegate=amqp://guest@127.0.0.1:5672/, localPort=54928]
+2026-03-25 22:48:53 INFO  com.capg.rechargenova.NotificationServiceApplicationTests - Started NotificationServiceApplicationTests in 6.272 seconds (process running for 7.589)
+2026-03-25 22:48:53 INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-25 22:48:54 INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-25 22:48:54 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-25 22:48:54 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-25 22:48:54 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-25 22:48:56 INFO  com.capg.rechargenova.service.NotificationListener - Received payment event ? RechargeId: 200, Status: SUCCESS
+2026-03-25 22:48:58 INFO  com.capg.rechargenova.service.NotificationService - Fetching notification with ID: 1
+2026-03-25 22:48:58 ERROR com.capg.rechargenova.service.NotificationService - Notification not found: 1
+2026-03-25 22:48:58 INFO  com.capg.rechargenova.service.NotificationService - Fetching notification with ID: 1
+2026-03-25 22:48:58 INFO  com.capg.rechargenova.service.NotificationService - Fetching notifications for userId: 101
+2026-03-25 22:48:58 INFO  com.capg.rechargenova.service.NotificationService - Fetching all notifications
+2026-03-26 14:32:28 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.capg.rechargenova.NotificationServiceApplicationTests]: NotificationServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-03-26 14:32:28 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.capg.rechargenova.NotificationServiceApplication for test class com.capg.rechargenova.NotificationServiceApplicationTests
+2026-03-26 14:32:28 INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-26 14:32:28 INFO  com.capg.rechargenova.NotificationServiceApplicationTests - Starting NotificationServiceApplicationTests using Java 17.0.12 with PID 2024 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\Sprint1-Project\Sprint-1\RechargeNova\notification-service)
+2026-03-26 14:32:28 INFO  com.capg.rechargenova.NotificationServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-03-26 14:32:30 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-26 14:32:30 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 140 ms. Found 1 JPA repository interface.
+2026-03-26 14:32:30 INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=ff09db1d-58b8-306b-b434-62cd8b5d2667
+2026-03-26 14:32:30 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-26 14:32:30 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-26 14:32:30 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-26 14:32:30 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-26 14:32:30 INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-26 14:32:31 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-26 14:32:31 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-26 14:32:31 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-03-26 14:32:31 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-26 14:32:31 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-26 14:32:32 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-26 14:32:32 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-26 14:32:33 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-26 14:32:34 INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-03-26 14:32:34 WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-26 14:32:34 INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2026-03-26 14:32:34 INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#354baab2:0/SimpleConnection@743167c7 [delegate=amqp://guest@127.0.0.1:5672/, localPort=50211]
+2026-03-26 14:32:34 INFO  com.capg.rechargenova.NotificationServiceApplicationTests - Started NotificationServiceApplicationTests in 6.317 seconds (process running for 7.671)
+2026-03-26 14:32:35 INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-26 14:32:35 INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-26 14:32:35 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-26 14:32:35 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-26 14:32:35 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-26 14:32:38 INFO  com.capg.rechargenova.service.NotificationListener - Received payment event ? RechargeId: 200, Status: SUCCESS
+2026-03-26 14:32:40 INFO  com.capg.rechargenova.service.NotificationService - Fetching notification with ID: 1
+2026-03-26 14:32:40 ERROR com.capg.rechargenova.service.NotificationService - Notification not found: 1
+2026-03-26 14:32:40 INFO  com.capg.rechargenova.service.NotificationService - Fetching notification with ID: 1
+2026-03-26 14:32:40 INFO  com.capg.rechargenova.service.NotificationService - Fetching notifications for userId: 101
+2026-03-26 14:32:40 INFO  com.capg.rechargenova.service.NotificationService - Fetching all notifications

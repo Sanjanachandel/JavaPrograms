@@ -1,21 +1,26 @@
 server:
-  port: 8083
+  port: 8084
 
 spring:
   application:
     name: payment-service
+
   datasource:
-    url: jdbc:oracle:thin:@localhost:1521/XEPDB1
-    driverClassName: oracle.jdbc.OracleDriver
-    username: paymentdb_admin
-    password: password
+    url: jdbc:oracle:thin:@//host.docker.internal:1521/xe
+    driver-class-name: oracle.jdbc.OracleDriver
+    username: scott
+    password: tiger
+
   jpa:
-    database-platform: org.hibernate.dialect.OracleDialect
     hibernate:
       ddl-auto: update
     show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.OracleDialect
+
   rabbitmq:
-    host: localhost
+    host: rabbitmq
     port: 5672
     username: guest
     password: guest
@@ -23,4 +28,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone:  http://eureka-server:8761/eureka/
+
+  instance:
+    prefer-ip-address: true   # 🔥 REQUIRED

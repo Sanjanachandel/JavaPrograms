@@ -9,7 +9,7 @@ spring:
     url: jdbc:oracle:thin:@localhost:1521:XE
     driver-class-name: oracle.jdbc.OracleDriver   # ✅ FIXED
     username: scott
-    password: satakratu789
+    password: tiger
 
   jpa:
     hibernate:

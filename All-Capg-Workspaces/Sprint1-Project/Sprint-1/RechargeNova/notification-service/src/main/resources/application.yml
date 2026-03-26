@@ -1,21 +1,24 @@
 server:
-  port: 8084
+  port: 8085
 
 spring:
   application:
     name: notification-service
+
   datasource:
-    url: jdbc:oracle:thin:@localhost:1521/XEPDB1
-    driverClassName: oracle.jdbc.OracleDriver
-    username: notificationdb_admin
-    password: password
+    url: jdbc:oracle:thin:@//host.docker.internal:1521/xe
+    driver-class-name: oracle.jdbc.OracleDriver
+    username: scott
+    password: tiger
+
   jpa:
     database-platform: org.hibernate.dialect.OracleDialect
     hibernate:
       ddl-auto: update
     show-sql: true
+
   rabbitmq:
-    host: localhost
+    host: rabbitmq        # ✅ FIXED
     port: 5672
     username: guest
     password: guest
@@ -23,4 +26,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://eureka-server:8761/eureka/   # ✅ FIXED
+
+  instance:
+    prefer-ip-address: true

@@ -12,6 +12,6 @@ public interface OperatorClient {
     @GetMapping("/operators/{id}")
     OperatorDto getOperatorById(@PathVariable("id") Long id);
 
-    @GetMapping("/plans/{id}")
+    @GetMapping("/operators/plans/{id}")
     PlanDto getPlanById(@PathVariable("id") Long id);
 }
