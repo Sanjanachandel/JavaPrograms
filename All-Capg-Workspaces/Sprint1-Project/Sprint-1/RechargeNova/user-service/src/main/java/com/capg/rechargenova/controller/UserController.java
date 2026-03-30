@@ -1,14 +1,23 @@
 package com.capg.rechargenova.controller;
 
-import jakarta.validation.Valid;
+import java.io.IOException;
+import java.util.Map;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestPart;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.capg.rechargenova.dto.AuthResponse;
 import com.capg.rechargenova.dto.LoginRequest;
@@ -16,6 +25,18 @@ import com.capg.rechargenova.dto.UserRegistrationRequest;
 import com.capg.rechargenova.dto.UserResponse;
 import com.capg.rechargenova.service.UserService;
 
+import jakarta.validation.Valid;
+/*
+ * ================================================================
+ * AUTHOR: Sanjana
+ * CLASS: UserController
+ * DESCRIPTION:
+ * Manages all user-related API requests such as registration,
+ * authentication.
+ * Integrates with UserService to handle business logic and
+ * ensures proper request validation and response handling.
+ * ================================================================
+ */
 @RestController
 @RequestMapping("/users")
 public class UserController {
@@ -83,4 +104,23 @@ public class UserController {
 
         return ResponseEntity.ok(response);
     }
+    
+    
+    @PutMapping("/profile/picture")
+    public ResponseEntity<Map<String, String>> uploadProfilePicture(
+
+            @RequestPart("picture") MultipartFile picture,
+
+            @RequestHeader("X-User-Id") Long userId
+    ) throws IOException {
+
+        logger.info("User [{}] uploading profile picture", userId);
+
+        String url = userService.updateProfilePicture(userId, picture);
+
+        logger.info("Profile picture updated for user [{}]", userId);
+
+        return new ResponseEntity<>(Map.of("profilePictureUrl", url), HttpStatus.OK);
+    }
+    
 }

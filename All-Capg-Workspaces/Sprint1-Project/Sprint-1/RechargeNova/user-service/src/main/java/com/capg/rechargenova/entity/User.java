@@ -4,12 +4,12 @@ import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "users")
+@Table(name = "users2")
 public class User {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_seq")
-	@SequenceGenerator(name = "user_seq", sequenceName = "user_seq", allocationSize = 1)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_seq2")
+	@SequenceGenerator(name = "user_seq2", sequenceName = "user_seq2", allocationSize = 1)
     private Long id;
 
     private String name;
@@ -23,6 +23,8 @@ public class User {
     private String role;
 
     private String phoneNumber;
+    
+    private String profilePictureUrl;
 
     @Column(updatable = false)
     private LocalDateTime createdAt;
@@ -59,4 +61,14 @@ public class User {
     public void setRole(String role) { this.role = role; }
     public void setPhoneNumber(String phoneNumber) { this.phoneNumber = phoneNumber; }
     public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
+
+	public String getProfilePictureUrl() {
+		return profilePictureUrl;
+	}
+
+	public void setProfilePictureUrl(String profilePictureUrl) {
+		this.profilePictureUrl = profilePictureUrl;
+	}
+    
+    
 }

@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 import com.capg.rechargenova.client.*;
 import com.capg.rechargenova.dto.*;
 import com.capg.rechargenova.entity.Recharge;
+import com.capg.rechargenova.exception.InvalidRechargeException;
+import com.capg.rechargenova.exception.RechargeNotFoundException;
 import com.capg.rechargenova.repository.RechargeRepository;
 
 import java.util.List;
@@ -56,7 +58,7 @@ public class RechargeService {
         UserDto user = userClient.getUserById(userId);
         if (user == null) {
             logger.error("User not found: {}", userId);
-            throw new RuntimeException("User not found");
+            throw new InvalidRechargeException("User not found");
         }
 
         // Validate Operator and Plan
@@ -94,7 +96,7 @@ public class RechargeService {
             PaymentResponse paymentResponse = paymentClient.processPayment(paymentRequest);
             if (paymentResponse == null) {
                 logger.error("Payment response is null for rechargeId: {}", recharge.getId());
-                throw new RuntimeException("Payment response is null");
+                throw new InvalidRechargeException("Payment response is null");
             }
 
             // Update Recharge Status (SUCCESS/FAILED)
@@ -130,7 +132,7 @@ public class RechargeService {
         Recharge recharge = rechargeRepository.findById(id)
                 .orElseThrow(() -> {
                     logger.error("Recharge not found for id: {}", id);
-                    return new RuntimeException("Recharge not found");
+                    return new RechargeNotFoundException("Recharge not found");
                 });
 
         return mapToResponse(recharge, "Success");

@@ -1,24 +1,30 @@
 package com.capg.rechargenova.service;
 
+import java.io.IOException;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
-import com.capg.rechargenova.dto.*;
+import com.capg.rechargenova.dto.AuthResponse;
+import com.capg.rechargenova.dto.LoginRequest;
+import com.capg.rechargenova.dto.UserRegistrationRequest;
+import com.capg.rechargenova.dto.UserResponse;
 import com.capg.rechargenova.entity.User;
 import com.capg.rechargenova.repository.UserRepository;
 import com.capg.rechargenova.security.JwtUtil;
+import com.capg.rechargenova.util.CloudinaryUtil;
 
 @Service
 /**
  * ================================================================
- * AUTHOR: Sanjana Chandel
+ * AUTHOR: Sanjana
  * CLASS: UserService
  * DESCRIPTION: Handles user registration, login, and user retrieval.
  * ================================================================
@@ -38,6 +44,9 @@ public class UserService {
 
     @Autowired
     private AuthenticationManager authenticationManager;
+    
+    @Autowired
+    private CloudinaryUtil cloudinaryUtil;
 
     /**
      * ================================================================
@@ -55,6 +64,7 @@ public class UserService {
             logger.error("Email already exists: {}", request.getEmail());
             throw new RuntimeException("Email already exists");
         }
+        
 
         User user = new User();
         user.setName(request.getName());
@@ -147,5 +157,25 @@ public class UserService {
                 user.getPhoneNumber(),
                 user.getCreatedAt()
         );
+    }
+    
+    
+    public String updateProfilePicture(Long userId, MultipartFile picture) throws IOException {
+
+        logger.info("Updating profile picture for user: {}", userId);
+
+        User user = userRepository.findById(userId).orElse(null);
+        if (user == null) {
+            logger.warn("User not found: {}", userId);
+            throw new RuntimeException("User not found");
+        }
+
+        String url = cloudinaryUtil.uploadProfilePicture(picture);
+        user.setProfilePictureUrl(url);
+        userRepository.save(user);
+
+        logger.info("Profile picture updated for user: {}", userId);
+
+        return url;
     }
 }

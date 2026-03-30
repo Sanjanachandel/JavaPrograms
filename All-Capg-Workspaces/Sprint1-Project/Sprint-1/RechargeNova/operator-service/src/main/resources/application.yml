@@ -19,6 +19,7 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.OracleDialect
 
+# ✅ Eureka
 eureka:
   client:
     service-url:
@@ -26,3 +27,13 @@ eureka:
 
   instance:
     prefer-ip-address: true   # 🔥 REQUIRED
+
+# 🔥 ✅ ADD THIS (Spring Boot 3 Tracing)
+management:
+  tracing:
+    sampling:
+      probability: 1.0   # capture all requests
+
+  zipkin:
+    tracing:
+      endpoint: http://zipkin:9411/api/v2/spans

@@ -7,7 +7,7 @@ spring:
 
   datasource:
     url: jdbc:oracle:thin:@host.docker.internal:1521:XE
-    driver-class-name: oracle.jdbc.OracleDriver   # ✅ FIXED
+    driver-class-name: oracle.jdbc.OracleDriver
     username: scott
     password: tiger
 
@@ -19,17 +19,29 @@ spring:
         dialect: org.hibernate.dialect.OracleDialect
     show-sql: true
 
+# ✅ Eureka
 eureka:
   client:
     service-url:
       defaultZone: http://eureka-server:8761/eureka/
 
   instance:
-    prefer-ip-address: true   # 🔥 MUST ADD
+    prefer-ip-address: true   # 🔥 MUST
 
+# ✅ Feign Config
 feign:
   client:
     config:
       default:
         connectTimeout: 5000
         readTimeout: 5000
+
+# 🔥 ✅ ADD THIS (Spring Boot 3 Tracing)
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+
+  zipkin:
+    tracing:
+      endpoint: http://zipkin:9411/api/v2/spans

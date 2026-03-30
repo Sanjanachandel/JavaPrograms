@@ -44,17 +44,32 @@ spring:
           filters:
             - JwtAuthenticationFilter
 
+  # ✅ Zipkin Configuration
+  zipkin:
+    base-url: http://zipkin:9411
+
+  # ✅ Sleuth Configuration
+  sleuth:
+    sampler:
+      probability: 1.0
+
+# ✅ Eureka Configuration
 eureka:
   client:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://eureka-server:8761/eureka/   # ✅ FIXED
+      defaultZone: http://eureka-server:8761/eureka/
 
   instance:
-    prefer-ip-address: true   # ✅ IMPORTANT
+    prefer-ip-address: true
 
-# JWT Configuration
+# ✅ JWT Configuration
 jwt:
   secret: 5367566B59703373367639792F423F4528482B4D6251655468576D5A71347437
   expiration: 86400000
+
+# ✅ Logging (for traceId & spanId in logs)
+logging:
+  pattern:
+    level: "%5p [${spring.application.name},%X{X-B3-TraceId},%X{X-B3-SpanId}]"

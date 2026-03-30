@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.capg.rechargenova.dto.NotificationResponse;
 import com.capg.rechargenova.entity.Notification;
+import com.capg.rechargenova.exception.NotificationNotFoundException;
 import com.capg.rechargenova.repository.NotificationRepository;
 
 import java.util.List;
@@ -48,7 +49,7 @@ public class NotificationService {
         Notification notification = notificationRepository.findById(id)
                 .orElseThrow(() -> {
                     logger.error("Notification not found: {}", id);
-                    return new RuntimeException("Notification not found");
+                    return new NotificationNotFoundException("Notification not found");
                 });
 
         return mapToResponse(notification);

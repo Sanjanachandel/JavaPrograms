@@ -83,7 +83,7 @@ public class JwtAuthenticationFilter extends AbstractGatewayFilterFactory<JwtAut
                path.startsWith("/swagger-ui") ||
                path.startsWith("/v3/api-docs") ||
                path.startsWith("/swagger-ui.html") ||
-               path.startsWith("/actuator/health");
+               path.startsWith("/actuator");
     }
 
     /**

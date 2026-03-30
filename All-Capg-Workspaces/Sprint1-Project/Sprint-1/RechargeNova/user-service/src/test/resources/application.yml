@@ -21,3 +21,8 @@ eureka:
 jwt:
   secret: testsecretkey123456789
   expiration: 3600000
+
+cloudinary:
+  cloud-name: dnakxnjo2
+  api-key: 174754673251635
+  api-secret: XoeBVFOuBxiIVPrGNrb_B5QhPww

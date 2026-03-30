@@ -2,6 +2,9 @@ version: '3.8'
 
 services:
 
+  # ===============================
+  # DATABASE
+  # ===============================
   oracle-db:
     image: gvenzl/oracle-xe:21-slim
     container_name: oracle-db3
@@ -11,28 +14,59 @@ services:
       ORACLE_PASSWORD: oracle
     volumes:
       - oracle-data:/opt/oracle/oradata
+    networks:
+      - recharge-network
 
+  # ===============================
+  # RABBITMQ
+  # ===============================
   rabbitmq:
     image: rabbitmq:3-management
     container_name: rabbitmq
     ports:
       - "5672:5672"
       - "15672:15672"
+    networks:
+      - recharge-network
 
+  # ===============================
+  # ZIPKIN (Distributed Tracing)
+  # ===============================
+  zipkin:
+    image: openzipkin/zipkin
+    container_name: zipkin
+    ports:
+      - "9411:9411"
+    networks:
+      - recharge-network
+
+  # ===============================
+  # EUREKA SERVER
+  # ===============================
   eureka-server:
     build: ./eureka-server
     ports:
       - "8761:8761"
     depends_on:
       - oracle-db
+    networks:
+      - recharge-network
 
+  # ===============================
+  # API GATEWAY (IMPORTANT FOR TRACE)
+  # ===============================
   gateway-service:
     build: ./gatewayservice
     ports:
       - "8989:8989"
     depends_on:
       - eureka-server
+    networks:
+      - recharge-network
 
+  # ===============================
+  # USER SERVICE
+  # ===============================
   user-service:
     build: ./user-service
     ports:
@@ -40,7 +74,12 @@ services:
     depends_on:
       - oracle-db
       - eureka-server
+    networks:
+      - recharge-network
 
+  # ===============================
+  # OPERATOR SERVICE
+  # ===============================
   operator-service:
     build: ./operator-service
     ports:
@@ -48,7 +87,12 @@ services:
     depends_on:
       - oracle-db
       - eureka-server
+    networks:
+      - recharge-network
 
+  # ===============================
+  # PAYMENT SERVICE
+  # ===============================
   payment-service:
     build: ./payment-service
     ports:
@@ -57,7 +101,12 @@ services:
       - oracle-db
       - rabbitmq
       - eureka-server
+    networks:
+      - recharge-network
 
+  # ===============================
+  # NOTIFICATION SERVICE
+  # ===============================
   notification-service:
     build: ./notification-service
     ports:
@@ -65,7 +114,12 @@ services:
     depends_on:
       - rabbitmq
       - eureka-server
+    networks:
+      - recharge-network
 
+  # ===============================
+  # RECHARGE SERVICE
+  # ===============================
   recharge-service:
     build: ./recharge-service
     ports:
@@ -76,6 +130,17 @@ services:
       - user-service
       - operator-service
       - payment-service
+    networks:
+      - recharge-network
 
+# ===============================
+# VOLUMES
+# ===============================
 volumes:
   oracle-data:
+
+# ===============================
+# NETWORK
+# ===============================
+networks:
+  recharge-network:
