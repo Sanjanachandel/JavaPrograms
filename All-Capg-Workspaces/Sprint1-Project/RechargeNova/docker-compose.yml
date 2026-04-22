@@ -1,0 +1,161 @@
+services:
+
+  # ===============================
+  # DATABASE
+  # ===============================
+  mysql-db:
+    image: mysql:8.0
+    container_name: mysql-db
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: rechargenova
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - recharge-network
+
+  # ===============================
+  # RABBITMQ
+  # ===============================
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - recharge-network
+
+  # ===============================
+  # ZIPKIN (Distributed Tracing)
+  # ===============================
+  zipkin:
+    image: openzipkin/zipkin
+    container_name: zipkin
+    ports:
+      - "9411:9411"
+    networks:
+      - recharge-network
+
+  # ===============================
+  # EUREKA SERVER
+  # ===============================
+  eureka-server:
+    build: ./eureka-server
+    ports:
+      - "8761:8761"
+    networks:
+      - recharge-network
+
+  # ===============================
+  # API GATEWAY (IMPORTANT FOR TRACE)
+  # ===============================
+  gateway-service:
+    build: ./gatewayservice
+    ports:
+      - "8989:8989"
+    depends_on:
+      - eureka-server
+    restart: always
+    networks:
+      - recharge-network
+    env_file:
+      - .env
+
+  # ===============================
+  # USER SERVICE
+  # ===============================
+  user-service:
+    build: ./user-service
+    ports:
+      - "8082:8082"
+    depends_on:
+      - mysql-db
+      - eureka-server
+    restart: always
+    networks:
+      - recharge-network
+    env_file:
+      - .env
+
+  # ===============================
+  # OPERATOR SERVICE
+  # ===============================
+  operator-service:
+    build: ./operator-service
+    ports:
+      - "8083:8083"
+    depends_on:
+      - mysql-db
+      - eureka-server
+    restart: always
+    networks:
+      - recharge-network
+    env_file:
+      - .env
+
+  # ===============================
+  # PAYMENT SERVICE
+  # ===============================
+  payment-service:
+    build: ./payment-service
+    ports:
+      - "8084:8084"
+    depends_on:
+      - mysql-db
+      - rabbitmq
+      - eureka-server
+    restart: always
+    networks:
+      - recharge-network
+    env_file:
+      - .env
+
+  # ===============================
+  # NOTIFICATION SERVICE
+  # ===============================
+  notification-service:
+    build: ./notification-service
+    ports:
+      - "8085:8085"
+    depends_on:
+      - rabbitmq
+      - eureka-server
+    restart: always
+    networks:
+      - recharge-network
+    env_file:
+      - .env
+
+  # ===============================
+  # RECHARGE SERVICE
+  # ===============================
+  recharge-service:
+    build: ./recharge-service
+    ports:
+      - "8086:8086"
+    depends_on:
+      - mysql-db
+      - eureka-server
+      - user-service
+      - operator-service
+      - payment-service
+    restart: always
+    networks:
+      - recharge-network
+    env_file:
+      - .env
+
+# ===============================
+# VOLUMES
+# ===============================
+volumes:
+  mysql-data:
+
+# ===============================
+# NETWORK
+# ===============================
+networks:
+  recharge-network:

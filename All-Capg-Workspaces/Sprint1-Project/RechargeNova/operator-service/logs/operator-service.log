@@ -1,0 +1,930 @@
+2026-03-25 14:32:33 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.operator_service.OperatorServiceApplicationTests]: OperatorServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-03-25 14:32:33 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.operator_service.OperatorServiceApplication for test class com.example.operator_service.OperatorServiceApplicationTests
+2026-03-25 14:32:34 INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-25 14:32:34 INFO  com.example.operator_service.OperatorServiceApplicationTests - Starting OperatorServiceApplicationTests using Java 17.0.12 with PID 18956 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\Sprint1-Project\Sprint-1\RechargeNova\operator-service)
+2026-03-25 14:32:34 DEBUG com.example.operator_service.OperatorServiceApplicationTests - Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-03-25 14:32:34 INFO  com.example.operator_service.OperatorServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-03-25 14:32:35 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-25 14:32:35 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 167 ms. Found 2 JPA repository interfaces.
+2026-03-25 14:32:36 INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=49b315a4-0578-3796-9786-997d6af77142
+2026-03-25 14:32:36 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-25 14:32:36 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-25 14:32:36 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-25 14:32:36 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-25 14:32:36 INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-25 14:32:37 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-25 14:32:37 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-25 14:32:37 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-03-25 14:32:37 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-25 14:32:37 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-25 14:32:38 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-25 14:32:38 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-25 14:32:39 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-25 14:32:40 INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-03-25 14:32:40 WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-25 14:32:40 INFO  com.example.operator_service.OperatorServiceApplicationTests - Started OperatorServiceApplicationTests in 6.753 seconds (process running for 8.404)
+2026-03-25 14:32:41 INFO  com.example.operator_service.service.OperatorService - Creating plan for operator ID: 1
+2026-03-25 14:32:41 ERROR com.example.operator_service.service.OperatorService - Operator not found for plan creation: 1
+2026-03-25 14:32:41 WARN  com.example.operator_service.service.OperatorService - Deleting operator with ID: 1
+2026-03-25 14:32:41 ERROR com.example.operator_service.service.OperatorService - Operator not found for deletion: 1
+2026-03-25 14:32:41 INFO  com.example.operator_service.service.OperatorService - Fetching plan with ID: 1
+2026-03-25 14:32:41 INFO  com.example.operator_service.service.OperatorService - Updating operator with ID: 1
+2026-03-25 14:32:41 DEBUG com.example.operator_service.service.OperatorService - Operator updated successfully: 1
+2026-03-25 14:32:41 INFO  com.example.operator_service.service.OperatorService - Creating operator: Airtel
+2026-03-25 14:32:41 DEBUG com.example.operator_service.service.OperatorService - Operator created with ID: 1
+2026-03-25 14:32:41 INFO  com.example.operator_service.service.OperatorService - Fetching plan with ID: 1
+2026-03-25 14:32:41 ERROR com.example.operator_service.service.OperatorService - Plan not found with ID: 1
+2026-03-25 14:32:41 INFO  com.example.operator_service.service.OperatorService - Fetching all operators
+2026-03-25 14:32:41 DEBUG com.example.operator_service.service.OperatorService - Total operators fetched: 1
+2026-03-25 14:32:41 WARN  com.example.operator_service.service.OperatorService - Deleting operator with ID: 1
+2026-03-25 14:32:41 INFO  com.example.operator_service.service.OperatorService - Operator deleted successfully: 1
+2026-03-25 14:32:41 INFO  com.example.operator_service.service.OperatorService - Creating plan for operator ID: 1
+2026-03-25 14:32:41 DEBUG com.example.operator_service.service.OperatorService - Plan created with ID: 1
+2026-03-25 14:32:41 INFO  com.example.operator_service.service.OperatorService - Fetching operator with ID: 1
+2026-03-25 14:32:41 ERROR com.example.operator_service.service.OperatorService - Operator not found with ID: 1
+2026-03-25 14:32:42 WARN  com.example.operator_service.service.OperatorService - Deleting plan with ID: 1
+2026-03-25 14:32:42 INFO  com.example.operator_service.service.OperatorService - Plan deleted successfully: 1
+2026-03-25 14:32:42 INFO  com.example.operator_service.service.OperatorService - Fetching operator with ID: 1
+2026-03-25 14:32:42 INFO  com.example.operator_service.service.OperatorService - Updating operator with ID: 1
+2026-03-25 14:32:42 ERROR com.example.operator_service.service.OperatorService - Operator not found for update: 1
+2026-03-25 14:32:42 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-25 14:32:42 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-25 14:32:42 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-25 15:53:35 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.operator_service.OperatorServiceApplicationTests]: OperatorServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-03-25 15:53:38 INFO  com.capg.rechargenova.service.OperatorService - Creating plan for operator ID: 1
+2026-03-25 15:53:38 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for plan creation: 1
+2026-03-25 15:53:38 WARN  com.capg.rechargenova.service.OperatorService - Deleting operator with ID: 1
+2026-03-25 15:53:38 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for deletion: 1
+2026-03-25 15:53:38 INFO  com.capg.rechargenova.service.OperatorService - Fetching plan with ID: 1
+2026-03-25 15:53:38 INFO  com.capg.rechargenova.service.OperatorService - Updating operator with ID: 1
+2026-03-25 15:53:38 INFO  com.capg.rechargenova.service.OperatorService - Creating operator: Airtel
+2026-03-25 15:53:38 INFO  com.capg.rechargenova.service.OperatorService - Fetching plan with ID: 1
+2026-03-25 15:53:38 ERROR com.capg.rechargenova.service.OperatorService - Plan not found with ID: 1
+2026-03-25 15:53:38 INFO  com.capg.rechargenova.service.OperatorService - Fetching all operators
+2026-03-25 15:53:38 WARN  com.capg.rechargenova.service.OperatorService - Deleting operator with ID: 1
+2026-03-25 15:53:38 INFO  com.capg.rechargenova.service.OperatorService - Operator deleted successfully: 1
+2026-03-25 15:53:38 INFO  com.capg.rechargenova.service.OperatorService - Creating plan for operator ID: 1
+2026-03-25 15:53:38 INFO  com.capg.rechargenova.service.OperatorService - Fetching operator with ID: 1
+2026-03-25 15:53:38 ERROR com.capg.rechargenova.service.OperatorService - Operator not found with ID: 1
+2026-03-25 15:53:38 WARN  com.capg.rechargenova.service.OperatorService - Deleting plan with ID: 1
+2026-03-25 15:53:38 INFO  com.capg.rechargenova.service.OperatorService - Plan deleted successfully: 1
+2026-03-25 15:53:38 INFO  com.capg.rechargenova.service.OperatorService - Fetching operator with ID: 1
+2026-03-25 15:53:38 INFO  com.capg.rechargenova.service.OperatorService - Updating operator with ID: 1
+2026-03-25 15:53:38 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for update: 1
+2026-03-25 15:54:02 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.operator_service.OperatorServiceApplicationTests]: OperatorServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-03-25 15:54:04 INFO  com.capg.rechargenova.service.OperatorService - Creating plan for operator ID: 1
+2026-03-25 15:54:04 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for plan creation: 1
+2026-03-25 15:54:04 WARN  com.capg.rechargenova.service.OperatorService - Deleting operator with ID: 1
+2026-03-25 15:54:04 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for deletion: 1
+2026-03-25 15:54:05 INFO  com.capg.rechargenova.service.OperatorService - Fetching plan with ID: 1
+2026-03-25 15:54:05 INFO  com.capg.rechargenova.service.OperatorService - Updating operator with ID: 1
+2026-03-25 15:54:05 INFO  com.capg.rechargenova.service.OperatorService - Creating operator: Airtel
+2026-03-25 15:54:05 INFO  com.capg.rechargenova.service.OperatorService - Fetching plan with ID: 1
+2026-03-25 15:54:05 ERROR com.capg.rechargenova.service.OperatorService - Plan not found with ID: 1
+2026-03-25 15:54:05 INFO  com.capg.rechargenova.service.OperatorService - Fetching all operators
+2026-03-25 15:54:05 WARN  com.capg.rechargenova.service.OperatorService - Deleting operator with ID: 1
+2026-03-25 15:54:05 INFO  com.capg.rechargenova.service.OperatorService - Operator deleted successfully: 1
+2026-03-25 15:54:05 INFO  com.capg.rechargenova.service.OperatorService - Creating plan for operator ID: 1
+2026-03-25 15:54:05 INFO  com.capg.rechargenova.service.OperatorService - Fetching operator with ID: 1
+2026-03-25 15:54:05 ERROR com.capg.rechargenova.service.OperatorService - Operator not found with ID: 1
+2026-03-25 15:54:05 WARN  com.capg.rechargenova.service.OperatorService - Deleting plan with ID: 1
+2026-03-25 15:54:05 INFO  com.capg.rechargenova.service.OperatorService - Plan deleted successfully: 1
+2026-03-25 15:54:05 INFO  com.capg.rechargenova.service.OperatorService - Fetching operator with ID: 1
+2026-03-25 15:54:05 INFO  com.capg.rechargenova.service.OperatorService - Updating operator with ID: 1
+2026-03-25 15:54:05 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for update: 1
+2026-03-25 16:25:57 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.capg.rechargenova.OperatorServiceApplicationTests]: OperatorServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-03-25 16:25:57 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.capg.rechargenova.OperatorServiceApplication for test class com.capg.rechargenova.OperatorServiceApplicationTests
+2026-03-25 16:25:58 INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-25 16:25:58 INFO  com.capg.rechargenova.OperatorServiceApplicationTests - Starting OperatorServiceApplicationTests using Java 17.0.12 with PID 16840 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\Sprint1-Project\Sprint-1\RechargeNova\operator-service)
+2026-03-25 16:25:58 INFO  com.capg.rechargenova.OperatorServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-03-25 16:25:59 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-25 16:25:59 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 144 ms. Found 2 JPA repository interfaces.
+2026-03-25 16:25:59 INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=49b315a4-0578-3796-9786-997d6af77142
+2026-03-25 16:25:59 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-25 16:25:59 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-25 16:26:00 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-25 16:26:00 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-25 16:26:00 INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-25 16:26:00 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-25 16:26:00 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-25 16:26:00 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-03-25 16:26:00 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-25 16:26:00 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-25 16:26:01 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-25 16:26:01 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-25 16:26:02 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-25 16:26:03 INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-03-25 16:26:03 WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-25 16:26:03 INFO  com.capg.rechargenova.OperatorServiceApplicationTests - Started OperatorServiceApplicationTests in 5.4 seconds (process running for 6.574)
+2026-03-25 16:26:04 INFO  com.capg.rechargenova.service.OperatorService - Creating plan for operator ID: 1
+2026-03-25 16:26:04 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for plan creation: 1
+2026-03-25 16:26:04 WARN  com.capg.rechargenova.service.OperatorService - Deleting operator with ID: 1
+2026-03-25 16:26:04 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for deletion: 1
+2026-03-25 16:26:04 INFO  com.capg.rechargenova.service.OperatorService - Fetching plan with ID: 1
+2026-03-25 16:26:04 INFO  com.capg.rechargenova.service.OperatorService - Updating operator with ID: 1
+2026-03-25 16:26:04 INFO  com.capg.rechargenova.service.OperatorService - Creating operator: Airtel
+2026-03-25 16:26:04 INFO  com.capg.rechargenova.service.OperatorService - Fetching plan with ID: 1
+2026-03-25 16:26:04 ERROR com.capg.rechargenova.service.OperatorService - Plan not found with ID: 1
+2026-03-25 16:26:04 INFO  com.capg.rechargenova.service.OperatorService - Fetching all operators
+2026-03-25 16:26:04 WARN  com.capg.rechargenova.service.OperatorService - Deleting operator with ID: 1
+2026-03-25 16:26:04 INFO  com.capg.rechargenova.service.OperatorService - Operator deleted successfully: 1
+2026-03-25 16:26:04 INFO  com.capg.rechargenova.service.OperatorService - Creating plan for operator ID: 1
+2026-03-25 16:26:04 INFO  com.capg.rechargenova.service.OperatorService - Fetching operator with ID: 1
+2026-03-25 16:26:04 ERROR com.capg.rechargenova.service.OperatorService - Operator not found with ID: 1
+2026-03-25 16:26:04 WARN  com.capg.rechargenova.service.OperatorService - Deleting plan with ID: 1
+2026-03-25 16:26:04 INFO  com.capg.rechargenova.service.OperatorService - Plan deleted successfully: 1
+2026-03-25 16:26:04 INFO  com.capg.rechargenova.service.OperatorService - Fetching operator with ID: 1
+2026-03-25 16:26:04 INFO  com.capg.rechargenova.service.OperatorService - Updating operator with ID: 1
+2026-03-25 16:26:04 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for update: 1
+2026-03-25 16:26:04 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-25 16:26:04 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-25 16:26:04 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-25 16:31:54 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.capg.rechargenova.OperatorServiceApplicationTests]: OperatorServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-03-25 16:31:55 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.capg.rechargenova.OperatorServiceApplication for test class com.capg.rechargenova.OperatorServiceApplicationTests
+2026-03-25 16:31:55 INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-25 16:31:55 INFO  com.capg.rechargenova.OperatorServiceApplicationTests - Starting OperatorServiceApplicationTests using Java 17.0.12 with PID 10824 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\Sprint1-Project\Sprint-1\RechargeNova\operator-service)
+2026-03-25 16:31:55 INFO  com.capg.rechargenova.OperatorServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-03-25 16:31:56 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-25 16:31:56 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 132 ms. Found 2 JPA repository interfaces.
+2026-03-25 16:31:57 INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=49b315a4-0578-3796-9786-997d6af77142
+2026-03-25 16:31:57 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-25 16:31:57 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-25 16:31:57 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-25 16:31:57 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-25 16:31:57 INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-25 16:31:57 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-25 16:31:57 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-25 16:31:58 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-03-25 16:31:58 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-25 16:31:58 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-25 16:31:58 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-25 16:31:58 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-25 16:31:59 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-25 16:32:00 INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-03-25 16:32:00 WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-25 16:32:00 INFO  com.capg.rechargenova.OperatorServiceApplicationTests - Started OperatorServiceApplicationTests in 5.253 seconds (process running for 6.563)
+2026-03-25 16:32:01 INFO  com.capg.rechargenova.service.OperatorService - Creating plan for operator ID: 1
+2026-03-25 16:32:01 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for plan creation: 1
+2026-03-25 16:32:01 WARN  com.capg.rechargenova.service.OperatorService - Deleting operator with ID: 1
+2026-03-25 16:32:01 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for deletion: 1
+2026-03-25 16:32:01 INFO  com.capg.rechargenova.service.OperatorService - Fetching plan with ID: 1
+2026-03-25 16:32:01 INFO  com.capg.rechargenova.service.OperatorService - Updating operator with ID: 1
+2026-03-25 16:32:01 INFO  com.capg.rechargenova.service.OperatorService - Creating operator: Airtel
+2026-03-25 16:32:01 INFO  com.capg.rechargenova.service.OperatorService - Fetching plan with ID: 1
+2026-03-25 16:32:01 ERROR com.capg.rechargenova.service.OperatorService - Plan not found with ID: 1
+2026-03-25 16:32:01 INFO  com.capg.rechargenova.service.OperatorService - Fetching all operators
+2026-03-25 16:32:01 WARN  com.capg.rechargenova.service.OperatorService - Deleting operator with ID: 1
+2026-03-25 16:32:01 INFO  com.capg.rechargenova.service.OperatorService - Operator deleted successfully: 1
+2026-03-25 16:32:01 INFO  com.capg.rechargenova.service.OperatorService - Creating plan for operator ID: 1
+2026-03-25 16:32:01 INFO  com.capg.rechargenova.service.OperatorService - Fetching operator with ID: 1
+2026-03-25 16:32:01 ERROR com.capg.rechargenova.service.OperatorService - Operator not found with ID: 1
+2026-03-25 16:32:01 WARN  com.capg.rechargenova.service.OperatorService - Deleting plan with ID: 1
+2026-03-25 16:32:01 INFO  com.capg.rechargenova.service.OperatorService - Plan deleted successfully: 1
+2026-03-25 16:32:01 INFO  com.capg.rechargenova.service.OperatorService - Fetching operator with ID: 1
+2026-03-25 16:32:01 INFO  com.capg.rechargenova.service.OperatorService - Updating operator with ID: 1
+2026-03-25 16:32:01 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for update: 1
+2026-03-25 16:32:01 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-25 16:32:01 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-25 16:32:01 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-25 16:34:06 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.capg.rechargenova.OperatorServiceApplicationTests]: OperatorServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-03-25 16:34:06 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.capg.rechargenova.OperatorServiceApplication for test class com.capg.rechargenova.OperatorServiceApplicationTests
+2026-03-25 16:34:07 INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-25 16:34:07 INFO  com.capg.rechargenova.OperatorServiceApplicationTests - Starting OperatorServiceApplicationTests using Java 17.0.12 with PID 12764 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\Sprint1-Project\Sprint-1\RechargeNova\operator-service)
+2026-03-25 16:34:07 INFO  com.capg.rechargenova.OperatorServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-03-25 16:34:08 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-25 16:34:08 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 167 ms. Found 2 JPA repository interfaces.
+2026-03-25 16:34:08 INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=49b315a4-0578-3796-9786-997d6af77142
+2026-03-25 16:34:08 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-25 16:34:08 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-25 16:34:09 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-25 16:34:09 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-25 16:34:09 INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-25 16:34:09 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-25 16:34:09 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-25 16:34:09 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-03-25 16:34:09 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-25 16:34:09 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-25 16:34:10 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-25 16:34:10 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-25 16:34:11 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-25 16:34:12 INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-03-25 16:34:12 WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-25 16:34:12 INFO  com.capg.rechargenova.OperatorServiceApplicationTests - Started OperatorServiceApplicationTests in 5.558 seconds (process running for 6.923)
+2026-03-25 16:34:13 INFO  com.capg.rechargenova.service.OperatorService - Creating plan for operator ID: 1
+2026-03-25 16:34:13 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for plan creation: 1
+2026-03-25 16:34:13 WARN  com.capg.rechargenova.service.OperatorService - Deleting operator with ID: 1
+2026-03-25 16:34:13 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for deletion: 1
+2026-03-25 16:34:13 INFO  com.capg.rechargenova.service.OperatorService - Fetching plan with ID: 1
+2026-03-25 16:34:13 INFO  com.capg.rechargenova.service.OperatorService - Updating operator with ID: 1
+2026-03-25 16:34:13 INFO  com.capg.rechargenova.service.OperatorService - Creating operator: Airtel
+2026-03-25 16:34:13 INFO  com.capg.rechargenova.service.OperatorService - Fetching plan with ID: 1
+2026-03-25 16:34:13 ERROR com.capg.rechargenova.service.OperatorService - Plan not found with ID: 1
+2026-03-25 16:34:13 INFO  com.capg.rechargenova.service.OperatorService - Fetching all operators
+2026-03-25 16:34:13 WARN  com.capg.rechargenova.service.OperatorService - Deleting operator with ID: 1
+2026-03-25 16:34:13 INFO  com.capg.rechargenova.service.OperatorService - Operator deleted successfully: 1
+2026-03-25 16:34:13 INFO  com.capg.rechargenova.service.OperatorService - Creating plan for operator ID: 1
+2026-03-25 16:34:13 INFO  com.capg.rechargenova.service.OperatorService - Fetching operator with ID: 1
+2026-03-25 16:34:13 ERROR com.capg.rechargenova.service.OperatorService - Operator not found with ID: 1
+2026-03-25 16:34:13 WARN  com.capg.rechargenova.service.OperatorService - Deleting plan with ID: 1
+2026-03-25 16:34:13 INFO  com.capg.rechargenova.service.OperatorService - Plan deleted successfully: 1
+2026-03-25 16:34:13 INFO  com.capg.rechargenova.service.OperatorService - Fetching operator with ID: 1
+2026-03-25 16:34:13 INFO  com.capg.rechargenova.service.OperatorService - Updating operator with ID: 1
+2026-03-25 16:34:13 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for update: 1
+2026-03-25 16:34:13 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-25 16:34:13 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-25 16:34:13 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-25 22:49:26 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.capg.rechargenova.OperatorServiceApplicationTests]: OperatorServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-03-25 22:49:26 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.capg.rechargenova.OperatorServiceApplication for test class com.capg.rechargenova.OperatorServiceApplicationTests
+2026-03-25 22:49:26 INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-25 22:49:26 INFO  com.capg.rechargenova.OperatorServiceApplicationTests - Starting OperatorServiceApplicationTests using Java 17.0.12 with PID 14912 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\Sprint1-Project\Sprint-1\RechargeNova\operator-service)
+2026-03-25 22:49:26 INFO  com.capg.rechargenova.OperatorServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-03-25 22:49:27 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-25 22:49:27 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 147 ms. Found 2 JPA repository interfaces.
+2026-03-25 22:49:28 INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=49b315a4-0578-3796-9786-997d6af77142
+2026-03-25 22:49:28 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-25 22:49:28 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-25 22:49:28 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-25 22:49:28 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-25 22:49:28 INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-25 22:49:28 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-25 22:49:28 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-25 22:49:29 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-03-25 22:49:29 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-25 22:49:29 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-25 22:49:29 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-25 22:49:30 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-25 22:49:30 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-25 22:49:31 INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-03-25 22:49:31 WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-25 22:49:31 INFO  com.capg.rechargenova.OperatorServiceApplicationTests - Started OperatorServiceApplicationTests in 5.163 seconds (process running for 6.386)
+2026-03-25 22:49:32 INFO  com.capg.rechargenova.service.OperatorService - Creating plan for operator ID: 1
+2026-03-25 22:49:32 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for plan creation: 1
+2026-03-25 22:49:32 WARN  com.capg.rechargenova.service.OperatorService - Deleting operator with ID: 1
+2026-03-25 22:49:32 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for deletion: 1
+2026-03-25 22:49:32 INFO  com.capg.rechargenova.service.OperatorService - Fetching plan with ID: 1
+2026-03-25 22:49:32 INFO  com.capg.rechargenova.service.OperatorService - Updating operator with ID: 1
+2026-03-25 22:49:32 INFO  com.capg.rechargenova.service.OperatorService - Creating operator: Airtel
+2026-03-25 22:49:32 INFO  com.capg.rechargenova.service.OperatorService - Fetching plan with ID: 1
+2026-03-25 22:49:32 ERROR com.capg.rechargenova.service.OperatorService - Plan not found with ID: 1
+2026-03-25 22:49:32 INFO  com.capg.rechargenova.service.OperatorService - Fetching all operators
+2026-03-25 22:49:32 WARN  com.capg.rechargenova.service.OperatorService - Deleting operator with ID: 1
+2026-03-25 22:49:32 INFO  com.capg.rechargenova.service.OperatorService - Operator deleted successfully: 1
+2026-03-25 22:49:32 INFO  com.capg.rechargenova.service.OperatorService - Creating plan for operator ID: 1
+2026-03-25 22:49:32 INFO  com.capg.rechargenova.service.OperatorService - Fetching operator with ID: 1
+2026-03-25 22:49:32 ERROR com.capg.rechargenova.service.OperatorService - Operator not found with ID: 1
+2026-03-25 22:49:32 WARN  com.capg.rechargenova.service.OperatorService - Deleting plan with ID: 1
+2026-03-25 22:49:32 INFO  com.capg.rechargenova.service.OperatorService - Plan deleted successfully: 1
+2026-03-25 22:49:32 INFO  com.capg.rechargenova.service.OperatorService - Fetching operator with ID: 1
+2026-03-25 22:49:32 INFO  com.capg.rechargenova.service.OperatorService - Updating operator with ID: 1
+2026-03-25 22:49:32 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for update: 1
+2026-03-25 22:49:32 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-25 22:49:32 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-25 22:49:32 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-26 14:33:12 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.capg.rechargenova.OperatorServiceApplicationTests]: OperatorServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-03-26 14:33:12 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.capg.rechargenova.OperatorServiceApplication for test class com.capg.rechargenova.OperatorServiceApplicationTests
+2026-03-26 14:33:12 INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-26 14:33:12 INFO  com.capg.rechargenova.OperatorServiceApplicationTests - Starting OperatorServiceApplicationTests using Java 17.0.12 with PID 24456 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\Sprint1-Project\Sprint-1\RechargeNova\operator-service)
+2026-03-26 14:33:12 INFO  com.capg.rechargenova.OperatorServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-03-26 14:33:13 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-26 14:33:14 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 162 ms. Found 2 JPA repository interfaces.
+2026-03-26 14:33:14 INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=49b315a4-0578-3796-9786-997d6af77142
+2026-03-26 14:33:14 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-26 14:33:14 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-26 14:33:14 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-26 14:33:14 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-26 14:33:14 INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-26 14:33:15 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-26 14:33:15 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-26 14:33:15 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-03-26 14:33:15 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-26 14:33:15 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-26 14:33:16 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-26 14:33:16 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-26 14:33:17 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-26 14:33:17 INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-03-26 14:33:17 WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-26 14:33:17 INFO  com.capg.rechargenova.OperatorServiceApplicationTests - Started OperatorServiceApplicationTests in 5.431 seconds (process running for 6.73)
+2026-03-26 14:33:18 INFO  com.capg.rechargenova.service.OperatorService - Creating plan for operator ID: 1
+2026-03-26 14:33:18 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for plan creation: 1
+2026-03-26 14:33:18 WARN  com.capg.rechargenova.service.OperatorService - Deleting operator with ID: 1
+2026-03-26 14:33:18 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for deletion: 1
+2026-03-26 14:33:18 INFO  com.capg.rechargenova.service.OperatorService - Fetching plan with ID: 1
+2026-03-26 14:33:18 INFO  com.capg.rechargenova.service.OperatorService - Updating operator with ID: 1
+2026-03-26 14:33:18 INFO  com.capg.rechargenova.service.OperatorService - Creating operator: Airtel
+2026-03-26 14:33:18 INFO  com.capg.rechargenova.service.OperatorService - Fetching plan with ID: 1
+2026-03-26 14:33:18 ERROR com.capg.rechargenova.service.OperatorService - Plan not found with ID: 1
+2026-03-26 14:33:18 INFO  com.capg.rechargenova.service.OperatorService - Fetching all operators
+2026-03-26 14:33:18 WARN  com.capg.rechargenova.service.OperatorService - Deleting operator with ID: 1
+2026-03-26 14:33:18 INFO  com.capg.rechargenova.service.OperatorService - Operator deleted successfully: 1
+2026-03-26 14:33:18 INFO  com.capg.rechargenova.service.OperatorService - Creating plan for operator ID: 1
+2026-03-26 14:33:18 INFO  com.capg.rechargenova.service.OperatorService - Fetching operator with ID: 1
+2026-03-26 14:33:18 ERROR com.capg.rechargenova.service.OperatorService - Operator not found with ID: 1
+2026-03-26 14:33:18 WARN  com.capg.rechargenova.service.OperatorService - Deleting plan with ID: 1
+2026-03-26 14:33:18 INFO  com.capg.rechargenova.service.OperatorService - Plan deleted successfully: 1
+2026-03-26 14:33:18 INFO  com.capg.rechargenova.service.OperatorService - Fetching operator with ID: 1
+2026-03-26 14:33:18 INFO  com.capg.rechargenova.service.OperatorService - Updating operator with ID: 1
+2026-03-26 14:33:18 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for update: 1
+2026-03-26 14:33:18 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-26 14:33:19 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-26 14:33:19 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-28 12:34:03 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.capg.rechargenova.OperatorServiceApplicationTests]: OperatorServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-03-28 12:34:03 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.capg.rechargenova.OperatorServiceApplication for test class com.capg.rechargenova.OperatorServiceApplicationTests
+2026-03-28 12:34:04 INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-28 12:34:04 INFO  com.capg.rechargenova.OperatorServiceApplicationTests - Starting OperatorServiceApplicationTests using Java 17.0.12 with PID 11104 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\RechargeNova\operator-service)
+2026-03-28 12:34:04 INFO  com.capg.rechargenova.OperatorServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-03-28 12:34:05 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-28 12:34:05 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 281 ms. Found 2 JPA repository interfaces.
+2026-03-28 12:34:05 INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=49b315a4-0578-3796-9786-997d6af77142
+2026-03-28 12:34:06 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-28 12:34:06 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-28 12:34:06 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-28 12:34:06 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-28 12:34:06 INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-28 12:34:06 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-28 12:34:06 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-28 12:34:07 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-03-28 12:34:07 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-28 12:34:07 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-28 12:34:07 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-28 12:34:07 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-28 12:34:08 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-28 12:34:09 INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-03-28 12:34:09 WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-28 12:34:09 INFO  com.capg.rechargenova.OperatorServiceApplicationTests - Started OperatorServiceApplicationTests in 5.87 seconds (process running for 7.235)
+2026-03-28 12:34:10 INFO  com.capg.rechargenova.service.OperatorService - Creating plan for operator ID: 1
+2026-03-28 12:34:10 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for plan creation: 1
+2026-03-28 12:34:10 WARN  com.capg.rechargenova.service.OperatorService - Deleting operator with ID: 1
+2026-03-28 12:34:10 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for deletion: 1
+2026-03-28 12:34:10 INFO  com.capg.rechargenova.service.OperatorService - Fetching plan with ID: 1
+2026-03-28 12:34:10 INFO  com.capg.rechargenova.service.OperatorService - Updating operator with ID: 1
+2026-03-28 12:34:10 INFO  com.capg.rechargenova.service.OperatorService - Creating operator: Airtel
+2026-03-28 12:34:10 INFO  com.capg.rechargenova.service.OperatorService - Fetching plan with ID: 1
+2026-03-28 12:34:10 ERROR com.capg.rechargenova.service.OperatorService - Plan not found with ID: 1
+2026-03-28 12:34:10 INFO  com.capg.rechargenova.service.OperatorService - Fetching all operators
+2026-03-28 12:34:10 WARN  com.capg.rechargenova.service.OperatorService - Deleting operator with ID: 1
+2026-03-28 12:34:10 INFO  com.capg.rechargenova.service.OperatorService - Operator deleted successfully: 1
+2026-03-28 12:34:10 INFO  com.capg.rechargenova.service.OperatorService - Creating plan for operator ID: 1
+2026-03-28 12:34:10 INFO  com.capg.rechargenova.service.OperatorService - Fetching operator with ID: 1
+2026-03-28 12:34:10 ERROR com.capg.rechargenova.service.OperatorService - Operator not found with ID: 1
+2026-03-28 12:34:10 WARN  com.capg.rechargenova.service.OperatorService - Deleting plan with ID: 1
+2026-03-28 12:34:10 INFO  com.capg.rechargenova.service.OperatorService - Plan deleted successfully: 1
+2026-03-28 12:34:10 INFO  com.capg.rechargenova.service.OperatorService - Fetching operator with ID: 1
+2026-03-28 12:34:10 INFO  com.capg.rechargenova.service.OperatorService - Updating operator with ID: 1
+2026-03-28 12:34:10 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for update: 1
+2026-03-28 12:34:10 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-28 12:34:10 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-28 12:34:10 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-30 10:46:38 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.capg.rechargenova.OperatorServiceApplicationTests]: OperatorServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-03-30 10:46:38 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.capg.rechargenova.OperatorServiceApplication for test class com.capg.rechargenova.OperatorServiceApplicationTests
+2026-03-30 10:46:39 INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-30 10:46:39 INFO  com.capg.rechargenova.OperatorServiceApplicationTests - Starting OperatorServiceApplicationTests using Java 17.0.12 with PID 11016 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\RechargeNova\operator-service)
+2026-03-30 10:46:39 INFO  com.capg.rechargenova.OperatorServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-03-30 10:46:41 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-30 10:46:41 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 151 ms. Found 2 JPA repository interfaces.
+2026-03-30 10:46:41 INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=471b0b80-9b07-3436-b8e4-ed681b9c6b73
+2026-03-30 10:46:42 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-30 10:46:42 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-30 10:46:42 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-30 10:46:42 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-30 10:46:42 INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-30 10:46:42 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-30 10:46:42 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-30 10:46:43 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-03-30 10:46:43 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-30 10:46:43 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-30 10:46:43 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-30 10:46:44 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-30 10:46:44 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-30 10:46:46 INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-03-30 10:46:46 WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-30 10:46:46 INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2026-03-30 10:46:46 INFO  com.capg.rechargenova.OperatorServiceApplicationTests - Started OperatorServiceApplicationTests in 7.748 seconds (process running for 9.188)
+2026-03-30 10:46:47 INFO  com.capg.rechargenova.service.OperatorService - Creating plan for operator ID: 1
+2026-03-30 10:46:47 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for plan creation: 1
+2026-03-30 10:46:47 WARN  com.capg.rechargenova.service.OperatorService - Deleting operator with ID: 1
+2026-03-30 10:46:47 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for deletion: 1
+2026-03-30 10:46:47 INFO  com.capg.rechargenova.service.OperatorService - Fetching plan with ID: 1
+2026-03-30 10:46:47 INFO  com.capg.rechargenova.service.OperatorService - Updating operator with ID: 1
+2026-03-30 10:46:47 INFO  com.capg.rechargenova.service.OperatorService - Creating operator: Airtel
+2026-03-30 10:46:47 INFO  com.capg.rechargenova.service.OperatorService - Fetching plan with ID: 1
+2026-03-30 10:46:47 ERROR com.capg.rechargenova.service.OperatorService - Plan not found with ID: 1
+2026-03-30 10:46:47 INFO  com.capg.rechargenova.service.OperatorService - Fetching all operators
+2026-03-30 10:46:47 WARN  com.capg.rechargenova.service.OperatorService - Deleting operator with ID: 1
+2026-03-30 10:46:47 INFO  com.capg.rechargenova.service.OperatorService - Operator deleted successfully: 1
+2026-03-30 10:46:47 INFO  com.capg.rechargenova.service.OperatorService - Creating plan for operator ID: 1
+2026-03-30 10:46:47 INFO  com.capg.rechargenova.service.OperatorService - Fetching operator with ID: 1
+2026-03-30 10:46:47 ERROR com.capg.rechargenova.service.OperatorService - Operator not found with ID: 1
+2026-03-30 10:46:47 WARN  com.capg.rechargenova.service.OperatorService - Deleting plan with ID: 1
+2026-03-30 10:46:47 INFO  com.capg.rechargenova.service.OperatorService - Plan deleted successfully: 1
+2026-03-30 10:46:47 INFO  com.capg.rechargenova.service.OperatorService - Fetching operator with ID: 1
+2026-03-30 10:46:47 INFO  com.capg.rechargenova.service.OperatorService - Updating operator with ID: 1
+2026-03-30 10:46:47 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for update: 1
+2026-03-30 10:46:48 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-30 10:46:48 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-30 10:46:48 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-30 12:10:21 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.capg.rechargenova.OperatorServiceApplicationTests]: OperatorServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-03-30 12:10:21 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.capg.rechargenova.OperatorServiceApplication for test class com.capg.rechargenova.OperatorServiceApplicationTests
+2026-03-30 12:10:22 INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-30 12:10:22 INFO  com.capg.rechargenova.OperatorServiceApplicationTests - Starting OperatorServiceApplicationTests using Java 17.0.12 with PID 10516 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\RechargeNova\operator-service)
+2026-03-30 12:10:22 INFO  com.capg.rechargenova.OperatorServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-03-30 12:10:24 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-30 12:10:24 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 228 ms. Found 2 JPA repository interfaces.
+2026-03-30 12:10:24 INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=471b0b80-9b07-3436-b8e4-ed681b9c6b73
+2026-03-30 12:10:25 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-03-30 12:10:25 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-03-30 12:10:25 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-30 12:10:26 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-30 12:10:26 INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-30 12:10:26 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-30 12:10:26 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-30 12:10:26 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-03-30 12:10:26 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-30 12:10:26 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-30 12:10:28 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-30 12:10:28 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-30 12:10:29 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-30 12:10:31 INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-03-30 12:10:31 WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-30 12:10:31 INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2026-03-30 12:10:31 INFO  com.capg.rechargenova.OperatorServiceApplicationTests - Started OperatorServiceApplicationTests in 9.961 seconds (process running for 11.622)
+2026-03-30 12:10:32 INFO  com.capg.rechargenova.service.OperatorService - Creating plan for operator ID: 1
+2026-03-30 12:10:32 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for plan creation: 1
+2026-03-30 12:10:32 WARN  com.capg.rechargenova.service.OperatorService - Deleting operator with ID: 1
+2026-03-30 12:10:32 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for deletion: 1
+2026-03-30 12:10:32 INFO  com.capg.rechargenova.service.OperatorService - Fetching plan with ID: 1
+2026-03-30 12:10:32 INFO  com.capg.rechargenova.service.OperatorService - Updating operator with ID: 1
+2026-03-30 12:10:32 INFO  com.capg.rechargenova.service.OperatorService - Creating operator: Airtel
+2026-03-30 12:10:33 INFO  com.capg.rechargenova.service.OperatorService - Fetching plan with ID: 1
+2026-03-30 12:10:33 ERROR com.capg.rechargenova.service.OperatorService - Plan not found with ID: 1
+2026-03-30 12:10:33 INFO  com.capg.rechargenova.service.OperatorService - Fetching all operators
+2026-03-30 12:10:33 WARN  com.capg.rechargenova.service.OperatorService - Deleting operator with ID: 1
+2026-03-30 12:10:33 INFO  com.capg.rechargenova.service.OperatorService - Operator deleted successfully: 1
+2026-03-30 12:10:33 INFO  com.capg.rechargenova.service.OperatorService - Creating plan for operator ID: 1
+2026-03-30 12:10:33 INFO  com.capg.rechargenova.service.OperatorService - Fetching operator with ID: 1
+2026-03-30 12:10:33 ERROR com.capg.rechargenova.service.OperatorService - Operator not found with ID: 1
+2026-03-30 12:10:33 WARN  com.capg.rechargenova.service.OperatorService - Deleting plan with ID: 1
+2026-03-30 12:10:33 INFO  com.capg.rechargenova.service.OperatorService - Plan deleted successfully: 1
+2026-03-30 12:10:33 INFO  com.capg.rechargenova.service.OperatorService - Fetching operator with ID: 1
+2026-03-30 12:10:33 INFO  com.capg.rechargenova.service.OperatorService - Updating operator with ID: 1
+2026-03-30 12:10:33 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for update: 1
+2026-03-30 12:10:34 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-30 12:10:34 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-30 12:10:34 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-04-17 10:42:54 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.capg.rechargenova.OperatorServiceApplicationTests]: OperatorServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-17 10:42:54 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.capg.rechargenova.OperatorServiceApplication for test class com.capg.rechargenova.OperatorServiceApplicationTests
+2026-04-17 10:42:55 INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-04-17 10:42:55 INFO  com.capg.rechargenova.OperatorServiceApplicationTests - Starting OperatorServiceApplicationTests using Java 17.0.12 with PID 21396 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\Sprint1-Project\RechargeNova\operator-service)
+2026-04-17 10:42:55 INFO  com.capg.rechargenova.OperatorServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-04-17 10:42:57 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-17 10:42:57 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 213 ms. Found 2 JPA repository interfaces.
+2026-04-17 10:42:58 INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=d4fae407-12c5-31fb-ab2b-65d66fee6c0d
+2026-04-17 10:42:58 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-04-17 10:42:58 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-04-17 10:42:59 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-17 10:42:59 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-04-17 10:42:59 INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-04-17 10:42:59 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-17 10:42:59 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-17 10:42:59 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-04-17 10:42:59 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-17 10:42:59 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-17 10:43:01 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-17 10:43:01 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-17 10:43:02 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-17 10:43:03 INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-04-17 10:43:03 WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-04-17 10:43:03 INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-04-17 10:43:04 INFO  com.capg.rechargenova.OperatorServiceApplicationTests - Started OperatorServiceApplicationTests in 9.156 seconds (process running for 13.945)
+2026-04-17 10:43:04 INFO  com.capg.rechargenova.service.OperatorService - Creating plan for operator ID: 1
+2026-04-17 10:43:04 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for plan creation: 1
+2026-04-17 10:43:04 WARN  com.capg.rechargenova.service.OperatorService - Deleting operator with ID: 1
+2026-04-17 10:43:04 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for deletion: 1
+2026-04-17 10:43:04 INFO  com.capg.rechargenova.service.OperatorService - Fetching plan with ID: 1
+2026-04-17 10:43:04 INFO  com.capg.rechargenova.service.OperatorService - Updating operator with ID: 1
+2026-04-17 10:43:04 INFO  com.capg.rechargenova.service.OperatorService - Creating operator: Airtel
+2026-04-17 10:43:04 INFO  com.capg.rechargenova.service.OperatorService - Fetching plan with ID: 1
+2026-04-17 10:43:04 ERROR com.capg.rechargenova.service.OperatorService - Plan not found with ID: 1
+2026-04-17 10:43:04 INFO  com.capg.rechargenova.service.OperatorService - Fetching all operators
+2026-04-17 10:43:04 WARN  com.capg.rechargenova.service.OperatorService - Deleting operator with ID: 1
+2026-04-17 10:43:04 INFO  com.capg.rechargenova.service.OperatorService - Operator deleted successfully: 1
+2026-04-17 10:43:04 INFO  com.capg.rechargenova.service.OperatorService - Creating plan for operator ID: 1
+2026-04-17 10:43:04 INFO  com.capg.rechargenova.service.OperatorService - Fetching operator with ID: 1
+2026-04-17 10:43:04 ERROR com.capg.rechargenova.service.OperatorService - Operator not found with ID: 1
+2026-04-17 10:43:04 WARN  com.capg.rechargenova.service.OperatorService - Deleting plan with ID: 1
+2026-04-17 10:43:04 INFO  com.capg.rechargenova.service.OperatorService - Plan deleted successfully: 1
+2026-04-17 10:43:04 INFO  com.capg.rechargenova.service.OperatorService - Fetching operator with ID: 1
+2026-04-17 10:43:04 INFO  com.capg.rechargenova.service.OperatorService - Updating operator with ID: 1
+2026-04-17 10:43:04 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for update: 1
+2026-04-17 10:43:04 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-17 10:43:04 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-04-17 10:43:04 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-04-17 10:53:46 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.capg.rechargenova.controller.OperatorControllerTest]: OperatorControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-17 10:53:46 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.capg.rechargenova.OperatorServiceApplication for test class com.capg.rechargenova.controller.OperatorControllerTest
+2026-04-17 10:53:47 INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-04-17 10:53:47 INFO  com.capg.rechargenova.controller.OperatorControllerTest - Starting OperatorControllerTest using Java 17.0.12 with PID 33136 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\Sprint1-Project\RechargeNova\operator-service)
+2026-04-17 10:53:47 INFO  com.capg.rechargenova.controller.OperatorControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-04-17 10:53:51 INFO  org.springframework.boot.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-17 10:53:51 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-17 10:53:51 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2026-04-17 10:53:51 INFO  com.capg.rechargenova.controller.OperatorControllerTest - Started OperatorControllerTest in 4.568 seconds (process running for 7.267)
+2026-04-17 10:53:51 WARN  com.capg.rechargenova.controller.OperatorController - API Call: Delete plan 1
+2026-04-17 10:53:52 INFO  com.capg.rechargenova.controller.OperatorController - API Call: Update plan 1
+2026-04-17 10:53:52 INFO  com.capg.rechargenova.controller.OperatorController - API Call: Get plan 1
+2026-04-17 10:53:52 INFO  com.capg.rechargenova.controller.OperatorController - CREATING OPERATOR: Jio
+2026-04-17 10:53:52 INFO  com.capg.rechargenova.controller.OperatorController - API Call: Get all operators
+2026-04-17 10:53:52 INFO  com.capg.rechargenova.controller.OperatorController - API Call: Get operator by ID 1
+2026-04-17 10:53:52 INFO  com.capg.rechargenova.controller.OperatorController - API Call: Create plan for operator 1
+2026-04-17 10:53:52 INFO  com.capg.rechargenova.OperatorServiceApplication - Starting OperatorServiceApplication using Java 17.0.12 with PID 33136 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\Sprint1-Project\RechargeNova\operator-service)
+2026-04-17 10:53:52 INFO  com.capg.rechargenova.OperatorServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-17 10:53:53 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-17 10:53:53 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 55 ms. Found 2 JPA repository interfaces.
+2026-04-17 10:53:54 INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=c4e94cce-9f8f-30cf-8cae-8cf4184df5cb
+2026-04-17 10:53:54 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-04-17 10:53:54 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-04-17 10:53:54 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 0 (http)
+2026-04-17 10:53:55 INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-1"]
+2026-04-17 10:53:55 INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-17 10:53:55 INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2026-04-17 10:53:55 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-17 10:53:55 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2417 ms
+2026-04-17 10:53:56 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-17 10:53:56 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-04-17 10:53:56 INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-04-17 10:53:56 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-17 10:53:56 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-17 10:53:56 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-04-17 10:53:56 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-17 10:53:56 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-17 10:53:58 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-17 10:53:58 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-17 10:53:58 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-17 10:53:59 INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-04-17 10:53:59 WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-04-17 10:53:59 INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-04-17 10:53:59 INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-1"]
+2026-04-17 10:53:59 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 59303 (http) with context path '/'
+2026-04-17 10:54:00 INFO  com.capg.rechargenova.OperatorServiceApplication - Started OperatorServiceApplication in 7.695 seconds (process running for 15.876)
+2026-04-17 10:54:00 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.capg.rechargenova.OperatorServiceApplicationTests]: OperatorServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-17 10:54:00 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.capg.rechargenova.OperatorServiceApplication for test class com.capg.rechargenova.OperatorServiceApplicationTests
+2026-04-17 10:54:00 INFO  com.capg.rechargenova.OperatorServiceApplicationTests - Starting OperatorServiceApplicationTests using Java 17.0.12 with PID 33136 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\Sprint1-Project\RechargeNova\operator-service)
+2026-04-17 10:54:00 INFO  com.capg.rechargenova.OperatorServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-04-17 10:54:00 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-17 10:54:00 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 2 JPA repository interfaces.
+2026-04-17 10:54:00 INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=d4fae407-12c5-31fb-ab2b-65d66fee6c0d
+2026-04-17 10:54:00 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-04-17 10:54:00 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-04-17 10:54:00 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-17 10:54:00 INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-04-17 10:54:00 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-17 10:54:00 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2026-04-17 10:54:00 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
+2026-04-17 10:54:00 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2026-04-17 10:54:00 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-17 10:54:00 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-17 10:54:00 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-17 10:54:01 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-17 10:54:01 INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-04-17 10:54:01 WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-04-17 10:54:01 INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-04-17 10:54:01 INFO  com.capg.rechargenova.OperatorServiceApplicationTests - Started OperatorServiceApplicationTests in 1.421 seconds (process running for 17.522)
+2026-04-17 10:54:01 INFO  com.capg.rechargenova.service.OperatorService - Creating plan for operator ID: 1
+2026-04-17 10:54:01 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for plan creation: 1
+2026-04-17 10:54:02 WARN  com.capg.rechargenova.service.OperatorService - Deleting operator with ID: 1
+2026-04-17 10:54:02 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for deletion: 1
+2026-04-17 10:54:02 INFO  com.capg.rechargenova.service.OperatorService - Fetching all operators
+2026-04-17 10:54:02 INFO  com.capg.rechargenova.service.OperatorService - Fetching plan with ID: 1
+2026-04-17 10:54:02 INFO  com.capg.rechargenova.service.OperatorService - Updating operator with ID: 1
+2026-04-17 10:54:02 INFO  com.capg.rechargenova.service.OperatorService - Creating operator: Airtel
+2026-04-17 10:54:02 WARN  com.capg.rechargenova.service.OperatorService - Deleting plan with ID: 1
+2026-04-17 10:54:02 ERROR com.capg.rechargenova.service.OperatorService - Plan not found for deletion: 1
+2026-04-17 10:54:02 INFO  com.capg.rechargenova.service.OperatorService - Fetching plan with ID: 1
+2026-04-17 10:54:02 ERROR com.capg.rechargenova.service.OperatorService - Plan not found with ID: 1
+2026-04-17 10:54:02 INFO  com.capg.rechargenova.service.OperatorService - Updating plan with ID: 1
+2026-04-17 10:54:02 ERROR com.capg.rechargenova.service.OperatorService - Plan not found for update: 1
+2026-04-17 10:54:02 INFO  com.capg.rechargenova.service.OperatorService - Fetching all operators
+2026-04-17 10:54:02 INFO  com.capg.rechargenova.service.OperatorService - Fetching plan with ID: 1
+2026-04-17 10:54:02 WARN  com.capg.rechargenova.service.OperatorService - Deleting operator with ID: 1
+2026-04-17 10:54:02 INFO  com.capg.rechargenova.service.OperatorService - Operator deleted successfully: 1
+2026-04-17 10:54:02 INFO  com.capg.rechargenova.service.OperatorService - Creating plan for operator ID: 1
+2026-04-17 10:54:02 INFO  com.capg.rechargenova.service.OperatorService - Fetching operator with ID: 1
+2026-04-17 10:54:02 ERROR com.capg.rechargenova.service.OperatorService - Operator not found with ID: 1
+2026-04-17 10:54:02 WARN  com.capg.rechargenova.service.OperatorService - Deleting plan with ID: 1
+2026-04-17 10:54:02 INFO  com.capg.rechargenova.service.OperatorService - Plan deleted successfully: 1
+2026-04-17 10:54:02 INFO  com.capg.rechargenova.service.OperatorService - Updating plan with ID: 1
+2026-04-17 10:54:02 INFO  com.capg.rechargenova.service.OperatorService - Fetching operator with ID: 1
+2026-04-17 10:54:02 INFO  com.capg.rechargenova.service.OperatorService - Updating operator with ID: 1
+2026-04-17 10:54:02 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for update: 1
+2026-04-17 10:54:02 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-17 10:54:02 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-04-17 10:54:02 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-04-17 10:54:03 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-17 10:54:03 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2026-04-17 10:54:03 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2026-04-17 10:55:26 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.capg.rechargenova.controller.OperatorControllerTest]: OperatorControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-17 10:55:26 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.capg.rechargenova.OperatorServiceApplication for test class com.capg.rechargenova.controller.OperatorControllerTest
+2026-04-17 10:55:27 INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-04-17 10:55:27 INFO  com.capg.rechargenova.controller.OperatorControllerTest - Starting OperatorControllerTest using Java 17.0.12 with PID 13292 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\Sprint1-Project\RechargeNova\operator-service)
+2026-04-17 10:55:27 INFO  com.capg.rechargenova.controller.OperatorControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-04-17 10:55:31 INFO  org.springframework.boot.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-17 10:55:31 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-17 10:55:31 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2026-04-17 10:55:31 INFO  com.capg.rechargenova.controller.OperatorControllerTest - Started OperatorControllerTest in 4.68 seconds (process running for 7.335)
+2026-04-17 10:55:31 WARN  com.capg.rechargenova.controller.OperatorController - API Call: Delete plan 1
+2026-04-17 10:55:32 INFO  com.capg.rechargenova.controller.OperatorController - API Call: Update plan 1
+2026-04-17 10:55:32 INFO  com.capg.rechargenova.controller.OperatorController - API Call: Get plan 1
+2026-04-17 10:55:32 INFO  com.capg.rechargenova.controller.OperatorController - CREATING OPERATOR: Jio
+2026-04-17 10:55:32 INFO  com.capg.rechargenova.controller.OperatorController - API Call: Get all operators
+2026-04-17 10:55:32 INFO  com.capg.rechargenova.controller.OperatorController - API Call: Get operator by ID 1
+2026-04-17 10:55:32 INFO  com.capg.rechargenova.controller.OperatorController - API Call: Create plan for operator 1
+2026-04-17 10:55:32 INFO  com.capg.rechargenova.OperatorServiceApplication - Starting OperatorServiceApplication using Java 17.0.12 with PID 13292 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\Sprint1-Project\RechargeNova\operator-service)
+2026-04-17 10:55:32 INFO  com.capg.rechargenova.OperatorServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-17 10:55:33 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-17 10:55:33 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 70 ms. Found 2 JPA repository interfaces.
+2026-04-17 10:55:34 INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=c4e94cce-9f8f-30cf-8cae-8cf4184df5cb
+2026-04-17 10:55:34 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-04-17 10:55:34 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-04-17 10:55:34 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 0 (http)
+2026-04-17 10:55:34 INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-1"]
+2026-04-17 10:55:34 INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-17 10:55:34 INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2026-04-17 10:55:35 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-17 10:55:35 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2301 ms
+2026-04-17 10:55:35 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-17 10:55:35 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-04-17 10:55:35 INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-04-17 10:55:36 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-17 10:55:36 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-17 10:55:36 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-04-17 10:55:36 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-17 10:55:36 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-17 10:55:37 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-17 10:55:37 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-17 10:55:38 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-17 10:55:39 INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-04-17 10:55:39 WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-04-17 10:55:39 INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-04-17 10:55:39 INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-1"]
+2026-04-17 10:55:39 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 52191 (http) with context path '/'
+2026-04-17 10:55:39 INFO  com.capg.rechargenova.OperatorServiceApplication - Started OperatorServiceApplication in 7.125 seconds (process running for 15.29)
+2026-04-17 10:55:39 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.capg.rechargenova.OperatorServiceApplicationTests]: OperatorServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-17 10:55:39 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.capg.rechargenova.OperatorServiceApplication for test class com.capg.rechargenova.OperatorServiceApplicationTests
+2026-04-17 10:55:40 INFO  com.capg.rechargenova.OperatorServiceApplicationTests - Starting OperatorServiceApplicationTests using Java 17.0.12 with PID 13292 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\Sprint1-Project\RechargeNova\operator-service)
+2026-04-17 10:55:40 INFO  com.capg.rechargenova.OperatorServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-04-17 10:55:40 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-17 10:55:40 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 2 JPA repository interfaces.
+2026-04-17 10:55:40 INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=d4fae407-12c5-31fb-ab2b-65d66fee6c0d
+2026-04-17 10:55:40 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-04-17 10:55:40 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-04-17 10:55:40 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-17 10:55:40 INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-04-17 10:55:40 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-17 10:55:40 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2026-04-17 10:55:40 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
+2026-04-17 10:55:40 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2026-04-17 10:55:40 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-17 10:55:40 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-17 10:55:40 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-17 10:55:40 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-17 10:55:41 INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-04-17 10:55:41 WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-04-17 10:55:41 INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-04-17 10:55:41 INFO  com.capg.rechargenova.OperatorServiceApplicationTests - Started OperatorServiceApplicationTests in 1.342 seconds (process running for 16.89)
+2026-04-17 10:55:41 INFO  com.capg.rechargenova.service.OperatorService - Creating plan for operator ID: 1
+2026-04-17 10:55:41 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for plan creation: 1
+2026-04-17 10:55:41 WARN  com.capg.rechargenova.service.OperatorService - Deleting operator with ID: 1
+2026-04-17 10:55:41 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for deletion: 1
+2026-04-17 10:55:41 INFO  com.capg.rechargenova.service.OperatorService - Fetching all operators
+2026-04-17 10:55:41 INFO  com.capg.rechargenova.service.OperatorService - Fetching plan with ID: 1
+2026-04-17 10:55:41 INFO  com.capg.rechargenova.service.OperatorService - Updating operator with ID: 1
+2026-04-17 10:55:41 INFO  com.capg.rechargenova.service.OperatorService - Creating operator: Airtel
+2026-04-17 10:55:41 WARN  com.capg.rechargenova.service.OperatorService - Deleting plan with ID: 1
+2026-04-17 10:55:41 ERROR com.capg.rechargenova.service.OperatorService - Plan not found for deletion: 1
+2026-04-17 10:55:41 INFO  com.capg.rechargenova.service.OperatorService - Fetching plan with ID: 1
+2026-04-17 10:55:41 ERROR com.capg.rechargenova.service.OperatorService - Plan not found with ID: 1
+2026-04-17 10:55:41 INFO  com.capg.rechargenova.service.OperatorService - Updating plan with ID: 1
+2026-04-17 10:55:41 ERROR com.capg.rechargenova.service.OperatorService - Plan not found for update: 1
+2026-04-17 10:55:41 INFO  com.capg.rechargenova.service.OperatorService - Fetching all operators
+2026-04-17 10:55:41 INFO  com.capg.rechargenova.service.OperatorService - Fetching plan with ID: 1
+2026-04-17 10:55:41 WARN  com.capg.rechargenova.service.OperatorService - Deleting operator with ID: 1
+2026-04-17 10:55:41 INFO  com.capg.rechargenova.service.OperatorService - Operator deleted successfully: 1
+2026-04-17 10:55:41 INFO  com.capg.rechargenova.service.OperatorService - Creating plan for operator ID: 1
+2026-04-17 10:55:41 INFO  com.capg.rechargenova.service.OperatorService - Fetching operator with ID: 1
+2026-04-17 10:55:41 ERROR com.capg.rechargenova.service.OperatorService - Operator not found with ID: 1
+2026-04-17 10:55:41 WARN  com.capg.rechargenova.service.OperatorService - Deleting plan with ID: 1
+2026-04-17 10:55:41 INFO  com.capg.rechargenova.service.OperatorService - Plan deleted successfully: 1
+2026-04-17 10:55:41 INFO  com.capg.rechargenova.service.OperatorService - Updating plan with ID: 1
+2026-04-17 10:55:41 INFO  com.capg.rechargenova.service.OperatorService - Fetching operator with ID: 1
+2026-04-17 10:55:41 INFO  com.capg.rechargenova.service.OperatorService - Updating operator with ID: 1
+2026-04-17 10:55:41 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for update: 1
+2026-04-17 10:55:41 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-17 10:55:41 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-04-17 10:55:41 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-04-17 10:55:43 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-17 10:55:43 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2026-04-17 10:55:43 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2026-04-17 10:58:33 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.capg.rechargenova.controller.OperatorControllerTest]: OperatorControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-17 10:58:33 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.capg.rechargenova.OperatorServiceApplication for test class com.capg.rechargenova.controller.OperatorControllerTest
+2026-04-17 10:58:34 INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-04-17 10:58:34 INFO  com.capg.rechargenova.controller.OperatorControllerTest - Starting OperatorControllerTest using Java 17.0.12 with PID 12208 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\Sprint1-Project\RechargeNova\operator-service)
+2026-04-17 10:58:34 INFO  com.capg.rechargenova.controller.OperatorControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-04-17 10:58:38 INFO  org.springframework.boot.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-17 10:58:38 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-17 10:58:38 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2026-04-17 10:58:38 INFO  com.capg.rechargenova.controller.OperatorControllerTest - Started OperatorControllerTest in 4.051 seconds (process running for 6.428)
+2026-04-17 10:58:38 WARN  com.capg.rechargenova.controller.OperatorController - API Call: Delete plan 1
+2026-04-17 10:58:38 INFO  com.capg.rechargenova.controller.OperatorController - API Call: Update plan 1
+2026-04-17 10:58:38 INFO  com.capg.rechargenova.controller.OperatorController - API Call: Get plan 1
+2026-04-17 10:58:38 INFO  com.capg.rechargenova.controller.OperatorController - CREATING OPERATOR: Jio
+2026-04-17 10:58:38 INFO  com.capg.rechargenova.controller.OperatorController - API Call: Get all operators
+2026-04-17 10:58:38 INFO  com.capg.rechargenova.controller.OperatorController - API Call: Get operator by ID 1
+2026-04-17 10:58:38 INFO  com.capg.rechargenova.controller.OperatorController - API Call: Create plan for operator 1
+2026-04-17 10:58:38 INFO  com.capg.rechargenova.OperatorServiceApplication - Starting OperatorServiceApplication using Java 17.0.12 with PID 12208 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\Sprint1-Project\RechargeNova\operator-service)
+2026-04-17 10:58:38 INFO  com.capg.rechargenova.OperatorServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-17 10:58:39 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-17 10:58:40 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 60 ms. Found 2 JPA repository interfaces.
+2026-04-17 10:58:40 INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=c4e94cce-9f8f-30cf-8cae-8cf4184df5cb
+2026-04-17 10:58:40 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-04-17 10:58:40 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-04-17 10:58:40 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 0 (http)
+2026-04-17 10:58:40 INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-1"]
+2026-04-17 10:58:40 INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-17 10:58:40 INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2026-04-17 10:58:41 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-17 10:58:41 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2081 ms
+2026-04-17 10:58:41 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-17 10:58:41 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-04-17 10:58:41 INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-04-17 10:58:42 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-17 10:58:42 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-17 10:58:42 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-04-17 10:58:42 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-17 10:58:42 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-17 10:58:43 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-17 10:58:43 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-17 10:58:44 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-17 10:58:45 INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-04-17 10:58:45 WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-04-17 10:58:45 INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-04-17 10:58:45 INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-1"]
+2026-04-17 10:58:45 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 52600 (http) with context path '/'
+2026-04-17 10:58:45 INFO  com.capg.rechargenova.OperatorServiceApplication - Started OperatorServiceApplication in 6.719 seconds (process running for 13.82)
+2026-04-17 10:58:45 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.capg.rechargenova.OperatorServiceApplicationTests]: OperatorServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-17 10:58:45 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.capg.rechargenova.OperatorServiceApplication for test class com.capg.rechargenova.OperatorServiceApplicationTests
+2026-04-17 10:58:45 INFO  com.capg.rechargenova.OperatorServiceApplicationTests - Starting OperatorServiceApplicationTests using Java 17.0.12 with PID 12208 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\Sprint1-Project\RechargeNova\operator-service)
+2026-04-17 10:58:45 INFO  com.capg.rechargenova.OperatorServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-04-17 10:58:46 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-17 10:58:46 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 2 JPA repository interfaces.
+2026-04-17 10:58:46 INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=d4fae407-12c5-31fb-ab2b-65d66fee6c0d
+2026-04-17 10:58:46 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-04-17 10:58:46 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-04-17 10:58:46 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-17 10:58:46 INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-04-17 10:58:46 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-17 10:58:46 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2026-04-17 10:58:46 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
+2026-04-17 10:58:46 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2026-04-17 10:58:46 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-17 10:58:46 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-17 10:58:46 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-17 10:58:46 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-17 10:58:46 INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-04-17 10:58:47 WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-04-17 10:58:47 INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-04-17 10:58:47 INFO  com.capg.rechargenova.OperatorServiceApplicationTests - Started OperatorServiceApplicationTests in 1.349 seconds (process running for 15.406)
+2026-04-17 10:58:47 INFO  com.capg.rechargenova.service.OperatorService - Creating plan for operator ID: 1
+2026-04-17 10:58:47 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for plan creation: 1
+2026-04-17 10:58:47 WARN  com.capg.rechargenova.service.OperatorService - Deleting operator with ID: 1
+2026-04-17 10:58:47 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for deletion: 1
+2026-04-17 10:58:47 INFO  com.capg.rechargenova.service.OperatorService - Fetching all operators
+2026-04-17 10:58:47 INFO  com.capg.rechargenova.service.OperatorService - Fetching plan with ID: 1
+2026-04-17 10:58:47 INFO  com.capg.rechargenova.service.OperatorService - Updating operator with ID: 1
+2026-04-17 10:58:47 INFO  com.capg.rechargenova.service.OperatorService - Creating operator: Airtel
+2026-04-17 10:58:47 WARN  com.capg.rechargenova.service.OperatorService - Deleting plan with ID: 1
+2026-04-17 10:58:47 ERROR com.capg.rechargenova.service.OperatorService - Plan not found for deletion: 1
+2026-04-17 10:58:47 INFO  com.capg.rechargenova.service.OperatorService - Fetching plan with ID: 1
+2026-04-17 10:58:47 ERROR com.capg.rechargenova.service.OperatorService - Plan not found with ID: 1
+2026-04-17 10:58:47 INFO  com.capg.rechargenova.service.OperatorService - Updating plan with ID: 1
+2026-04-17 10:58:47 ERROR com.capg.rechargenova.service.OperatorService - Plan not found for update: 1
+2026-04-17 10:58:47 INFO  com.capg.rechargenova.service.OperatorService - Fetching all operators
+2026-04-17 10:58:47 INFO  com.capg.rechargenova.service.OperatorService - Fetching plan with ID: 1
+2026-04-17 10:58:47 WARN  com.capg.rechargenova.service.OperatorService - Deleting operator with ID: 1
+2026-04-17 10:58:47 INFO  com.capg.rechargenova.service.OperatorService - Operator deleted successfully: 1
+2026-04-17 10:58:47 INFO  com.capg.rechargenova.service.OperatorService - Creating plan for operator ID: 1
+2026-04-17 10:58:47 INFO  com.capg.rechargenova.service.OperatorService - Fetching operator with ID: 1
+2026-04-17 10:58:47 ERROR com.capg.rechargenova.service.OperatorService - Operator not found with ID: 1
+2026-04-17 10:58:47 WARN  com.capg.rechargenova.service.OperatorService - Deleting plan with ID: 1
+2026-04-17 10:58:47 INFO  com.capg.rechargenova.service.OperatorService - Plan deleted successfully: 1
+2026-04-17 10:58:47 INFO  com.capg.rechargenova.service.OperatorService - Fetching operator with ID: 1
+2026-04-17 10:58:47 INFO  com.capg.rechargenova.service.OperatorService - Updating plan with ID: 1
+2026-04-17 10:58:47 INFO  com.capg.rechargenova.service.OperatorService - Fetching operator with ID: 1
+2026-04-17 10:58:47 INFO  com.capg.rechargenova.service.OperatorService - Updating operator with ID: 1
+2026-04-17 10:58:47 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for update: 1
+2026-04-17 10:58:47 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-17 10:58:47 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-04-17 10:58:47 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-04-17 10:58:48 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-17 10:58:48 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2026-04-17 10:58:48 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2026-04-17 12:04:57 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.capg.rechargenova.controller.OperatorControllerTest]: OperatorControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-17 12:04:57 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.capg.rechargenova.OperatorServiceApplication for test class com.capg.rechargenova.controller.OperatorControllerTest
+2026-04-17 12:04:58 INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-04-17 12:04:58 INFO  com.capg.rechargenova.controller.OperatorControllerTest - Starting OperatorControllerTest using Java 17.0.12 with PID 4036 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\Sprint1-Project\RechargeNova\operator-service)
+2026-04-17 12:04:58 INFO  com.capg.rechargenova.controller.OperatorControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-04-17 12:05:01 INFO  org.springframework.boot.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-17 12:05:01 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-17 12:05:01 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 2 ms
+2026-04-17 12:05:01 INFO  com.capg.rechargenova.controller.OperatorControllerTest - Started OperatorControllerTest in 4.329 seconds (process running for 7.079)
+2026-04-17 12:05:02 WARN  com.capg.rechargenova.controller.OperatorController - API Call: Delete plan 1
+2026-04-17 12:05:02 INFO  com.capg.rechargenova.controller.OperatorController - API Call: Update plan 1
+2026-04-17 12:05:02 INFO  com.capg.rechargenova.controller.OperatorController - API Call: Get plan 1
+2026-04-17 12:05:02 INFO  com.capg.rechargenova.controller.OperatorController - CREATING OPERATOR: Jio
+2026-04-17 12:05:02 INFO  com.capg.rechargenova.controller.OperatorController - API Call: Get all operators
+2026-04-17 12:05:02 INFO  com.capg.rechargenova.controller.OperatorController - API Call: Get operator by ID 1
+2026-04-17 12:05:02 INFO  com.capg.rechargenova.controller.OperatorController - API Call: Create plan for operator 1
+2026-04-17 12:05:02 INFO  com.capg.rechargenova.OperatorServiceApplication - Starting OperatorServiceApplication using Java 17.0.12 with PID 4036 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\Sprint1-Project\RechargeNova\operator-service)
+2026-04-17 12:05:02 INFO  com.capg.rechargenova.OperatorServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-17 12:05:04 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-17 12:05:04 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 52 ms. Found 2 JPA repository interfaces.
+2026-04-17 12:05:04 INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=c4e94cce-9f8f-30cf-8cae-8cf4184df5cb
+2026-04-17 12:05:04 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-04-17 12:05:04 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-04-17 12:05:05 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 0 (http)
+2026-04-17 12:05:05 INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-1"]
+2026-04-17 12:05:05 INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-17 12:05:05 INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2026-04-17 12:05:05 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-17 12:05:05 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2331 ms
+2026-04-17 12:05:06 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-17 12:05:06 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-04-17 12:05:06 INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-04-17 12:05:06 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-17 12:05:06 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-17 12:05:07 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-04-17 12:05:07 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-17 12:05:07 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-17 12:05:08 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-17 12:05:08 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-17 12:05:09 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-17 12:05:09 INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-04-17 12:05:09 WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-04-17 12:05:09 INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-04-17 12:05:10 INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-1"]
+2026-04-17 12:05:10 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 56530 (http) with context path '/'
+2026-04-17 12:05:10 INFO  com.capg.rechargenova.OperatorServiceApplication - Started OperatorServiceApplication in 7.425 seconds (process running for 15.309)
+2026-04-17 12:05:10 INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.capg.rechargenova.OperatorServiceApplicationTests]: OperatorServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-17 12:05:10 INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.capg.rechargenova.OperatorServiceApplication for test class com.capg.rechargenova.OperatorServiceApplicationTests
+2026-04-17 12:05:10 INFO  com.capg.rechargenova.OperatorServiceApplicationTests - Starting OperatorServiceApplicationTests using Java 17.0.12 with PID 4036 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\Sprint1-Project\RechargeNova\operator-service)
+2026-04-17 12:05:10 INFO  com.capg.rechargenova.OperatorServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-04-17 12:05:10 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-17 12:05:10 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 2 JPA repository interfaces.
+2026-04-17 12:05:10 INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=d4fae407-12c5-31fb-ab2b-65d66fee6c0d
+2026-04-17 12:05:10 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-04-17 12:05:10 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-04-17 12:05:11 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-17 12:05:11 INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-04-17 12:05:11 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-17 12:05:11 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2026-04-17 12:05:11 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
+2026-04-17 12:05:11 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2026-04-17 12:05:11 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-17 12:05:11 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-17 12:05:11 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-17 12:05:11 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-17 12:05:12 INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-04-17 12:05:12 WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-04-17 12:05:12 INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-04-17 12:05:12 INFO  com.capg.rechargenova.OperatorServiceApplicationTests - Started OperatorServiceApplicationTests in 1.692 seconds (process running for 17.231)
+2026-04-17 12:05:12 INFO  com.capg.rechargenova.service.OperatorService - Creating plan for operator ID: 1
+2026-04-17 12:05:12 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for plan creation: 1
+2026-04-17 12:05:12 WARN  com.capg.rechargenova.service.OperatorService - Deleting operator with ID: 1
+2026-04-17 12:05:12 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for deletion: 1
+2026-04-17 12:05:12 INFO  com.capg.rechargenova.service.OperatorService - Fetching all operators
+2026-04-17 12:05:12 INFO  com.capg.rechargenova.service.OperatorService - Fetching plan with ID: 1
+2026-04-17 12:05:12 INFO  com.capg.rechargenova.service.OperatorService - Updating operator with ID: 1
+2026-04-17 12:05:12 INFO  com.capg.rechargenova.service.OperatorService - Creating operator: Airtel
+2026-04-17 12:05:12 WARN  com.capg.rechargenova.service.OperatorService - Deleting plan with ID: 1
+2026-04-17 12:05:12 ERROR com.capg.rechargenova.service.OperatorService - Plan not found for deletion: 1
+2026-04-17 12:05:12 INFO  com.capg.rechargenova.service.OperatorService - Fetching plan with ID: 1
+2026-04-17 12:05:12 ERROR com.capg.rechargenova.service.OperatorService - Plan not found with ID: 1
+2026-04-17 12:05:12 INFO  com.capg.rechargenova.service.OperatorService - Updating plan with ID: 1
+2026-04-17 12:05:12 ERROR com.capg.rechargenova.service.OperatorService - Plan not found for update: 1
+2026-04-17 12:05:12 INFO  com.capg.rechargenova.service.OperatorService - Fetching all operators
+2026-04-17 12:05:12 INFO  com.capg.rechargenova.service.OperatorService - Fetching plan with ID: 1
+2026-04-17 12:05:12 WARN  com.capg.rechargenova.service.OperatorService - Deleting operator with ID: 1
+2026-04-17 12:05:12 INFO  com.capg.rechargenova.service.OperatorService - Operator deleted successfully: 1
+2026-04-17 12:05:12 INFO  com.capg.rechargenova.service.OperatorService - Creating plan for operator ID: 1
+2026-04-17 12:05:12 INFO  com.capg.rechargenova.service.OperatorService - Fetching operator with ID: 1
+2026-04-17 12:05:12 ERROR com.capg.rechargenova.service.OperatorService - Operator not found with ID: 1
+2026-04-17 12:05:12 WARN  com.capg.rechargenova.service.OperatorService - Deleting plan with ID: 1
+2026-04-17 12:05:12 INFO  com.capg.rechargenova.service.OperatorService - Plan deleted successfully: 1
+2026-04-17 12:05:12 INFO  com.capg.rechargenova.service.OperatorService - Fetching operator with ID: 1
+2026-04-17 12:05:12 INFO  com.capg.rechargenova.service.OperatorService - Updating plan with ID: 1
+2026-04-17 12:05:12 INFO  com.capg.rechargenova.service.OperatorService - Fetching operator with ID: 1
+2026-04-17 12:05:12 INFO  com.capg.rechargenova.service.OperatorService - Updating operator with ID: 1
+2026-04-17 12:05:12 ERROR com.capg.rechargenova.service.OperatorService - Operator not found for update: 1
+2026-04-17 12:05:12 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-17 12:05:12 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-04-17 12:05:12 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-04-17 12:05:13 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-17 12:05:13 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2026-04-17 12:05:13 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
