@@ -21,17 +21,17 @@ const mockUser = {
 
 const mockPlan: PlanDto = {
   id: 5, operatorId: 2, amount: 199, validity: 28,
-  description: 'All-in-One plan',
+  description: 'All-in-One plan', type: 'Prepaid', category: 'All-in-One'
 };
 
 const mockOperator: OperatorDto = {
-  id: 2, name: 'Jio', type: 'Prepaid', circle: 'All India', plans: [mockPlan],
+  id: 2, name: 'Jio', circle: 'All India', plans: [mockPlan],
 };
 
 const mockRechargeResult: RechargeResponse = {
   id: 100, userId: 1, operatorId: 2, planId: 5, mobileNumber: '9876543210',
   amount: 199, status: 'SUCCESS', createdAt: '2024-06-01T10:00:00.000Z', message: 'Recharge successful',
-  paymentMethod: 'UPI',
+  paymentMethod: 'UPI', rechargeType: 'PREPAID',
 };
 
 describe('RechargeComponent', () => {
@@ -96,8 +96,8 @@ describe('RechargeComponent', () => {
     expect(component.steps.length).toBe(4);
   });
 
-  it('should define 5 payment methods', () => {
-    expect(component.paymentMethods.length).toBe(5);
+  it('should define 1 payment method', () => {
+    expect(component.paymentMethods.length).toBe(1);
   });
 
   it('should define 4 plan categories', () => {
@@ -281,6 +281,68 @@ describe('RechargeComponent', () => {
     expect(toast.error).toHaveBeenCalledWith('Failed to initiate recharge record.');
     expect(component.loading()).toBe(false);
   });
+
+  it('should show error toast when createOrder fails', () => {
+    const toast = TestBed.inject(ToastService);
+    vi.spyOn(toast, 'error');
+    component.mobileForm.get('mobile')!.setValue('9876543210');
+    component.selectOperator(mockOperator);
+    component.selectPlan(mockPlan);
+    component.paymentMethod.set('UPI');
+    component.processRecharge();
+    
+    // 1. initiate success
+    const req1 = httpMock.expectOne(`${BASE}/recharges`);
+    req1.flush(mockRechargeResult);
+    
+    // 2. createOrder fails
+    const req2 = httpMock.expectOne(`http://localhost:8989/api/payments/create-order`);
+    req2.flush({ message: 'Order Error' }, { status: 500, statusText: 'Error' });
+    
+    expect(toast.error).toHaveBeenCalledWith('Failed to initiate payment. Please try again.');
+    expect(component.loading()).toBe(false);
+  });
+
+  it('should return operator color from opColor', () => {
+    expect(component.opColor(0)).toBeDefined();
+    expect(component.opColor(1)).toBeDefined();
+  });
+
+  it('should handle recharge fetch failure after payment verification', async () => {
+    const toast = TestBed.inject(ToastService);
+    vi.spyOn(toast, 'error');
+
+    // Use a regular function instead of vi.fn() to avoid warning
+    const mockRzpInstance = { open: vi.fn() };
+    (window as any).Razorpay = function(options: any) {
+      setTimeout(() => {
+        if (options.handler) options.handler({ razorpay_payment_id: 'p1' });
+      }, 10);
+      return mockRzpInstance;
+    } as any;
+
+    component.mobileForm.get('mobile')!.setValue('9876543210');
+    component.selectOperator(mockOperator);
+    component.selectPlan(mockPlan);
+    component.paymentMethod.set('UPI');
+    component.processRecharge();
+
+    httpMock.expectOne(`${BASE}/recharges`).flush(mockRechargeResult);
+    httpMock.expectOne(`http://localhost:8989/api/payments/create-order`).flush({ orderId: 'o1' });
+    
+    await new Promise(r => setTimeout(r, 50));
+    httpMock.expectOne(`http://localhost:8989/api/payments/verify-payment`).flush({ status: 'SUCCESS' });
+    
+    httpMock.expectOne(`${BASE}/recharges/100`).flush({}, { status: 500, statusText: 'Error' });
+
+    expect(toast.error).toHaveBeenCalledWith('Payment successful but failed to fetch record.');
+    expect(component.loading()).toBe(false);
+  });
+
+
+
+
+
   // ─── resetFlow ───────────────────────────────────────────────────────────
   it('should reset all state on resetFlow()', () => {
     component.mobileForm.get('mobile')!.setValue('9876543210');
@@ -295,12 +357,13 @@ describe('RechargeComponent', () => {
     expect(component.mobileForm.value.mobile).toBeFalsy();
     expect(component.selectedOperator()).toBeNull();
     expect(component.selectedPlan()).toBeNull();
-    expect(component.paymentMethod()).toBe('');
+    expect(component.paymentMethod()).toBe('RAZORPAY');
     expect(component.rechargeResult()).toBeNull();
     expect(component.planCategory()).toBe('ALL');
     expect(component.planSearch()).toBe('');
   });
 });
+
 
 describe('RechargeComponent Operator Load Error', () => {
   let component: RechargeComponent;
@@ -338,4 +401,98 @@ describe('RechargeComponent Operator Load Error', () => {
     expect(toast.error).toHaveBeenCalledWith('Failed to load operators. Is the backend running?');
     expect(component.loadingOperators()).toBe(false);
   });
+
+  it('should retry fetchFinalRecharge if status is FAILED', () => {
+    vi.useFakeTimers();
+    const mockRzpInstance = { open: vi.fn() };
+    (window as any).Razorpay = function(options: any) {
+      setTimeout(() => options.handler({ razorpay_payment_id: 'p1' }), 10);
+      return mockRzpInstance;
+    } as any;
+
+    component.mobileForm.get('mobile')!.setValue('9876543210');
+    component.selectOperator(mockOperator);
+    component.selectPlan(mockPlan);
+    component.paymentMethod.set('UPI');
+    component.processRecharge();
+
+    httpMock.expectOne(`${BASE}/recharges`).flush(mockRechargeResult);
+    httpMock.expectOne(`http://localhost:8989/api/payments/create-order`).flush({ orderId: 'o1' });
+    
+    // Trigger Razorpay handler
+    vi.advanceTimersByTime(20);
+    httpMock.expectOne(`http://localhost:8989/api/payments/verify-payment`).flush({ status: 'SUCCESS' });
+
+    // 1st fetch - FAILED
+    httpMock.expectOne(`${BASE}/recharges/100`).flush({ ...mockRechargeResult, status: 'FAILED' });
+    
+    // Advance time for retry
+    vi.advanceTimersByTime(1000);
+    
+    // 2nd fetch - SUCCESS
+    httpMock.expectOne(`${BASE}/recharges/100`).flush({ ...mockRechargeResult, status: 'SUCCESS' });
+    
+    expect(component.rechargeResult()?.status).toBe('SUCCESS');
+    vi.useRealTimers();
+  });
+
+  it('should fallback to SUCCESS if status remains FAILED after retries', () => {
+    vi.useFakeTimers();
+    const mockRzpInstance = { open: vi.fn() };
+    (window as any).Razorpay = function(options: any) {
+      setTimeout(() => options.handler({ razorpay_payment_id: 'p1' }), 10);
+      return mockRzpInstance;
+    } as any;
+
+    component.mobileForm.get('mobile')!.setValue('9876543210');
+    component.selectOperator(mockOperator);
+    component.selectPlan(mockPlan);
+    component.paymentMethod.set('UPI');
+    component.processRecharge();
+
+    httpMock.expectOne(`${BASE}/recharges`).flush(mockRechargeResult);
+    httpMock.expectOne(`http://localhost:8989/api/payments/create-order`).flush({ orderId: 'o1' });
+    
+    vi.advanceTimersByTime(20);
+    httpMock.expectOne(`http://localhost:8989/api/payments/verify-payment`).flush({ status: 'SUCCESS' });
+
+    // 6 fetches total (1 initial + 5 retries)
+    for(let i=0; i<6; i++) {
+      httpMock.expectOne(`${BASE}/recharges/100`).flush({ ...mockRechargeResult, status: 'FAILED' });
+      if (i < 5) vi.advanceTimersByTime(1000);
+    }
+    
+    expect(component.rechargeResult()?.status).toBe('SUCCESS');
+    vi.useRealTimers();
+  });
+
+  it('should handle verifyPayment error', () => {
+    vi.useFakeTimers();
+    const toast = TestBed.inject(ToastService);
+    vi.spyOn(toast, 'error');
+    
+    const mockRzpInstance = { open: vi.fn() };
+    (window as any).Razorpay = function(options: any) {
+      setTimeout(() => options.handler({ razorpay_payment_id: 'p1' }), 10);
+      return mockRzpInstance;
+    } as any;
+
+    component.mobileForm.get('mobile')!.setValue('9876543210');
+    component.selectOperator(mockOperator);
+    component.selectPlan(mockPlan);
+    component.paymentMethod.set('UPI');
+    component.processRecharge();
+
+    httpMock.expectOne(`${BASE}/recharges`).flush(mockRechargeResult);
+    httpMock.expectOne(`http://localhost:8989/api/payments/create-order`).flush({ orderId: 'o1' });
+    
+    vi.advanceTimersByTime(20);
+    httpMock.expectOne(`http://localhost:8989/api/payments/verify-payment`).flush({}, { status: 400, statusText: 'Bad Request' });
+    
+    expect(toast.error).toHaveBeenCalledWith('Payment verification failed.');
+    expect(component.loading()).toBe(false);
+    vi.useRealTimers();
+  });
 });
+
+

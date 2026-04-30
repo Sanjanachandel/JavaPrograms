@@ -25,6 +25,7 @@ import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.when;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.PageRequest;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
@@ -94,7 +95,7 @@ class RechargeControllerTest {
     void testGetRechargesByUserId_Returns200() throws Exception {
         RechargeResponse r1 = buildResponse(1L, "SUCCESS");
         RechargeResponse r2 = buildResponse(2L, "FAILED");
-        Page<RechargeResponse> page = new PageImpl<>(List.of(r1, r2));
+        Page<RechargeResponse> page = new PageImpl<>(new java.util.ArrayList<>(List.of(r1, r2)), PageRequest.of(0, 10), 2);
 
         when(rechargeService.getRechargesByUserId(eq(501L), anyInt(), anyInt()))
                 .thenReturn(page);
@@ -109,7 +110,7 @@ class RechargeControllerTest {
     @Test
     void testGetAllRecharges_Returns200() throws Exception {
         RechargeResponse r1 = buildResponse(1L, "SUCCESS");
-        Page<RechargeResponse> page = new PageImpl<>(List.of(r1));
+        Page<RechargeResponse> page = new PageImpl<>(new java.util.ArrayList<>(List.of(r1)), PageRequest.of(0, 10), 1);
 
         when(rechargeService.getAllRecharges(anyInt(), anyInt()))
                 .thenReturn(page);

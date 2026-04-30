@@ -47,7 +47,7 @@ describe('AdminUsersComponent', () => {
     component = fixture.componentInstance;
     httpMock  = TestBed.inject(HttpTestingController);
     fixture.detectChanges();
-    httpMock.expectOne(`${BASE}/users`).flush([mockUser, mockAdmin]);
+    httpMock.expectOne(`${BASE}/users?page=0&size=10`).flush({ content: [mockUser, mockAdmin], totalPages: 1, totalElements: 2, number: 0 });
   });
 
   afterEach(() => {
@@ -77,7 +77,7 @@ describe('AdminUsersComponent', () => {
     vi.spyOn(toast, 'error');
     
     component.loadUsers();
-    const req = httpMock.expectOne(`${BASE}/users`);
+    const req = httpMock.expectOne(`${BASE}/users?page=0&size=10`);
     req.flush({}, { status: 500, statusText: 'Server Error' });
     
     expect(toast.error).toHaveBeenCalledWith('Failed to load users');
@@ -86,8 +86,39 @@ describe('AdminUsersComponent', () => {
   // ─── Reload via loadUsers ──────────────────────────────────────────────────
   it('should update users signal when loadUsers is called again', () => {
     component.loadUsers();
-    const req = httpMock.expectOne(`${BASE}/users`);
-    req.flush([mockUser]);
+    const req = httpMock.expectOne(`${BASE}/users?page=0&size=10`);
+    req.flush({ content: [mockUser], totalPages: 1, totalElements: 1, number: 0 });
     expect(component.users().length).toBe(1);
   });
+
+  // ─── Pagination ──────────────────────────────────────────────────────────
+  it('should call loadUsers with page+1 on nextPage when not on last page', () => {
+    component.currentPage.set(0);
+    component.totalPages.set(3);
+    component.nextPage();
+    const req = httpMock.expectOne(`${BASE}/users?page=1&size=10`);
+    req.flush({ content: [mockUser], totalPages: 3, totalElements: 1, number: 1 });
+  });
+
+  it('should NOT load next page when already on last page', () => {
+    component.currentPage.set(2);
+    component.totalPages.set(3);
+    component.nextPage();
+    httpMock.expectNone(`${BASE}/users?page=3&size=10`);
+  });
+
+  it('should call loadUsers with page-1 on prevPage when not on first page', () => {
+    component.currentPage.set(2);
+    component.totalPages.set(3);
+    component.prevPage();
+    const req = httpMock.expectOne(`${BASE}/users?page=1&size=10`);
+    req.flush({ content: [mockUser], totalPages: 3, totalElements: 1, number: 1 });
+  });
+
+  it('should NOT load prev page when already on first page', () => {
+    component.currentPage.set(0);
+    component.prevPage();
+    httpMock.expectNone(`${BASE}/users?page=-1&size=10`);
+  });
 });
+

@@ -97,10 +97,22 @@ describe('SidebarComponent', () => {
     expect(component.dashboardLink()).toBe('/admin');
   });
 
-  it('should logout and navigate to login', () => {
-    const navigateSpy = vi.spyOn(router, 'navigate');
+  it('should show logout modal on logout()', () => {
     component.logout();
+    expect(component.isLogoutModalVisible()).toBe(true);
+  });
+
+  it('should logout and navigate to login on onLogoutConfirm()', () => {
+    const navigateSpy = vi.spyOn(router, 'navigate');
+    component.onLogoutConfirm();
+    expect(component.isLogoutModalVisible()).toBe(false);
     expect(authServiceMock.logout).toHaveBeenCalled();
     expect(navigateSpy).toHaveBeenCalledWith(['/auth/login']);
+  });
+
+  it('should hide modal on onLogoutCancel()', () => {
+    component.isLogoutModalVisible.set(true);
+    component.onLogoutCancel();
+    expect(component.isLogoutModalVisible()).toBe(false);
   });
 });

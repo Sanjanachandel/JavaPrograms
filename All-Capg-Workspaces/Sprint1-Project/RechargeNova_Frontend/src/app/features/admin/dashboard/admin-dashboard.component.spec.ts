@@ -32,11 +32,11 @@ const mockAdmin: UserResponse = {
 const makeRecharge = (id: number, status: 'SUCCESS' | 'FAILED', amount: number, createdAt = '2024-06-01T10:00:00Z'): RechargeResponse => ({
   id, userId: 1, operatorId: 2, planId: 3,
   mobileNumber: '9876543210', amount, status, createdAt, message: '',
-  paymentMethod: 'UPI',
+  paymentMethod: 'UPI', rechargeType: 'PREPAID',
 });
 
 const mockOperator: OperatorDto = {
-  id: 1, name: 'Jio', type: 'Prepaid', circle: 'All India',
+  id: 1, name: 'Jio', circle: 'All India',
 };
 
 describe('AdminDashboardComponent', () => {
@@ -45,8 +45,13 @@ describe('AdminDashboardComponent', () => {
   let httpMock: HttpTestingController;
 
   const setupAndFlush = (users: UserResponse[], recharges: RechargeResponse[], operators: OperatorDto[]) => {
-    httpMock.expectOne(`${BASE}/users`).flush(users);
-    httpMock.expectOne(`${BASE}/recharges`).flush(recharges);
+    httpMock.expectOne(`${BASE}/users/count`).flush(users.length);
+    httpMock.expectOne(`${BASE}/recharges/count`).flush(recharges.length);
+    httpMock.expectOne(`${BASE}/recharges/revenue`).flush(recharges.reduce((sum, r) => sum + r.amount, 0));
+    httpMock.expectOne(`${BASE}/operators/count`).flush(operators.length);
+
+    httpMock.expectOne(`${BASE}/users?page=0&size=10`).flush({ content: users, totalPages: 1, totalElements: users.length });
+    httpMock.expectOne(`${BASE}/recharges?page=0&size=10`).flush({ content: recharges, totalPages: 1, totalElements: recharges.length });
     httpMock.expectOne(`${BASE}/operators`).flush(operators);
   };
 
@@ -108,13 +113,14 @@ describe('AdminDashboardComponent', () => {
   });
 
   // ─── recentRecharges ──────────────────────────────────────────────────────
-  it('should return at most 4 recentRecharges sorted by newest first', () => {
+  it('should return at most 4 recentRecharges', () => {
     const r1 = makeRecharge(1, 'SUCCESS', 100, '2024-06-01T08:00:00Z');
     const r2 = makeRecharge(2, 'SUCCESS', 200, '2024-06-02T08:00:00Z');
     const r3 = makeRecharge(3, 'SUCCESS', 300, '2024-06-03T08:00:00Z');
     const r4 = makeRecharge(4, 'SUCCESS', 400, '2024-06-04T08:00:00Z');
     const r5 = makeRecharge(5, 'SUCCESS', 500, '2024-06-05T08:00:00Z');
-    component.recharges.set([r1, r2, r3, r4, r5]);
+    // Set newest-first order (as backend would return)
+    component.recharges.set([r5, r4, r3, r2, r1]);
     const recent = component.recentRecharges();
     expect(recent.length).toBe(4);
     expect(recent[0].id).toBe(5); // newest first

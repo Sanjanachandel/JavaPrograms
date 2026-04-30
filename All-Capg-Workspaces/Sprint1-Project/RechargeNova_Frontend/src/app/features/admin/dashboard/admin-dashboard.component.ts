@@ -40,7 +40,7 @@ export class AdminDashboardComponent implements OnInit {
   });
 
   recentRecharges = computed(() => {
-    return this.recharges(); // Already sorted from backend if we want, or we can sort here
+    return this.recharges().slice(0, 4);
   });
 
   ngOnInit() {

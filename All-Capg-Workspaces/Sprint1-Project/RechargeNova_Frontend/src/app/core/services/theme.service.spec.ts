@@ -89,4 +89,29 @@ describe('ThemeService', () => {
     TestBed.flushEffects();
     expect(localStorage.getItem('rechargenova-theme')).toBe('light');
   });
+
+  it('should use dark if matchMedia matches light:false', () => {
+    localStorage.clear();
+    Object.defineProperty(window, 'matchMedia', {
+      writable: true,
+      value: vi.fn().mockImplementation(query => ({ matches: false }))
+    });
+    TestBed.resetTestingModule();
+    TestBed.configureTestingModule({});
+    const freshService = TestBed.inject(ThemeService);
+    expect(freshService.theme()).toBe('dark');
+  });
+
+  it('should use light if matchMedia matches light:true', () => {
+    localStorage.clear();
+    Object.defineProperty(window, 'matchMedia', {
+      writable: true,
+      value: vi.fn().mockImplementation(query => ({ matches: true }))
+    });
+    TestBed.resetTestingModule();
+    TestBed.configureTestingModule({});
+    const freshService = TestBed.inject(ThemeService);
+    expect(freshService.theme()).toBe('light');
+  });
 });
+

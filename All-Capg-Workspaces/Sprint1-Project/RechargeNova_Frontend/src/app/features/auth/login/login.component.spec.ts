@@ -176,16 +176,37 @@ describe('LoginComponent', () => {
     expect(router.navigate).toHaveBeenCalledWith(['/admin']);
   });
 
-  it('should set loading=false and show toast on login error', () => {
+  it('should show fallback error message on login failure', () => {
     const toast = TestBed.inject(ToastService);
     vi.spyOn(toast, 'error');
     component.form.get('email')!.setValue('sanjana@example.com');
     component.form.get('password')!.setValue('wrongPass');
     component.onSubmit();
     const req = httpMock.expectOne(`${BASE}/users/login`);
-    req.flush({ message: 'Invalid credentials' }, { status: 401, statusText: 'Unauthorized' });
-    expect(component.loading()).toBe(false);
-    expect(toast.error).toHaveBeenCalled();
+    req.flush(null, { status: 500, statusText: 'Server Error' });
+    expect(toast.error).toHaveBeenCalledWith('Login failed. Check credentials.');
+  });
+
+  it('should show fallback error message on forgot password failure', () => {
+    const toast = TestBed.inject(ToastService);
+    vi.spyOn(toast, 'error');
+    component.forgotEmailForm.get('email')!.setValue('test@test.com');
+    component.onSendOtp();
+    const req = httpMock.expectOne(`${BASE}/users/forgot-password`);
+    req.flush(null, { status: 500, statusText: 'Server Error' });
+    expect(toast.error).toHaveBeenCalledWith('Failed to send OTP. Is the email registered?');
+  });
+
+  it('should show fallback error message on reset password failure', () => {
+    const toast = TestBed.inject(ToastService);
+    vi.spyOn(toast, 'error');
+    component.forgotEmailForm.get('email')!.setValue('test@test.com');
+    component.resetPasswordForm.get('otp')!.setValue('123456');
+    component.resetPasswordForm.get('newPassword')!.setValue('newPass123');
+    component.onResetPassword();
+    const req = httpMock.expectOne(`${BASE}/users/reset-password`);
+    req.flush(null, { status: 500, statusText: 'Server Error' });
+    expect(toast.error).toHaveBeenCalledWith('Failed to reset password. Check your OTP.');
   });
 
   // ─── onSendOtp ────────────────────────────────────────────────────────────

@@ -439,3 +439,168 @@
 2026-04-30 14:23:45 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-04-30 14:23:45 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2026-04-30 14:23:45 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-04-30 19:00:47 INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-04-30 19:00:49 INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-30 19:00:49 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-30 19:00:49 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 4 ms
+2026-04-30 19:00:49 INFO  com.capg.rechargenova.controller.RechargeController - Admin API called to list all recharges (Page: 0, Size: 10)
+2026-04-30 19:00:49 WARN  org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: (was java.lang.UnsupportedOperationException)]
+2026-04-30 19:00:49 INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-30 19:00:49 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-30 19:00:49 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2026-04-30 19:00:49 INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-30 19:00:49 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-30 19:00:49 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+2026-04-30 19:00:49 INFO  com.capg.rechargenova.controller.RechargeController - Fetching recharges for userId: 501 (Page: 0, Size: 10)
+2026-04-30 19:00:49 WARN  org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: (was java.lang.UnsupportedOperationException)]
+2026-04-30 19:00:49 INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-30 19:00:49 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-30 19:00:49 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2026-04-30 19:00:49 INFO  com.capg.rechargenova.controller.RechargeController - Fetching recharge by id: 1
+2026-04-30 19:00:49 INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-30 19:00:49 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-30 19:00:49 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+2026-04-30 19:00:50 INFO  com.capg.rechargenova.controller.RechargeController - Initiating recharge for userId: 501
+2026-04-30 19:00:51 INFO  com.capg.rechargenova.RechargeServiceApplication - Starting RechargeServiceApplication using Java 17.0.12 with PID 10332 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\Sprint1-Project\RechargeNova_Backend\recharge-service)
+2026-04-30 19:00:51 DEBUG com.capg.rechargenova.RechargeServiceApplication - Running with Spring Boot v3.3.2, Spring v6.1.11
+2026-04-30 19:00:51 INFO  com.capg.rechargenova.RechargeServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-30 19:00:52 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-30 19:00:52 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 62 ms. Found 1 JPA repository interface.
+2026-04-30 19:00:53 INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=0e3ee28c-af26-378e-baca-f71a665f6584
+2026-04-30 19:00:53 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-04-30 19:00:53 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-04-30 19:00:54 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 0 (http)
+2026-04-30 19:00:54 INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-1"]
+2026-04-30 19:00:54 INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-30 19:00:54 INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2026-04-30 19:00:54 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-30 19:00:54 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3419 ms
+2026-04-30 19:00:55 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-30 19:00:55 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-04-30 19:00:55 INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-04-30 19:00:55 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-30 19:00:55 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-30 19:00:56 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SCOTT
+2026-04-30 19:00:56 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-30 19:00:56 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-30 19:00:57 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-30 19:00:57 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-30 19:00:58 INFO  org.springframework.data.jpa.repository.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-30 19:00:59 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-30 19:00:59 INFO  org.springframework.cloud.openfeign.FeignClientFactoryBean - For 'user-service' URL not provided. Will try picking an instance via load-balancing.
+2026-04-30 19:00:59 INFO  org.springframework.cloud.openfeign.FeignClientFactoryBean - For 'operator-service' URL not provided. Will try picking an instance via load-balancing.
+2026-04-30 19:01:00 INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-04-30 19:01:01 WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-04-30 19:01:01 INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-04-30 19:01:01 INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-1"]
+2026-04-30 19:01:01 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 57613 (http) with context path '/'
+2026-04-30 19:01:01 INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2026-04-30 19:01:01 INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#e3c851f:0/SimpleConnection@1742d10b [delegate=amqp://guest@127.0.0.1:5672/, localPort=57614]
+2026-04-30 19:01:01 INFO  com.capg.rechargenova.RechargeServiceApplication - Started RechargeServiceApplication in 11.338 seconds (process running for 19.062)
+2026-04-30 19:01:01 ERROR com.capg.rechargenova.exception.GlobalExceptionHandler - Resource Not Found: Not found
+2026-04-30 19:01:01 ERROR com.capg.rechargenova.exception.GlobalExceptionHandler - Unexpected Error: Global Error
+2026-04-30 19:01:01 ERROR com.capg.rechargenova.exception.GlobalExceptionHandler - Exception: Not found
+2026-04-30 19:01:01 ERROR com.capg.rechargenova.exception.GlobalExceptionHandler - Exception: Invalid
+2026-04-30 19:01:01 INFO  com.capg.rechargenova.service.RechargeListener - Received payment event for Recharge ID: null with status: SUCCESS
+2026-04-30 19:01:01 INFO  com.capg.rechargenova.service.RechargeListener - Received payment event for Recharge ID: 1 with status: FAILED
+2026-04-30 19:01:01 INFO  com.capg.rechargenova.service.RechargeListener - Received payment event for Recharge ID: 1 with status: SUCCESS
+2026-04-30 19:01:01 INFO  com.capg.rechargenova.service.RechargeListener - Recharge ID: 1 status updated to SUCCESS
+2026-04-30 19:01:02 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 19:01:02 ERROR com.capg.rechargenova.service.RechargeService - Invalid Operator/Plan for userId: 501
+2026-04-30 19:01:02 INFO  com.capg.rechargenova.service.RechargeService - Fetching all recharges for admin (Page: 0, Size: 10)
+2026-04-30 19:01:02 INFO  com.capg.rechargenova.service.RechargeService - Fetching recharge by id: 1
+2026-04-30 19:01:02 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 19:01:02 INFO  com.capg.rechargenova.service.RechargeService - Recharge created with ID: 1
+2026-04-30 19:01:02 INFO  com.capg.rechargenova.service.RechargeService - Calling payment service for synchronous processing...
+2026-04-30 19:01:02 ERROR com.capg.rechargenova.service.RechargeService - Payment response is null for rechargeId: 1
+2026-04-30 19:01:02 ERROR com.capg.rechargenova.service.RechargeService - Synchronous payment failed for rechargeId 1: Payment response is null
+2026-04-30 19:01:02 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 19:01:02 ERROR com.capg.rechargenova.service.RechargeService - Invalid Operator/Plan for userId: 501
+2026-04-30 19:01:02 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 19:01:02 INFO  com.capg.rechargenova.service.RechargeService - Recharge created with ID: 1
+2026-04-30 19:01:02 INFO  com.capg.rechargenova.service.RechargeService - Razorpay payment detected for rechargeId: 1. Skipping sync processing.
+2026-04-30 19:01:02 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 19:01:02 ERROR com.capg.rechargenova.service.RechargeService - Invalid Operator/Plan for userId: 501
+2026-04-30 19:01:02 INFO  com.capg.rechargenova.service.RechargeService - Fetching recharge by id: 99
+2026-04-30 19:01:02 ERROR com.capg.rechargenova.service.RechargeService - Recharge not found for id: 99
+2026-04-30 19:01:02 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 19:01:02 INFO  com.capg.rechargenova.service.RechargeService - Recharge created with ID: 1
+2026-04-30 19:01:02 INFO  com.capg.rechargenova.service.RechargeService - Calling payment service for synchronous processing...
+2026-04-30 19:01:02 ERROR com.capg.rechargenova.service.RechargeService - Synchronous payment failed for rechargeId 1: Error
+2026-04-30 19:01:02 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 19:01:02 ERROR com.capg.rechargenova.service.RechargeService - User not found: 501
+2026-04-30 19:01:02 INFO  com.capg.rechargenova.service.RechargeService - Fetching recharge by id: 1
+2026-04-30 19:01:02 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 19:01:02 INFO  com.capg.rechargenova.service.RechargeService - Recharge created with ID: 1
+2026-04-30 19:01:02 INFO  com.capg.rechargenova.service.RechargeService - Calling payment service for synchronous processing...
+2026-04-30 19:01:02 INFO  com.capg.rechargenova.service.RechargeService - Synchronous recharge successful for id: 1
+2026-04-30 19:01:02 INFO  com.capg.rechargenova.service.RechargeService - Fetching recharges for userId: 501 (Page: 0, Size: 10)
+2026-04-30 19:01:02 INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-30 19:01:02 INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-04-30 19:01:02 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-30 19:01:02 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-04-30 19:01:02 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-04-30 19:03:26 INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-04-30 19:03:27 INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-30 19:03:27 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-30 19:03:27 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 7 ms
+2026-04-30 19:03:28 INFO  com.capg.rechargenova.controller.RechargeController - Admin API called to list all recharges (Page: 0, Size: 10)
+2026-04-30 19:03:28 WARN  org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: (was java.lang.UnsupportedOperationException)]
+2026-04-30 19:03:28 INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-30 19:03:28 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-30 19:03:28 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 2 ms
+2026-04-30 19:03:28 INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-30 19:03:28 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-30 19:03:28 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+2026-04-30 19:03:28 INFO  com.capg.rechargenova.controller.RechargeController - Fetching recharges for userId: 501 (Page: 0, Size: 10)
+2026-04-30 19:03:28 WARN  org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: (was java.lang.UnsupportedOperationException)]
+2026-04-30 19:03:28 INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-30 19:03:28 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-30 19:03:28 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+2026-04-30 19:03:28 INFO  com.capg.rechargenova.controller.RechargeController - Fetching recharge by id: 1
+2026-04-30 19:03:29 INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-30 19:03:29 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-30 19:03:29 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+2026-04-30 19:03:29 INFO  com.capg.rechargenova.controller.RechargeController - Initiating recharge for userId: 501
+2026-04-30 19:04:23 INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-04-30 19:04:25 INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-30 19:04:25 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-30 19:04:25 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 11 ms
+2026-04-30 19:04:26 INFO  com.capg.rechargenova.controller.RechargeController - Admin API called to list all recharges (Page: 0, Size: 10)
+2026-04-30 19:04:26 WARN  org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: (was java.lang.UnsupportedOperationException)]
+2026-04-30 19:04:26 INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-30 19:04:26 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-30 19:04:26 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+2026-04-30 19:04:26 INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-30 19:04:26 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-30 19:04:26 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+2026-04-30 19:04:26 INFO  com.capg.rechargenova.controller.RechargeController - Fetching recharges for userId: 501 (Page: 0, Size: 10)
+2026-04-30 19:04:26 WARN  org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: (was java.lang.UnsupportedOperationException)]
+2026-04-30 19:04:26 INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-30 19:04:26 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-30 19:04:26 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+2026-04-30 19:04:26 INFO  com.capg.rechargenova.controller.RechargeController - Fetching recharge by id: 1
+2026-04-30 19:04:26 INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-30 19:04:26 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-30 19:04:26 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2026-04-30 19:04:27 INFO  com.capg.rechargenova.controller.RechargeController - Initiating recharge for userId: 501
+2026-04-30 19:06:04 INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-04-30 19:06:06 INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-30 19:06:06 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-30 19:06:06 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 8 ms
+2026-04-30 19:06:07 INFO  com.capg.rechargenova.controller.RechargeController - Admin API called to list all recharges (Page: 0, Size: 10)
+2026-04-30 19:06:08 INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-30 19:06:08 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-30 19:06:08 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+2026-04-30 19:06:08 INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-30 19:06:08 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-30 19:06:08 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+2026-04-30 19:06:08 INFO  com.capg.rechargenova.controller.RechargeController - Fetching recharges for userId: 501 (Page: 0, Size: 10)
+2026-04-30 19:06:08 INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-30 19:06:08 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-30 19:06:08 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+2026-04-30 19:06:08 INFO  com.capg.rechargenova.controller.RechargeController - Fetching recharge by id: 1
+2026-04-30 19:06:08 INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-30 19:06:08 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-30 19:06:08 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+2026-04-30 19:06:08 INFO  com.capg.rechargenova.controller.RechargeController - Initiating recharge for userId: 501

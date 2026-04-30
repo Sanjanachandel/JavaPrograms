@@ -129,15 +129,27 @@ describe('ProfileComponent', () => {
   });
 
   // ─── logout() ─────────────────────────────────────────────────────────────
-  it('should call auth.logout() and navigate to login when logout() is called', () => {
+  it('should show logout modal on logout()', () => {
+    component.logout();
+    expect(component.isLogoutModalVisible()).toBe(true);
+  });
+
+  it('should call auth.logout() and navigate to login on onLogoutConfirm()', () => {
     const router = TestBed.inject(Router);
     vi.spyOn(router, 'navigate');
     vi.spyOn(authService, 'logout');
     
-    component.logout();
+    component.onLogoutConfirm();
     
+    expect(component.isLogoutModalVisible()).toBe(false);
     expect(authService.logout).toHaveBeenCalled();
     expect(router.navigate).toHaveBeenCalledWith(['/auth/login']);
+  });
+
+  it('should hide modal on onLogoutCancel()', () => {
+    component.isLogoutModalVisible.set(true);
+    component.onLogoutCancel();
+    expect(component.isLogoutModalVisible()).toBe(false);
   });
 
   // ─── onFileChange (no uid) ────────────────────────────────────────────────

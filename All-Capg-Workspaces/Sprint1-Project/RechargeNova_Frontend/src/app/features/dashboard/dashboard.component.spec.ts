@@ -19,7 +19,7 @@ const makeRecharge = (id: number, status: 'SUCCESS' | 'FAILED', amount: number):
   id, userId: 1, operatorId: 2, planId: 3,
   mobileNumber: '9876543210', amount, status,
   createdAt: '2024-06-01T10:00:00Z', message: '',
-  paymentMethod: 'UPI',
+  paymentMethod: 'UPI', rechargeType: 'PREPAID',
 });
 
 describe('DashboardComponent', () => {
@@ -50,8 +50,8 @@ describe('DashboardComponent', () => {
     httpMock  = TestBed.inject(HttpTestingController);
     fixture.detectChanges();
     // Flush the HTTP call made in ngOnInit
-    const req = httpMock.expectOne(`${BASE}/recharges/user/1`);
-    req.flush([]);
+    const req = httpMock.expectOne(`${BASE}/recharges/user/1?page=0&size=10`);
+    req.flush({ content: [], totalPages: 0, totalElements: 0, number: 0 });
   });
 
   afterEach(() => {
@@ -174,8 +174,65 @@ describe('DashboardComponent Initialization Error', () => {
 
   it('should set loading=false when API fails', () => {
     fixture.detectChanges();
-    const req = httpMock.expectOne(`${BASE}/recharges/user/1`);
+    const req = httpMock.expectOne(`${BASE}/recharges/user/1?page=0&size=10`);
     req.flush({}, { status: 500, statusText: 'Error' });
     expect(component.loading()).toBe(false);
   });
+
+  it('should transform date and sort recharges with ensureIst logic', () => {
+    // Manually trigger ngOnInit again with data
+    const rawRecharge1 = { 
+      id: 98, userId: 1, operatorId: 2, planId: 3, mobileNumber: '123', amount: 100, status: 'SUCCESS', 
+      createdAt: '2024-01-01 10:00:00', // Older
+      paymentMethod: 'UPI', rechargeType: 'PREPAID', message: ''
+    };
+    const rawRecharge2 = { 
+      id: 99, userId: 1, operatorId: 2, planId: 3, mobileNumber: '456', amount: 200, status: 'SUCCESS', 
+      createdAt: '2024-01-02 10:00:00', // Newer
+      paymentMethod: 'UPI', rechargeType: 'PREPAID', message: ''
+    };
+    
+    component.ngOnInit();
+    const req = httpMock.expectOne(`${BASE}/recharges/user/1?page=0&size=10`);
+    req.flush({ content: [rawRecharge1, rawRecharge2], totalPages: 1, totalElements: 2, number: 0 });
+    
+    expect(component.recharges()[0].id).toBe(99);
+    expect(component.recharges()[0].createdAt).toContain('T');
+    expect(component.recharges()[1].id).toBe(98);
+  });
+
+  it('should handle error in ngOnInit', () => {
+    component.ngOnInit();
+    const req = httpMock.expectOne(`${BASE}/recharges/user/1?page=0&size=10`);
+    req.flush({}, { status: 500, statusText: 'Error' });
+    expect(component.loading()).toBe(false);
+  });
+
+  it('should return empty string for null date in ensureIst', () => {
+    const raw = { ...makeRecharge(1, 'SUCCESS', 100), createdAt: null };
+    component.ngOnInit();
+    const req = httpMock.expectOne(`${BASE}/recharges/user/1?page=0&size=10`);
+    req.flush({ content: [raw], totalPages: 1, totalElements: 1, number: 0 });
+    expect(component.recharges()[0].createdAt).toBe('');
+  });
+
+  it('should handle null UID in ngOnInit', () => {
+    const auth = TestBed.inject(AuthService);
+    vi.spyOn(auth, 'getUserId').mockReturnValue(null);
+    component.ngOnInit();
+    expect(component.loading()).toBe(false);
+    httpMock.expectNone(`${BASE}/recharges/user/null?page=0&size=10`);
+  });
+
+  it('should handle date string already containing Z or +', () => {
+    const raw = { ...makeRecharge(1, 'SUCCESS', 100), createdAt: '2024-01-01T10:00:00Z' };
+    component.ngOnInit();
+    const req = httpMock.expectOne(`${BASE}/recharges/user/1?page=0&size=10`);
+    req.flush({ content: [raw], totalPages: 1, totalElements: 1, number: 0 });
+    expect(component.recharges()[0].createdAt).toBe('2024-01-01T10:00:00.000Z');
+  });
 });
+
+
+
+

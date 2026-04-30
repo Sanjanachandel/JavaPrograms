@@ -91,12 +91,12 @@ describe('UserApiService', () => {
   it('should GET /users with Authorization header', () => {
     authService.saveAuth(mockAuthResponse);
     service.getAllUsers().subscribe(res => {
-      expect(res).toEqual([mockUser]);
+      expect(res.content).toEqual([mockUser]);
     });
-    const req = httpMock.expectOne(`${BASE}/users`);
+    const req = httpMock.expectOne(`${BASE}/users?page=0&size=10`);
     expect(req.request.method).toBe('GET');
     expect(req.request.headers.get('Authorization')).toBe('Bearer jwt-token');
-    req.flush([mockUser]);
+    req.flush({ content: [mockUser], totalElements: 1, totalPages: 1, number: 0 });
   });
 
   // ─── forgotPassword ──────────────────────────────────────────────────────
@@ -133,4 +133,14 @@ describe('UserApiService', () => {
     expect(req.request.headers.get('X-User-Id')).toBe('1');
     req.flush({ profilePictureUrl: 'https://cdn.example.com/pic.jpg' });
   });
+
+  it('should use empty string if token is null in getHeaders', () => {
+    const auth = TestBed.inject(AuthService);
+    vi.spyOn(auth, 'token').mockReturnValue(null);
+    service.getUserById(1).subscribe();
+    const req = httpMock.expectOne(`${BASE}/users/1`);
+    expect(req.request.headers.get('Authorization')).toBe('Bearer ');
+  });
 });
+
+

@@ -17,7 +17,7 @@ const makeRecharge = (id: number, status: 'SUCCESS' | 'FAILED', mobile: string, 
   id, userId, operatorId: 2, planId: 3,
   mobileNumber: mobile, amount: 199, status,
   createdAt: '2024-06-01T10:00:00Z', message: '',
-  paymentMethod: 'UPI',
+  paymentMethod: 'UPI', rechargeType: 'PREPAID',
 });
 
 describe('AdminTransactionsComponent', () => {
@@ -45,7 +45,7 @@ describe('AdminTransactionsComponent', () => {
     component = fixture.componentInstance;
     httpMock  = TestBed.inject(HttpTestingController);
     fixture.detectChanges();
-    httpMock.expectOne(`${BASE}/recharges`).flush([]);
+    httpMock.expectOne(`${BASE}/recharges?page=0&size=10`).flush({ content: [], totalPages: 0, totalElements: 0, number: 0 });
   });
 
   afterEach(() => {
@@ -115,10 +115,79 @@ describe('AdminTransactionsComponent', () => {
     component.loadTransactions();
     expect(component.loading()).toBe(true);
 
-    const req = httpMock.expectOne(`${BASE}/recharges`);
+    const req = httpMock.expectOne(`${BASE}/recharges?page=0&size=10`);
     req.flush({ message: 'Error' }, { status: 500, statusText: 'Server Error' });
 
     expect(toast.error).toHaveBeenCalledWith('Failed to load transactions');
     expect(component.loading()).toBe(false);
   });
+
+  // ─── Pagination ──────────────────────────────────────────────────────────
+  it('should call loadTransactions with page+1 on nextPage when not on last page', () => {
+    component.currentPage.set(0);
+    component.totalPages.set(3);
+    component.nextPage();
+    const req = httpMock.expectOne(`${BASE}/recharges?page=1&size=10`);
+    req.flush({ content: [], totalPages: 3, totalElements: 0, number: 1 });
+  });
+
+  it('should NOT call loadTransactions on nextPage when already on last page', () => {
+    component.currentPage.set(2);
+    component.totalPages.set(3);
+    component.nextPage();
+    httpMock.expectNone(`${BASE}/recharges?page=3&size=10`);
+  });
+
+  it('should call loadTransactions with page-1 on prevPage when not on first page', () => {
+    component.currentPage.set(2);
+    component.totalPages.set(3);
+    component.prevPage();
+    const req = httpMock.expectOne(`${BASE}/recharges?page=1&size=10`);
+    req.flush({ content: [], totalPages: 3, totalElements: 0, number: 1 });
+  });
+
+  it('should NOT call loadTransactions on prevPage when already on first page', () => {
+    component.currentPage.set(0);
+    component.prevPage();
+    httpMock.expectNone(`${BASE}/recharges?page=-1&size=10`);
+  });
+
+  it('should transform date in loadTransactions', () => {
+    const rawRecharge = { 
+      id: 99, userId: 1, operatorId: 2, planId: 3, mobileNumber: '123', 
+      amount: 100, status: 'SUCCESS', 
+      createdAt: '2024-01-01 10:00:00', // No Z, has space
+      paymentMethod: 'UPI', message: ''
+    };
+    component.loadTransactions(0);
+    const req = httpMock.expectOne(`${BASE}/recharges?page=0&size=10`);
+    req.flush({ content: [rawRecharge], totalPages: 1, totalElements: 1, number: 0 });
+    
+    expect(component.transactions()[0].createdAt).toContain('T');
+    expect(component.transactions()[0].createdAt).toContain('Z');
+  });
+
+  it('should default paymentMethod to UPI if missing', () => {
+    const raw = makeRecharge(1, 'SUCCESS', '123', 1);
+    (raw as any).paymentMethod = null;
+    component.loadTransactions(0);
+    const req = httpMock.expectOne(`${BASE}/recharges?page=0&size=10`);
+    req.flush({ content: [raw], totalPages: 1, totalElements: 1, number: 0 });
+    expect(component.transactions()[0].paymentMethod).toBe('UPI');
+  });
+
+    expect(component.transactions()[0].createdAt).toBe('');
+  });
+
+  it('should handle date string already containing Z in ensureIst', () => {
+    const raw = makeRecharge(1, 'SUCCESS', '123', 1);
+    raw.createdAt = '2024-01-01T10:00:00Z';
+    component.loadTransactions(0);
+    const req = httpMock.expectOne(`${BASE}/recharges?page=0&size=10`);
+    req.flush({ content: [raw], totalPages: 1, totalElements: 1, number: 0 });
+    expect(component.transactions()[0].createdAt).toBe('2024-01-01T10:00:00.000Z');
+  });
 });
+
+
+

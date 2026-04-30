@@ -28,6 +28,7 @@ const mockRecharge: RechargeResponse = {
   amount: 299,
   status: 'SUCCESS',
   paymentMethod: 'UPI',
+  rechargeType: 'PREPAID',
   createdAt: '2024-06-01T10:00:00Z',
   message: 'Recharge successful',
 };
@@ -70,6 +71,7 @@ describe('RechargeApiService', () => {
       planId: 3,
       mobileNumber: '9876543210',
       paymentMethod: 'UPI',
+      rechargeType: 'PREPAID',
     };
     service.initiateRecharge(1, payload).subscribe(res => {
       expect(res).toEqual(mockRecharge);
@@ -96,31 +98,39 @@ describe('RechargeApiService', () => {
   // ─── getRechargesByUserId ────────────────────────────────────────────────
   it('should GET /recharges/user/1 with Authorization header', () => {
     service.getRechargesByUserId(1).subscribe(res => {
-      expect(res).toEqual([mockRecharge]);
+      expect(res.content).toEqual([mockRecharge]);
     });
-    const req = httpMock.expectOne(`${BASE}/recharges/user/1`);
+    const req = httpMock.expectOne(`${BASE}/recharges/user/1?page=0&size=10`);
     expect(req.request.method).toBe('GET');
     expect(req.request.headers.get('Authorization')).toBe('Bearer test-jwt');
-    req.flush([mockRecharge]);
+    req.flush({ content: [mockRecharge], totalElements: 1, totalPages: 1, number: 0 });
   });
 
   // ─── getAllRecharges ──────────────────────────────────────────────────────
   it('should GET /recharges with Authorization header', () => {
     service.getAllRecharges().subscribe(res => {
-      expect(res).toEqual([mockRecharge]);
+      expect(res.content).toEqual([mockRecharge]);
     });
-    const req = httpMock.expectOne(`${BASE}/recharges`);
+    const req = httpMock.expectOne(`${BASE}/recharges?page=0&size=10`);
     expect(req.request.method).toBe('GET');
     expect(req.request.headers.get('Authorization')).toBe('Bearer test-jwt');
-    req.flush([mockRecharge]);
+    req.flush({ content: [mockRecharge], totalElements: 1, totalPages: 1, number: 0 });
   });
 
   // ─── No token scenario ───────────────────────────────────────────────────
   it('should still make request with empty Bearer when not logged in', () => {
     authService.logout();
     service.getAllRecharges().subscribe();
+    const req = httpMock.expectOne(`${BASE}/recharges?page=0&size=10`);
+    expect(req.request.headers.get('Authorization')).toBe('Bearer ');
+    req.flush({ content: [], totalElements: 0, totalPages: 0, number: 0 });
+  });
+
+  it('should use empty string if token is null in headers(userId)', () => {
+    authService.logout();
+    service.initiateRecharge(1, { operatorId: 1, planId: 1, mobileNumber: '123', paymentMethod: 'UPI', rechargeType: 'PREPAID' }).subscribe();
     const req = httpMock.expectOne(`${BASE}/recharges`);
     expect(req.request.headers.get('Authorization')).toBe('Bearer ');
-    req.flush([]);
   });
 });
+
