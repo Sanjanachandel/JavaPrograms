@@ -1,0 +1,29 @@
+public class Solution3{
+    public static void main(String[] args)
+    {
+        Thermostat t=new Thermostat(22);
+        t.setTemperature(35);
+        t.setTemperature(25);
+        t.display();
+    }
+
+class Thermostat{
+    private int temperature;
+    public Thermostat(int temperature)
+    {
+        this.temperature=temperature;
+    }
+    public void setTemperature(int temp)
+    {
+        if(temp>16 && temp <30){
+            temperature=temp;
+        }
+        else{
+            System.out.println("Temperature out of range");
+        }
+    }
+    public void display()
+    {
+        System.out.println("Current Temperature: "+temperature);
+    }
+}
