@@ -1,0 +1,74 @@
+<div class="page-enter">
+  <header class="admin-header">
+    <h1 class="section-title">👥 User Management</h1>
+    <p class="section-subtitle">View and manage all registered users in the system.</p>
+  </header>
+
+  <div class="admin-card glass-card">
+    <div class="section-header">
+      <h3>Registered Users ({{ users().length }})</h3>
+      <button class="btn-refresh" (click)="loadUsers()">🔄 Refresh</button>
+    </div>
+
+    <div class="table-container">
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Role</th>
+            <th>Joined</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (u of users(); track u.id) {
+            <tr>
+              <td>#{{ u.id }}</td>
+              <td>
+                <div class="user-info">
+                  @if (u.profilePictureUrl) {
+                    <img [src]="u.profilePictureUrl" alt="" class="mini-avatar">
+                  } @else {
+                    <div class="mini-initials">{{ u.name.charAt(0) }}</div>
+                  }
+                  <strong>{{ u.name }}</strong>
+                </div>
+              </td>
+              <td>{{ u.email }}</td>
+              <td>{{ u.phoneNumber }}</td>
+              <td>
+                <span class="badge" [class.badge-purple]="u.role === 'ADMIN' || u.role === 'ROLE_ADMIN'">
+                  {{ u.role }}
+                </span>
+              </td>
+              <td>{{ u.createdAt | date:'d MMM y' }}</td>
+            </tr>
+          } @empty {
+            <tr><td colspan="6" style="text-align:center;">No users found.</td></tr>
+          }
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Pagination -->
+    @if (totalPages() > 1) {
+      <div class="pagination-controls">
+        <button 
+          class="pg-btn" 
+          [disabled]="currentPage() === 0" 
+          (click)="prevPage()">
+          &larr; Previous
+        </button>
+        <span class="pg-info">Page {{ currentPage() + 1 }} of {{ totalPages() }}</span>
+        <button 
+          class="pg-btn" 
+          [disabled]="currentPage() === totalPages() - 1" 
+          (click)="nextPage()">
+          Next &rarr;
+        </button>
+      </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,105 @@
+<div class="auth-wrapper">
+  <!-- Theme Toggle -->
+  <button (click)="themeSvc.toggleTheme()" class="floating-theme-toggle" title="Toggle Theme">
+    {{ themeSvc.theme() === 'dark' ? '☀️' : '🌙' }}
+  </button>
+
+  <!-- Decoration -->
+  <div class="auth-decoration" aria-hidden="true">
+    <div class="deco-glow"></div>
+    <div class="deco-content">
+      <div class="deco-icon">🚀</div>
+      <h2 class="deco-title">Join Thousands<br>of Happy Users</h2>
+      <p class="deco-sub">Create your account in seconds and start recharging instantly.</p>
+      <div class="deco-steps">
+        <div class="deco-step"><span class="step-num">1</span><span>Create your account</span></div>
+        <div class="deco-step"><span class="step-num">2</span><span>Choose a plan</span></div>
+        <div class="deco-step"><span class="step-num">3</span><span>Recharge instantly</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Register form -->
+  <div class="auth-form-panel">
+    <div class="auth-card">
+      <div class="auth-header">
+        <button class="back-to-home-top" routerLink="/">← Back to Home</button>
+        <h2 class="auth-title">Create Account</h2>
+        <p class="auth-subtitle">Fill in your details to get started</p>
+      </div>
+
+      <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate class="auth-form" id="register-form">
+        <!-- Name -->
+        <div class="form-group">
+          <label class="form-label" for="reg-name">Full Name</label>
+          <input id="reg-name" type="text" formControlName="name" class="form-control"
+            [class.is-invalid]="isInvalid('name')" placeholder="Your full name" autocomplete="name">
+          @if (isInvalid('name')) {
+          <span class="error-msg">Name must contain only alphabets and spaces</span>
+          }
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label class="form-label" for="reg-email">Email address</label>
+          <input id="reg-email" type="email" formControlName="email" class="form-control"
+            [class.is-invalid]="isInvalid('email')" placeholder="you@example.com" autocomplete="email">
+          @if (isInvalid('email')) {
+          <span class="error-msg">Enter a valid email address</span>
+          }
+        </div>
+
+        <!-- Phone -->
+        <div class="form-group">
+          <label class="form-label" for="reg-phone">Mobile Number</label>
+          <div class="phone-input">
+            <span class="phone-prefix">🇮🇳 +91</span>
+            <input id="reg-phone" type="tel" formControlName="phoneNumber" class="form-control phone-field"
+              [class.is-invalid]="isInvalid('phoneNumber')" placeholder="9876543210" maxlength="10" autocomplete="tel">
+          </div>
+          @if (isInvalid('phoneNumber')) {
+          <span class="error-msg">Enter valid 10-digit Indian mobile number</span>
+          }
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+          <label class="form-label" for="reg-password">Password</label>
+          <div class="input-wrapper">
+            <input id="reg-password" [type]="showPassword() ? 'text' : 'password'" formControlName="password"
+              class="form-control" [class.is-invalid]="isInvalid('password')" placeholder="Min 6 characters"
+              autocomplete="new-password">
+            <button type="button" class="toggle-pw" (click)="showPassword.set(!showPassword())"
+              id="toggle-reg-password">
+              {{ showPassword() ? '🙈' : '👁' }}
+            </button>
+          </div>
+          <!-- Strength bar -->
+          @if (form.get('password')?.value) {
+          <div class="strength-bar">
+            <div class="strength-fill" [style.width]="strengthPct() + '%'" [class]="'strength-' + strengthLabel()">
+            </div>
+          </div>
+          <span class="strength-text" [class]="'st-' + strengthLabel()">{{ strengthLabel() | titlecase }}</span>
+          }
+          @if (isInvalid('password')) {
+          <span class="error-msg">Password must be at least 6 characters</span>
+          }
+        </div>
+
+        <button id="btn-register" type="submit" class="btn-primary w-full" [disabled]="loading()">
+          @if (loading()) {
+          <span class="spinner"></span> Creating account…
+          } @else {
+          Create Account →
+          }
+        </button>
+      </form>
+
+      <p class="auth-switch">
+        Already have an account?
+        <a routerLink="/auth/login" id="link-login" class="auth-link">Sign in</a>
+      </p>
+    </div>
+  </div>
+</div>

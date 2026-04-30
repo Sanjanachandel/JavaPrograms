@@ -1,0 +1,107 @@
+<div class="page-enter history-page">
+  <div class="hist-header">
+    <div>
+      <h1 class="section-title">📋 Recharge History</h1>
+      <p class="section-subtitle">All your past recharge transactions</p>
+    </div>
+    <!-- Filter chips -->
+    <div class="filter-chips">
+      @for (f of filters; track f.value) {
+        <button
+          class="chip"
+          [class.active]="activeFilter() === f.value"
+          (click)="activeFilter.set(f.value)"
+          [id]="'filter-' + f.value">
+          {{ f.label }}
+        </button>
+      }
+    </div>
+  </div>
+
+  <!-- Summary strip -->
+  <div class="summary-strip">
+    <div class="sum-item">
+      <span class="sum-val">{{ filtered().length }}</span>
+      <span class="sum-lbl">Shown</span>
+    </div>
+    <div class="sum-divider"></div>
+    <div class="sum-item">
+      <span class="sum-val">₹{{ totalShown() }}</span>
+      <span class="sum-lbl">Total</span>
+    </div>
+    <div class="sum-divider"></div>
+    <div class="sum-item">
+      <span class="sum-val">{{ successShown() }}</span>
+      <span class="sum-lbl">Successful</span>
+    </div>
+  </div>
+
+  <!-- Table -->
+  @if (loading()) {
+    <div class="skeletons">
+      @for (s of [1,2,3,4,5]; track s) {
+        <div class="skeleton" style="height:72px; border-radius:12px;"></div>
+      }
+    </div>
+  } @else if (filtered().length === 0) {
+    <div class="empty-state">
+      <div class="empty-icon">📭</div>
+      <p>No recharges found.</p>
+    </div>
+  } @else {
+    <div class="history-table-wrap">
+      <table class="history-table" id="recharge-history-table">
+        <thead>
+          <tr>
+            <th>#ID</th>
+            <th>Mobile</th>
+            <th>Amount</th>
+            <th>Method</th>
+            <th>Status</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (r of filtered(); track r.id) {
+            <tr class="table-row" [id]="'row-' + r.id">
+              <td class="id-cell">#{{ r.id }}</td>
+              <td class="mobile-cell">
+                <div class="mobile-icon">📱</div>
+                {{ r.mobileNumber }}
+              </td>
+              <td class="amount-cell">₹{{ r.amount }}</td>
+              <td>
+                <span class="badge badge-cyan">{{ r.paymentMethod || 'UPI' }}</span>
+              </td>
+              <td>
+                <span class="badge" [class]="r.status === 'SUCCESS' ? 'badge-success' : 'badge-error'">
+                  {{ r.status }}
+                </span>
+              </td>
+              <td class="date-cell">{{ r.createdAt | date:'d MMM y':'+0530' }}<br><span class="time">{{ r.createdAt | date:'h:mm a':'+0530' }}</span></td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Pagination Controls -->
+    @if (totalPages() > 1) {
+      <div class="pagination-controls">
+        <button 
+          class="pg-btn" 
+          [disabled]="currentPage() === 0" 
+          (click)="prevPage()">
+          &larr; Previous
+        </button>
+        <span class="pg-info">Page {{ currentPage() + 1 }} of {{ totalPages() }}</span>
+        <button 
+          class="pg-btn" 
+          [disabled]="currentPage() === totalPages() - 1" 
+          (click)="nextPage()">
+          Next &rarr;
+        </button>
+      </div>
+    }
+  }
+</div>

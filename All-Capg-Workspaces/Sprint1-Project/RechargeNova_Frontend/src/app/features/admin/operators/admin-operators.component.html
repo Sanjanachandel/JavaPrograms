@@ -1,0 +1,261 @@
+<div class="page-enter">
+  <div class="main-content-wrapper" [class.blur-background]="showOperatorForm || showPlanForm">
+    <header class="admin-header">
+      <h1 class="section-title">📡 Network Operators</h1>
+      <p class="section-subtitle">Configure mobile networks and their respective recharge plans.</p>
+    </header>
+  
+    <div class="admin-grid">
+      <!-- Operators List -->
+      <div class="admin-card glass-card">
+        <div class="section-header">
+          <h3>Operators ({{ operators().length }})</h3>
+          <button class="btn-primary-sm" (click)="toggleOperatorForm()">
+            + New Operator
+          </button>
+        </div>
+  
+        <div class="table-container">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Circle</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (op of operators(); track op.id) {
+                <tr [class.selected]="selectedOperatorId === op.id">
+                  <td>#{{ op.id }}</td>
+                  <td><strong>{{ op.name }}</strong></td>
+                  <td>{{ op.circle }}</td>
+                  <td class="action-cell">
+                    <button class="btn-action btn-manage" (click)="viewPlans(op)">📋 Plans</button>
+                    <button class="btn-action btn-edit" (click)="editOperator(op)">✏️</button>
+                    <button class="btn-action btn-delete" (click)="deleteOperator(op.id)">🗑️</button>
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+  
+      <!-- Plans List -->
+      @if (selectedOperatorId) {
+        <div class="admin-card glass-card border-accent">
+          <div class="section-header">
+            <h3>Plans for {{ selectedOperatorName }}</h3>
+            <button class="btn-primary-sm" (click)="togglePlanForm()">
+              + New Plan
+            </button>
+          </div>
+  
+          <div class="table-container">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Category</th>
+                  <th>Amount</th>
+                  <th>Validity</th>
+                  <th>Type</th>
+                  <th>Description</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                @for (plan of operatorPlans(); track plan.id) {
+                  <tr>
+                    <td>#{{ plan.id }}</td>
+                    <td>{{ plan.category || 'N/A' }}</td>
+                    <td class="amount">₹{{ plan.amount }}</td>
+                    <td>{{ plan.validity }} Days</td>
+                    <td>
+                      <span class="badge" [class.badge-purple]="plan.type === 'Prepaid'" [style.background]="plan.type === 'Postpaid' ? 'rgba(6,182,212,0.15)' : ''" [style.color]="plan.type === 'Postpaid' ? '#06b6d4' : ''">
+                        {{ plan.type }}
+                      </span>
+                    </td>
+                    <td>{{ plan.description }}</td>
+                    <td class="action-cell">
+                      <button class="btn-action btn-edit" (click)="editPlan(plan)">✏️</button>
+                      <button class="btn-action btn-delete" (click)="deletePlan(plan.id)">🗑️</button>
+                    </td>
+                  </tr>
+                } @empty {
+                  <tr><td colspan="6" style="text-align:center;">No plans found for this operator.</td></tr>
+                }
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Pagination for Plans -->
+          @if (totalPlanPages() > 1) {
+            <div class="pagination-controls small">
+              <button 
+                class="pg-btn" 
+                [disabled]="currentPlanPage() === 0" 
+                (click)="prevPlanPage()">
+                &larr; Prev
+              </button>
+              <span class="pg-info">P. {{ currentPlanPage() + 1 }} / {{ totalPlanPages() }}</span>
+              <button 
+                class="pg-btn" 
+                [disabled]="currentPlanPage() === totalPlanPages() - 1" 
+                (click)="nextPlanPage()">
+                Next &rarr;
+              </button>
+            </div>
+          }
+        </div>
+      }
+    </div>
+  </div>
+</div>
+
+  <!-- Modals (Outside the wrapper and page-enter to avoid being blurred and shifted) -->
+  @if (showOperatorForm) {
+    <div class="fixed inset-0 z-[99999] flex items-center justify-center bg-black/80 backdrop-blur-md transition-all duration-300 md:pl-[240px]" 
+         (click)="$event.target === $event.currentTarget && resetOperatorForm()">
+      <div class="modal-container operator-modal modern-modal max-w-[550px] w-full mx-4">
+        <div class="modal-header">
+          <div class="title-group">
+            <h2 class="modal-title-main">NEW <span class="accent-text">OPERATOR</span></h2>
+            <p class="modal-subtitle">PLEASE FILL IN ALL REQUIRED DETAILS BELOW</p>
+          </div>
+          <button class="btn-close-circle" (click)="resetOperatorForm()">×</button>
+        </div>
+        
+        <form #opForm="ngForm" (ngSubmit)="saveOperator()">
+          <div class="modal-body">
+            <div class="modern-form">
+              <div class="form-grid">
+                <div class="input-group full-width">
+                  <label class="modern-label">OPERATOR NAME</label>
+                  <div class="input-wrapper">
+                    <input type="text" name="opName" [(ngModel)]="operatorForm.name" #opName="ngModel" 
+                           placeholder="e.g. Jio, Airtel, Vi" class="modern-input" required minlength="2" />
+                  </div>
+                  @if (opName.touched && opName.invalid) {
+                    <span class="error-text">Name is required (min 2 chars)</span>
+                  }
+                </div>
+                
+
+    
+                <div class="input-group">
+                  <label class="modern-label">OPERATING CIRCLE</label>
+                  <input type="text" name="opCircle" [(ngModel)]="operatorForm.circle" #opCircle="ngModel" 
+                         placeholder="e.g. Mumbai, All India" class="modern-input" required />
+                  @if (opCircle.touched && opCircle.invalid) {
+                    <span class="error-text">Circle is required</span>
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer modern-footer">
+            <button type="button" class="btn-text" (click)="resetOperatorForm()">CANCEL</button>
+            <button type="button" class="btn-modern-primary" (click)="saveOperator()">
+              {{ isEditingOperator ? 'UPDATE NOW' : 'CREATE NOW' }}
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  }
+
+  @if (showPlanForm) {
+    <div class="fixed inset-0 z-[99999] flex items-center justify-center bg-black/80 backdrop-blur-md transition-all duration-300 md:pl-[240px]" 
+         (click)="$event.target === $event.currentTarget && resetPlanForm()">
+      <div class="modal-container plan-modal modern-modal max-w-[550px] w-full mx-4">
+        <div class="modal-header">
+          <div class="title-group">
+            <h2 class="modal-title-main">NEW <span class="accent-text">PLAN</span></h2>
+            <p class="modal-subtitle">PLEASE FILL IN ALL REQUIRED DETAILS BELOW</p>
+          </div>
+          <button class="btn-close-circle" (click)="resetPlanForm()">×</button>
+        </div>
+
+        <form #pForm="ngForm" (ngSubmit)="savePlan()">
+          <div class="modal-body">
+            <div class="modern-form">
+              <div class="form-grid">
+                <div class="input-group">
+                  <label class="modern-label">PLAN CATEGORY</label>
+                  <select name="pCategory" [(ngModel)]="planForm.category" #pCategory="ngModel" class="modern-input" required>
+                    @for (cat of planCategories; track cat) {
+                      <option [value]="cat">{{ cat }}</option>
+                    }
+                  </select>
+                </div>
+
+                <div class="input-group">
+                  <label class="modern-label">PLAN TYPE</label>
+                  <select name="pType" [(ngModel)]="planForm.type" #pType="ngModel" class="modern-input" required>
+                    @for (type of operatorTypes; track type) {
+                      <option [value]="type">{{ type }}</option>
+                    }
+                  </select>
+                </div>
+  
+                <div class="input-group">
+                  <label class="modern-label">PRICE POINT (₹)</label>
+                  <input type="number" name="pAmount" [(ngModel)]="planForm.amount" #pAmount="ngModel" 
+                         placeholder="e.g. 299" class="modern-input" required min="1" />
+                  @if (pAmount.touched && pAmount.invalid) {
+                    <span class="error-text">Amount must be > 0</span>
+                  }
+                </div>
+  
+                <div class="input-group">
+                  <label class="modern-label">TIME VALIDITY (DAYS)</label>
+                  <input type="number" name="pValidity" [(ngModel)]="planForm.validity" #pValidity="ngModel" 
+                         placeholder="e.g. 28 Days" class="modern-input" required min="1" />
+                  @if (pValidity.touched && pValidity.invalid) {
+                    <span class="error-text">Validity must be > 0</span>
+                  }
+                </div>
+  
+                <div class="input-group full-width">
+                  <label class="modern-label">CORE BENEFITS & DESCRIPTION</label>
+                  <textarea name="pDesc" [(ngModel)]="planForm.description" #pDesc="ngModel" 
+                         placeholder="e.g. 1.5GB/Day + Unlimited Calls..." class="modern-input tall" required minlength="5"></textarea>
+                  @if (pDesc.touched && pDesc.invalid) {
+                    <span class="error-text">Min 5 characters</span>
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer modern-footer">
+            <button type="button" class="btn-text" (click)="resetPlanForm()">CANCEL</button>
+            <button type="button" class="btn-modern-primary" (click)="savePlan()">
+              {{ isEditingPlan ? 'UPDATE NOW' : 'CREATE NOW' }}
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  }
+
+  @if (showDeleteConfirm) {
+    <div class="fixed inset-0 z-[99999] flex items-center justify-center bg-black/80 backdrop-blur-md transition-all duration-300 md:pl-[240px]" 
+         (click)="$event.target === $event.currentTarget && cancelDelete()">
+      <div class="modal-container modern-modal max-w-[400px] w-full mx-4" style="text-align: center; padding: 40px 20px;">
+        <div style="font-size: 48px; margin-bottom: 20px;">⚠️</div>
+        <h2 class="modal-title-main" style="margin-bottom: 10px;">CONFIRM <span class="accent-text" style="color: #ef4444;">DELETE</span></h2>
+        <p class="modal-subtitle" style="margin-bottom: 30px; font-size: 14px; color: #94a3b8;">
+          Are you sure you want to delete this {{ itemToDelete?.type === 'OPERATOR' ? 'operator and all its plans' : 'plan' }}? This action cannot be undone.
+        </p>
+        <div class="modern-footer" style="display: flex; justify-content: center; gap: 15px; border-top: none; padding-top: 0;">
+          <button type="button" class="btn-text" (click)="cancelDelete()">CANCEL</button>
+          <button type="button" class="btn-modern-primary" style="background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%); box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);" (click)="confirmDelete()">
+            DELETE
+          </button>
+        </div>
+      </div>
+    </div>
+  }

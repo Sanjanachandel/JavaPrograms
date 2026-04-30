@@ -1,0 +1,441 @@
+2026-04-30 10:28:06 INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-04-30 10:28:07 INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-30 10:28:07 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-30 10:28:07 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 5 ms
+2026-04-30 10:28:07 INFO  com.capg.rechargenova.controller.RechargeController - Fetching recharges for userId: 501
+2026-04-30 10:28:08 INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-30 10:28:08 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-30 10:28:08 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+2026-04-30 10:28:08 INFO  com.capg.rechargenova.controller.RechargeController - Fetching recharge by id: 1
+2026-04-30 10:28:08 INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-30 10:28:08 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-30 10:28:08 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2026-04-30 10:28:08 INFO  com.capg.rechargenova.controller.RechargeController - Initiating recharge for userId: 501
+2026-04-30 10:28:09 INFO  com.capg.rechargenova.RechargeServiceApplication - Starting RechargeServiceApplication using Java 17.0.12 with PID 10940 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\Sprint1-Project\RechargeNova_Backend\recharge-service)
+2026-04-30 10:28:09 DEBUG com.capg.rechargenova.RechargeServiceApplication - Running with Spring Boot v3.3.2, Spring v6.1.11
+2026-04-30 10:28:09 INFO  com.capg.rechargenova.RechargeServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-30 10:28:11 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-30 10:28:11 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 56 ms. Found 1 JPA repository interface.
+2026-04-30 10:28:11 INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=0e3ee28c-af26-378e-baca-f71a665f6584
+2026-04-30 10:28:12 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-04-30 10:28:12 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-04-30 10:28:12 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 0 (http)
+2026-04-30 10:28:12 INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-1"]
+2026-04-30 10:28:12 INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-30 10:28:12 INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2026-04-30 10:28:12 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-30 10:28:12 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3226 ms
+2026-04-30 10:28:13 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-30 10:28:13 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-04-30 10:28:13 INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-04-30 10:28:14 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-30 10:28:14 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-30 10:28:14 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SCOTT
+2026-04-30 10:28:14 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-30 10:28:14 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-30 10:28:15 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-30 10:28:15 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-30 10:28:16 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-30 10:28:16 INFO  org.springframework.cloud.openfeign.FeignClientFactoryBean - For 'user-service' URL not provided. Will try picking an instance via load-balancing.
+2026-04-30 10:28:16 INFO  org.springframework.cloud.openfeign.FeignClientFactoryBean - For 'operator-service' URL not provided. Will try picking an instance via load-balancing.
+2026-04-30 10:28:18 INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-04-30 10:28:18 WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-04-30 10:28:18 INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-04-30 10:28:18 INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-1"]
+2026-04-30 10:28:18 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 52509 (http) with context path '/'
+2026-04-30 10:28:18 INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2026-04-30 10:28:19 INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#580419bb:0/SimpleConnection@1eb0b2b0 [delegate=amqp://guest@127.0.0.1:5672/, localPort=52510]
+2026-04-30 10:28:19 INFO  com.capg.rechargenova.RechargeServiceApplication - Started RechargeServiceApplication in 10.512 seconds (process running for 17.029)
+2026-04-30 10:28:19 ERROR com.capg.rechargenova.exception.GlobalExceptionHandler - Resource Not Found: Not found
+2026-04-30 10:28:19 ERROR com.capg.rechargenova.exception.GlobalExceptionHandler - Unexpected Error: Global Error
+2026-04-30 10:28:19 ERROR com.capg.rechargenova.exception.GlobalExceptionHandler - Exception: Not found
+2026-04-30 10:28:19 ERROR com.capg.rechargenova.exception.GlobalExceptionHandler - Exception: Invalid
+2026-04-30 10:28:19 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 10:28:19 ERROR com.capg.rechargenova.service.RechargeService - Invalid Operator/Plan for userId: 501
+2026-04-30 10:28:19 INFO  com.capg.rechargenova.service.RechargeService - Fetching recharge by id: 1
+2026-04-30 10:28:19 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 10:28:19 INFO  com.capg.rechargenova.service.RechargeService - Recharge created with ID: 1
+2026-04-30 10:28:19 INFO  com.capg.rechargenova.service.RechargeService - Calling payment service for synchronous processing...
+2026-04-30 10:28:19 ERROR com.capg.rechargenova.service.RechargeService - Payment response is null for rechargeId: 1
+2026-04-30 10:28:19 ERROR com.capg.rechargenova.service.RechargeService - Synchronous payment failed for rechargeId 1: Payment response is null
+2026-04-30 10:28:19 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 10:28:19 ERROR com.capg.rechargenova.service.RechargeService - Invalid Operator/Plan for userId: 501
+2026-04-30 10:28:19 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 10:28:19 ERROR com.capg.rechargenova.service.RechargeService - Invalid Operator/Plan for userId: 501
+2026-04-30 10:28:19 INFO  com.capg.rechargenova.service.RechargeService - Fetching recharge by id: 99
+2026-04-30 10:28:19 ERROR com.capg.rechargenova.service.RechargeService - Recharge not found for id: 99
+2026-04-30 10:28:19 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 10:28:19 INFO  com.capg.rechargenova.service.RechargeService - Recharge created with ID: 1
+2026-04-30 10:28:19 INFO  com.capg.rechargenova.service.RechargeService - Calling payment service for synchronous processing...
+2026-04-30 10:28:19 ERROR com.capg.rechargenova.service.RechargeService - Synchronous payment failed for rechargeId 1: Error
+2026-04-30 10:28:19 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 10:28:19 ERROR com.capg.rechargenova.service.RechargeService - User not found: 501
+2026-04-30 10:28:19 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 10:28:19 INFO  com.capg.rechargenova.service.RechargeService - Recharge created with ID: 1
+2026-04-30 10:28:19 INFO  com.capg.rechargenova.service.RechargeService - Calling payment service for synchronous processing...
+2026-04-30 10:28:19 INFO  com.capg.rechargenova.service.RechargeService - Synchronous recharge successful for id: 1
+2026-04-30 10:28:19 INFO  com.capg.rechargenova.service.RechargeService - Fetching recharges for userId: 501
+2026-04-30 10:28:19 INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-30 10:28:20 INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-04-30 10:28:20 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-30 10:28:20 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-04-30 10:28:20 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-04-30 13:42:54 INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-04-30 13:42:55 INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-30 13:42:55 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-30 13:42:55 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 4 ms
+2026-04-30 13:42:56 INFO  com.capg.rechargenova.controller.RechargeController - Fetching recharges for userId: 501
+2026-04-30 13:42:56 INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-30 13:42:56 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-30 13:42:56 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+2026-04-30 13:42:56 INFO  com.capg.rechargenova.controller.RechargeController - Fetching recharge by id: 1
+2026-04-30 13:42:56 INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-30 13:42:56 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-30 13:42:56 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+2026-04-30 13:42:56 INFO  com.capg.rechargenova.controller.RechargeController - Initiating recharge for userId: 501
+2026-04-30 13:42:57 INFO  com.capg.rechargenova.RechargeServiceApplication - Starting RechargeServiceApplication using Java 17.0.12 with PID 8504 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\Sprint1-Project\RechargeNova_Backend\recharge-service)
+2026-04-30 13:42:57 DEBUG com.capg.rechargenova.RechargeServiceApplication - Running with Spring Boot v3.3.2, Spring v6.1.11
+2026-04-30 13:42:57 INFO  com.capg.rechargenova.RechargeServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-30 13:42:58 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-30 13:42:58 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 55 ms. Found 1 JPA repository interface.
+2026-04-30 13:42:59 INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=0e3ee28c-af26-378e-baca-f71a665f6584
+2026-04-30 13:42:59 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-04-30 13:42:59 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-04-30 13:43:00 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 0 (http)
+2026-04-30 13:43:00 INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-1"]
+2026-04-30 13:43:00 INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-30 13:43:00 INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2026-04-30 13:43:00 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-30 13:43:00 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2900 ms
+2026-04-30 13:43:01 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-30 13:43:01 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-04-30 13:43:01 INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-04-30 13:43:01 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-30 13:43:01 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-30 13:43:01 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SCOTT
+2026-04-30 13:43:01 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-30 13:43:02 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-30 13:43:03 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-30 13:43:03 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-30 13:43:03 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-30 13:43:03 INFO  org.springframework.cloud.openfeign.FeignClientFactoryBean - For 'user-service' URL not provided. Will try picking an instance via load-balancing.
+2026-04-30 13:43:03 INFO  org.springframework.cloud.openfeign.FeignClientFactoryBean - For 'operator-service' URL not provided. Will try picking an instance via load-balancing.
+2026-04-30 13:43:05 INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-04-30 13:43:05 WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-04-30 13:43:05 INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-04-30 13:43:05 INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-1"]
+2026-04-30 13:43:05 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 60120 (http) with context path '/'
+2026-04-30 13:43:05 INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2026-04-30 13:43:05 INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#734d846c:0/SimpleConnection@40dbdf41 [delegate=amqp://guest@127.0.0.1:5672/, localPort=60121]
+2026-04-30 13:43:05 INFO  com.capg.rechargenova.RechargeServiceApplication - Started RechargeServiceApplication in 9.072 seconds (process running for 15.344)
+2026-04-30 13:43:05 ERROR com.capg.rechargenova.exception.GlobalExceptionHandler - Resource Not Found: Not found
+2026-04-30 13:43:06 ERROR com.capg.rechargenova.exception.GlobalExceptionHandler - Unexpected Error: Global Error
+2026-04-30 13:43:06 ERROR com.capg.rechargenova.exception.GlobalExceptionHandler - Exception: Not found
+2026-04-30 13:43:06 ERROR com.capg.rechargenova.exception.GlobalExceptionHandler - Exception: Invalid
+2026-04-30 13:43:06 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 13:43:06 ERROR com.capg.rechargenova.service.RechargeService - Invalid Operator/Plan for userId: 501
+2026-04-30 13:43:06 INFO  com.capg.rechargenova.service.RechargeService - Fetching recharge by id: 1
+2026-04-30 13:43:06 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 13:43:06 INFO  com.capg.rechargenova.service.RechargeService - Recharge created with ID: 1
+2026-04-30 13:43:06 INFO  com.capg.rechargenova.service.RechargeService - Calling payment service for synchronous processing...
+2026-04-30 13:43:06 ERROR com.capg.rechargenova.service.RechargeService - Payment response is null for rechargeId: 1
+2026-04-30 13:43:06 ERROR com.capg.rechargenova.service.RechargeService - Synchronous payment failed for rechargeId 1: Payment response is null
+2026-04-30 13:43:06 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 13:43:06 ERROR com.capg.rechargenova.service.RechargeService - Invalid Operator/Plan for userId: 501
+2026-04-30 13:43:06 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 13:43:06 ERROR com.capg.rechargenova.service.RechargeService - Invalid Operator/Plan for userId: 501
+2026-04-30 13:43:06 INFO  com.capg.rechargenova.service.RechargeService - Fetching recharge by id: 99
+2026-04-30 13:43:06 ERROR com.capg.rechargenova.service.RechargeService - Recharge not found for id: 99
+2026-04-30 13:43:06 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 13:43:06 INFO  com.capg.rechargenova.service.RechargeService - Recharge created with ID: 1
+2026-04-30 13:43:06 INFO  com.capg.rechargenova.service.RechargeService - Calling payment service for synchronous processing...
+2026-04-30 13:43:06 ERROR com.capg.rechargenova.service.RechargeService - Synchronous payment failed for rechargeId 1: Error
+2026-04-30 13:43:06 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 13:43:06 ERROR com.capg.rechargenova.service.RechargeService - User not found: 501
+2026-04-30 13:43:06 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 13:43:06 INFO  com.capg.rechargenova.service.RechargeService - Recharge created with ID: 1
+2026-04-30 13:43:06 INFO  com.capg.rechargenova.service.RechargeService - Calling payment service for synchronous processing...
+2026-04-30 13:43:06 INFO  com.capg.rechargenova.service.RechargeService - Synchronous recharge successful for id: 1
+2026-04-30 13:43:06 INFO  com.capg.rechargenova.service.RechargeService - Fetching recharges for userId: 501
+2026-04-30 13:43:06 INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-30 13:43:06 INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-04-30 13:43:07 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-30 13:43:07 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-04-30 13:43:07 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-04-30 13:47:09 INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-04-30 13:47:10 INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-30 13:47:10 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-30 13:47:10 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 5 ms
+2026-04-30 13:47:11 INFO  com.capg.rechargenova.controller.RechargeController - Fetching recharges for userId: 501
+2026-04-30 13:47:11 INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-30 13:47:11 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-30 13:47:11 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2026-04-30 13:47:11 INFO  com.capg.rechargenova.controller.RechargeController - Fetching recharge by id: 1
+2026-04-30 13:47:11 INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-30 13:47:11 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-30 13:47:11 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+2026-04-30 13:47:11 INFO  com.capg.rechargenova.controller.RechargeController - Initiating recharge for userId: 501
+2026-04-30 13:47:12 INFO  com.capg.rechargenova.RechargeServiceApplication - Starting RechargeServiceApplication using Java 17.0.12 with PID 27224 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\Sprint1-Project\RechargeNova_Backend\recharge-service)
+2026-04-30 13:47:12 DEBUG com.capg.rechargenova.RechargeServiceApplication - Running with Spring Boot v3.3.2, Spring v6.1.11
+2026-04-30 13:47:12 INFO  com.capg.rechargenova.RechargeServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-30 13:47:14 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-30 13:47:14 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 69 ms. Found 1 JPA repository interface.
+2026-04-30 13:47:14 INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=0e3ee28c-af26-378e-baca-f71a665f6584
+2026-04-30 13:47:15 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-04-30 13:47:15 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-04-30 13:47:15 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 0 (http)
+2026-04-30 13:47:15 INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-1"]
+2026-04-30 13:47:15 INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-30 13:47:15 INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2026-04-30 13:47:15 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-30 13:47:15 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2879 ms
+2026-04-30 13:47:16 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-30 13:47:16 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-04-30 13:47:16 INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-04-30 13:47:16 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-30 13:47:16 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-30 13:47:17 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SCOTT
+2026-04-30 13:47:17 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-30 13:47:17 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-30 13:47:18 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-30 13:47:18 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-30 13:47:18 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-30 13:47:18 INFO  org.springframework.cloud.openfeign.FeignClientFactoryBean - For 'user-service' URL not provided. Will try picking an instance via load-balancing.
+2026-04-30 13:47:19 INFO  org.springframework.cloud.openfeign.FeignClientFactoryBean - For 'operator-service' URL not provided. Will try picking an instance via load-balancing.
+2026-04-30 13:47:20 INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-04-30 13:47:20 WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-04-30 13:47:20 INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-04-30 13:47:20 INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-1"]
+2026-04-30 13:47:20 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 54320 (http) with context path '/'
+2026-04-30 13:47:20 INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2026-04-30 13:47:20 INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#588a2576:0/SimpleConnection@27569209 [delegate=amqp://guest@127.0.0.1:5672/, localPort=54321]
+2026-04-30 13:47:21 INFO  com.capg.rechargenova.RechargeServiceApplication - Started RechargeServiceApplication in 9.192 seconds (process running for 15.762)
+2026-04-30 13:47:21 ERROR com.capg.rechargenova.exception.GlobalExceptionHandler - Resource Not Found: Not found
+2026-04-30 13:47:21 ERROR com.capg.rechargenova.exception.GlobalExceptionHandler - Unexpected Error: Global Error
+2026-04-30 13:47:21 ERROR com.capg.rechargenova.exception.GlobalExceptionHandler - Exception: Not found
+2026-04-30 13:47:21 ERROR com.capg.rechargenova.exception.GlobalExceptionHandler - Exception: Invalid
+2026-04-30 13:47:21 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 13:47:21 ERROR com.capg.rechargenova.service.RechargeService - Invalid Operator/Plan for userId: 501
+2026-04-30 13:47:21 INFO  com.capg.rechargenova.service.RechargeService - Fetching recharge by id: 1
+2026-04-30 13:47:21 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 13:47:21 INFO  com.capg.rechargenova.service.RechargeService - Recharge created with ID: 1
+2026-04-30 13:47:21 INFO  com.capg.rechargenova.service.RechargeService - Calling payment service for synchronous processing...
+2026-04-30 13:47:21 ERROR com.capg.rechargenova.service.RechargeService - Payment response is null for rechargeId: 1
+2026-04-30 13:47:21 ERROR com.capg.rechargenova.service.RechargeService - Synchronous payment failed for rechargeId 1: Payment response is null
+2026-04-30 13:47:21 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 13:47:21 ERROR com.capg.rechargenova.service.RechargeService - Invalid Operator/Plan for userId: 501
+2026-04-30 13:47:21 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 13:47:21 ERROR com.capg.rechargenova.service.RechargeService - Invalid Operator/Plan for userId: 501
+2026-04-30 13:47:21 INFO  com.capg.rechargenova.service.RechargeService - Fetching recharge by id: 99
+2026-04-30 13:47:21 ERROR com.capg.rechargenova.service.RechargeService - Recharge not found for id: 99
+2026-04-30 13:47:21 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 13:47:21 INFO  com.capg.rechargenova.service.RechargeService - Recharge created with ID: 1
+2026-04-30 13:47:21 INFO  com.capg.rechargenova.service.RechargeService - Calling payment service for synchronous processing...
+2026-04-30 13:47:21 ERROR com.capg.rechargenova.service.RechargeService - Synchronous payment failed for rechargeId 1: Error
+2026-04-30 13:47:21 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 13:47:21 ERROR com.capg.rechargenova.service.RechargeService - User not found: 501
+2026-04-30 13:47:21 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 13:47:21 INFO  com.capg.rechargenova.service.RechargeService - Recharge created with ID: 1
+2026-04-30 13:47:21 INFO  com.capg.rechargenova.service.RechargeService - Calling payment service for synchronous processing...
+2026-04-30 13:47:21 INFO  com.capg.rechargenova.service.RechargeService - Synchronous recharge successful for id: 1
+2026-04-30 13:47:21 INFO  com.capg.rechargenova.service.RechargeService - Fetching recharges for userId: 501
+2026-04-30 13:47:21 INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-30 13:47:22 INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-04-30 13:47:22 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-30 13:47:22 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-04-30 13:47:22 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-04-30 14:22:34 INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-04-30 14:22:35 INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-30 14:22:35 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-30 14:22:35 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 4 ms
+2026-04-30 14:22:36 INFO  com.capg.rechargenova.controller.RechargeController - Admin API called to list all recharges
+2026-04-30 14:22:36 INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-30 14:22:36 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-30 14:22:36 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+2026-04-30 14:22:36 INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-30 14:22:36 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-30 14:22:36 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+2026-04-30 14:22:36 INFO  com.capg.rechargenova.controller.RechargeController - Fetching recharges for userId: 501
+2026-04-30 14:22:36 INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-30 14:22:36 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-30 14:22:36 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+2026-04-30 14:22:36 INFO  com.capg.rechargenova.controller.RechargeController - Fetching recharge by id: 1
+2026-04-30 14:22:36 INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-30 14:22:36 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-30 14:22:36 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+2026-04-30 14:22:36 INFO  com.capg.rechargenova.controller.RechargeController - Initiating recharge for userId: 501
+2026-04-30 14:22:37 INFO  com.capg.rechargenova.RechargeServiceApplication - Starting RechargeServiceApplication using Java 17.0.12 with PID 23620 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\Sprint1-Project\RechargeNova_Backend\recharge-service)
+2026-04-30 14:22:37 DEBUG com.capg.rechargenova.RechargeServiceApplication - Running with Spring Boot v3.3.2, Spring v6.1.11
+2026-04-30 14:22:37 INFO  com.capg.rechargenova.RechargeServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-30 14:22:39 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-30 14:22:39 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 55 ms. Found 1 JPA repository interface.
+2026-04-30 14:22:39 INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=0e3ee28c-af26-378e-baca-f71a665f6584
+2026-04-30 14:22:40 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-04-30 14:22:40 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-04-30 14:22:40 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 0 (http)
+2026-04-30 14:22:40 INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-1"]
+2026-04-30 14:22:40 INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-30 14:22:40 INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2026-04-30 14:22:40 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-30 14:22:40 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3156 ms
+2026-04-30 14:22:41 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-30 14:22:41 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-04-30 14:22:41 INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-04-30 14:22:42 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-30 14:22:42 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-30 14:22:42 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SCOTT
+2026-04-30 14:22:42 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-30 14:22:42 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-30 14:22:43 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-30 14:22:43 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-30 14:22:44 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-30 14:22:44 INFO  org.springframework.cloud.openfeign.FeignClientFactoryBean - For 'user-service' URL not provided. Will try picking an instance via load-balancing.
+2026-04-30 14:22:44 INFO  org.springframework.cloud.openfeign.FeignClientFactoryBean - For 'operator-service' URL not provided. Will try picking an instance via load-balancing.
+2026-04-30 14:22:46 INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-04-30 14:22:46 WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-04-30 14:22:46 INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-04-30 14:22:46 INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-1"]
+2026-04-30 14:22:46 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 52321 (http) with context path '/'
+2026-04-30 14:22:46 INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2026-04-30 14:22:46 INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#4ef76ce1:0/SimpleConnection@21a1e76f [delegate=amqp://guest@127.0.0.1:5672/, localPort=52322]
+2026-04-30 14:22:46 INFO  com.capg.rechargenova.RechargeServiceApplication - Started RechargeServiceApplication in 10.019 seconds (process running for 16.505)
+2026-04-30 14:22:46 ERROR com.capg.rechargenova.exception.GlobalExceptionHandler - Resource Not Found: Not found
+2026-04-30 14:22:47 ERROR com.capg.rechargenova.exception.GlobalExceptionHandler - Unexpected Error: Global Error
+2026-04-30 14:22:47 ERROR com.capg.rechargenova.exception.GlobalExceptionHandler - Exception: Not found
+2026-04-30 14:22:47 ERROR com.capg.rechargenova.exception.GlobalExceptionHandler - Exception: Invalid
+2026-04-30 14:22:47 INFO  com.capg.rechargenova.service.RechargeListener - Received payment event for Recharge ID: null with status: SUCCESS
+2026-04-30 14:22:47 INFO  com.capg.rechargenova.service.RechargeListener - Received payment event for Recharge ID: 1 with status: FAILED
+2026-04-30 14:22:47 INFO  com.capg.rechargenova.service.RechargeListener - Received payment event for Recharge ID: 1 with status: SUCCESS
+2026-04-30 14:22:47 INFO  com.capg.rechargenova.service.RechargeListener - Recharge ID: 1 status updated to SUCCESS
+2026-04-30 14:22:47 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 14:22:47 ERROR com.capg.rechargenova.service.RechargeService - Invalid Operator/Plan for userId: 501
+2026-04-30 14:22:47 INFO  com.capg.rechargenova.service.RechargeService - Fetching all recharges for admin
+2026-04-30 14:22:47 INFO  com.capg.rechargenova.service.RechargeService - Fetching recharge by id: 1
+2026-04-30 14:22:47 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 14:22:47 INFO  com.capg.rechargenova.service.RechargeService - Recharge created with ID: 1
+2026-04-30 14:22:47 INFO  com.capg.rechargenova.service.RechargeService - Calling payment service for synchronous processing...
+2026-04-30 14:22:47 ERROR com.capg.rechargenova.service.RechargeService - Payment response is null for rechargeId: 1
+2026-04-30 14:22:47 ERROR com.capg.rechargenova.service.RechargeService - Synchronous payment failed for rechargeId 1: Payment response is null
+2026-04-30 14:22:47 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 14:22:47 ERROR com.capg.rechargenova.service.RechargeService - Invalid Operator/Plan for userId: 501
+2026-04-30 14:22:47 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 14:22:47 INFO  com.capg.rechargenova.service.RechargeService - Recharge created with ID: 1
+2026-04-30 14:22:47 INFO  com.capg.rechargenova.service.RechargeService - Razorpay payment detected for rechargeId: 1. Skipping sync processing.
+2026-04-30 14:22:47 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 14:22:47 ERROR com.capg.rechargenova.service.RechargeService - Invalid Operator/Plan for userId: 501
+2026-04-30 14:22:47 INFO  com.capg.rechargenova.service.RechargeService - Fetching recharge by id: 99
+2026-04-30 14:22:47 ERROR com.capg.rechargenova.service.RechargeService - Recharge not found for id: 99
+2026-04-30 14:22:47 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 14:22:47 INFO  com.capg.rechargenova.service.RechargeService - Recharge created with ID: 1
+2026-04-30 14:22:47 INFO  com.capg.rechargenova.service.RechargeService - Calling payment service for synchronous processing...
+2026-04-30 14:22:47 ERROR com.capg.rechargenova.service.RechargeService - Synchronous payment failed for rechargeId 1: Error
+2026-04-30 14:22:47 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 14:22:47 ERROR com.capg.rechargenova.service.RechargeService - User not found: 501
+2026-04-30 14:22:47 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 14:22:47 INFO  com.capg.rechargenova.service.RechargeService - Recharge created with ID: 1
+2026-04-30 14:22:47 INFO  com.capg.rechargenova.service.RechargeService - Calling payment service for synchronous processing...
+2026-04-30 14:22:47 INFO  com.capg.rechargenova.service.RechargeService - Synchronous recharge successful for id: 1
+2026-04-30 14:22:47 INFO  com.capg.rechargenova.service.RechargeService - Fetching recharges for userId: 501
+2026-04-30 14:22:47 INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-30 14:22:47 INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-04-30 14:22:48 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-30 14:22:48 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-04-30 14:22:48 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-04-30 14:23:32 INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-04-30 14:23:33 INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-30 14:23:33 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-30 14:23:33 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 5 ms
+2026-04-30 14:23:33 INFO  com.capg.rechargenova.controller.RechargeController - Admin API called to list all recharges
+2026-04-30 14:23:34 INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-30 14:23:34 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-30 14:23:34 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+2026-04-30 14:23:34 INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-30 14:23:34 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-30 14:23:34 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2026-04-30 14:23:34 INFO  com.capg.rechargenova.controller.RechargeController - Fetching recharges for userId: 501
+2026-04-30 14:23:34 INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-30 14:23:34 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-30 14:23:34 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+2026-04-30 14:23:34 INFO  com.capg.rechargenova.controller.RechargeController - Fetching recharge by id: 1
+2026-04-30 14:23:34 INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-30 14:23:34 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-30 14:23:34 INFO  org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+2026-04-30 14:23:34 INFO  com.capg.rechargenova.controller.RechargeController - Initiating recharge for userId: 501
+2026-04-30 14:23:35 INFO  com.capg.rechargenova.RechargeServiceApplication - Starting RechargeServiceApplication using Java 17.0.12 with PID 23244 (started by HP in C:\Users\HP\Desktop\JavaPrograms\All-Capg-Workspaces\Sprint1-Project\RechargeNova_Backend\recharge-service)
+2026-04-30 14:23:35 DEBUG com.capg.rechargenova.RechargeServiceApplication - Running with Spring Boot v3.3.2, Spring v6.1.11
+2026-04-30 14:23:35 INFO  com.capg.rechargenova.RechargeServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-30 14:23:37 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-30 14:23:37 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 63 ms. Found 1 JPA repository interface.
+2026-04-30 14:23:37 INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=0e3ee28c-af26-378e-baca-f71a665f6584
+2026-04-30 14:23:38 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-04-30 14:23:38 WARN  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-04-30 14:23:38 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 0 (http)
+2026-04-30 14:23:38 INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-1"]
+2026-04-30 14:23:38 INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-30 14:23:38 INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2026-04-30 14:23:38 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-30 14:23:38 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3088 ms
+2026-04-30 14:23:39 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-30 14:23:39 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-04-30 14:23:39 INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-04-30 14:23:39 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-30 14:23:39 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-30 14:23:40 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SCOTT
+2026-04-30 14:23:40 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-30 14:23:40 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-30 14:23:41 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-30 14:23:41 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-30 14:23:42 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-30 14:23:42 INFO  org.springframework.cloud.openfeign.FeignClientFactoryBean - For 'user-service' URL not provided. Will try picking an instance via load-balancing.
+2026-04-30 14:23:42 INFO  org.springframework.cloud.openfeign.FeignClientFactoryBean - For 'operator-service' URL not provided. Will try picking an instance via load-balancing.
+2026-04-30 14:23:43 INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-04-30 14:23:43 WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-04-30 14:23:43 INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-04-30 14:23:44 INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-1"]
+2026-04-30 14:23:44 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 59408 (http) with context path '/'
+2026-04-30 14:23:44 INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2026-04-30 14:23:44 INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#2b0987f5:0/SimpleConnection@6bb53de5 [delegate=amqp://guest@127.0.0.1:5672/, localPort=59410]
+2026-04-30 14:23:44 INFO  com.capg.rechargenova.RechargeServiceApplication - Started RechargeServiceApplication in 9.579 seconds (process running for 16.027)
+2026-04-30 14:23:44 ERROR com.capg.rechargenova.exception.GlobalExceptionHandler - Resource Not Found: Not found
+2026-04-30 14:23:44 ERROR com.capg.rechargenova.exception.GlobalExceptionHandler - Unexpected Error: Global Error
+2026-04-30 14:23:44 ERROR com.capg.rechargenova.exception.GlobalExceptionHandler - Exception: Not found
+2026-04-30 14:23:44 ERROR com.capg.rechargenova.exception.GlobalExceptionHandler - Exception: Invalid
+2026-04-30 14:23:44 INFO  com.capg.rechargenova.service.RechargeListener - Received payment event for Recharge ID: null with status: SUCCESS
+2026-04-30 14:23:44 INFO  com.capg.rechargenova.service.RechargeListener - Received payment event for Recharge ID: 1 with status: FAILED
+2026-04-30 14:23:44 INFO  com.capg.rechargenova.service.RechargeListener - Received payment event for Recharge ID: 1 with status: SUCCESS
+2026-04-30 14:23:44 INFO  com.capg.rechargenova.service.RechargeListener - Recharge ID: 1 status updated to SUCCESS
+2026-04-30 14:23:44 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 14:23:44 ERROR com.capg.rechargenova.service.RechargeService - Invalid Operator/Plan for userId: 501
+2026-04-30 14:23:44 INFO  com.capg.rechargenova.service.RechargeService - Fetching all recharges for admin
+2026-04-30 14:23:44 INFO  com.capg.rechargenova.service.RechargeService - Fetching recharge by id: 1
+2026-04-30 14:23:44 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 14:23:44 INFO  com.capg.rechargenova.service.RechargeService - Recharge created with ID: 1
+2026-04-30 14:23:44 INFO  com.capg.rechargenova.service.RechargeService - Calling payment service for synchronous processing...
+2026-04-30 14:23:44 ERROR com.capg.rechargenova.service.RechargeService - Payment response is null for rechargeId: 1
+2026-04-30 14:23:44 ERROR com.capg.rechargenova.service.RechargeService - Synchronous payment failed for rechargeId 1: Payment response is null
+2026-04-30 14:23:44 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 14:23:44 ERROR com.capg.rechargenova.service.RechargeService - Invalid Operator/Plan for userId: 501
+2026-04-30 14:23:44 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 14:23:44 INFO  com.capg.rechargenova.service.RechargeService - Recharge created with ID: 1
+2026-04-30 14:23:44 INFO  com.capg.rechargenova.service.RechargeService - Razorpay payment detected for rechargeId: 1. Skipping sync processing.
+2026-04-30 14:23:44 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 14:23:44 ERROR com.capg.rechargenova.service.RechargeService - Invalid Operator/Plan for userId: 501
+2026-04-30 14:23:44 INFO  com.capg.rechargenova.service.RechargeService - Fetching recharge by id: 99
+2026-04-30 14:23:44 ERROR com.capg.rechargenova.service.RechargeService - Recharge not found for id: 99
+2026-04-30 14:23:44 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 14:23:44 INFO  com.capg.rechargenova.service.RechargeService - Recharge created with ID: 1
+2026-04-30 14:23:44 INFO  com.capg.rechargenova.service.RechargeService - Calling payment service for synchronous processing...
+2026-04-30 14:23:44 ERROR com.capg.rechargenova.service.RechargeService - Synchronous payment failed for rechargeId 1: Error
+2026-04-30 14:23:44 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 14:23:44 ERROR com.capg.rechargenova.service.RechargeService - User not found: 501
+2026-04-30 14:23:44 INFO  com.capg.rechargenova.service.RechargeService - Fetching recharge by id: 1
+2026-04-30 14:23:44 INFO  com.capg.rechargenova.service.RechargeService - Starting recharge for userId: 501
+2026-04-30 14:23:44 INFO  com.capg.rechargenova.service.RechargeService - Recharge created with ID: 1
+2026-04-30 14:23:44 INFO  com.capg.rechargenova.service.RechargeService - Calling payment service for synchronous processing...
+2026-04-30 14:23:44 INFO  com.capg.rechargenova.service.RechargeService - Synchronous recharge successful for id: 1
+2026-04-30 14:23:44 INFO  com.capg.rechargenova.service.RechargeService - Fetching recharges for userId: 501
+2026-04-30 14:23:45 INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-30 14:23:45 INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-04-30 14:23:45 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-30 14:23:45 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-04-30 14:23:45 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

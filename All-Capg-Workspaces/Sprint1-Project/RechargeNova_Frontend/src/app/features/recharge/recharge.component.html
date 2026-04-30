@@ -1,0 +1,296 @@
+<div class="page-enter recharge-page">
+  <div class="recharge-header">
+    <h1 class="section-title">⚡ Mobile Recharge</h1>
+    <p class="section-subtitle">Fast, secure recharge in a few clicks</p>
+  </div>
+
+  <!-- Step indicator -->
+  <div class="step-indicator" *ngIf="step() !== 5">
+    @for (s of steps; track s.num) {
+      <div class="step-item" [class.active]="step() === s.num" [class.done]="step() > s.num">
+        <span class="step-icon-top">{{ s.icon }}</span>
+        <div class="step-dot-wrap">
+          <div class="step-dot"
+               [class.active]="step() === s.num"
+               [class.done]="step() > s.num">
+            {{ step() > s.num ? '✓' : s.num }}
+          </div>
+          @if (!s.last) {
+            <div class="step-line" [class.active]="step() > s.num"></div>
+          }
+        </div>
+        <span class="step-label">{{ s.label }}</span>
+      </div>
+    }
+  </div>
+
+  <!-- ─── STEP 1: Mobile Number ─── -->
+  @if (step() === 1) {
+    <div class="step-card">
+      <h2 class="step-title">📱 Enter Mobile Number</h2>
+      <p class="step-desc">Enter the 10-digit Indian mobile number to recharge</p>
+      <form [formGroup]="mobileForm" (ngSubmit)="goToStep2()" id="form-mobile">
+        <div class="mobile-input-group">
+          <span class="mobile-prefix">🇮🇳 +91</span>
+          <input
+            id="input-mobile"
+            type="tel"
+            formControlName="mobile"
+            class="form-control mobile-input"
+            [class.is-invalid]="isMobileInvalid()"
+            placeholder="9876543210"
+            maxlength="10"
+            autocomplete="tel"
+          >
+        </div>
+        @if (isMobileInvalid()) {
+          <span class="error-msg">Enter a valid 10-digit Indian mobile number (starts with 6-9)</span>
+        }
+        <button id="btn-next-step2" type="submit" class="btn-primary step-btn">
+          Continue → Select Operator
+        </button>
+      </form>
+    </div>
+  }
+
+  <!-- ─── STEP 2: Operator Selection ─── -->
+  @if (step() === 2) {
+    <div class="step-card">
+      <h2 class="step-title">📡 Select Operator</h2>
+      <p class="step-desc">Choose your mobile network operator</p>
+
+      @if (loadingOperators()) {
+        <div class="ops-grid">
+          @for (s of [1,2,3,4,5,6]; track s) {
+            <div class="skeleton" style="height:120px; border-radius:16px;"></div>
+          }
+        </div>
+      } @else if (operators().length === 0) {
+        <div class="empty-state">No operators found. Please check backend connection.</div>
+      } @else {
+        <div class="ops-grid">
+          @for (op of operators(); track op.id; let i = $index) {
+            <div
+              class="operator-card"
+              [class.selected]="selectedOperator()?.id === op.id"
+              (click)="selectOperator(op)"
+              [id]="'op-' + op.id"
+              role="button"
+              [attr.aria-pressed]="selectedOperator()?.id === op.id"
+            >
+              <div class="operator-avatar" [style.background]="opColor(i)">
+                {{ op.name.charAt(0) }}
+              </div>
+              <div class="op-name">{{ op.name }}</div>
+              <div class="op-circle badge badge-purple">{{ op.circle }}</div>
+              @if (selectedOperator()?.id === op.id) {
+                <div class="op-check">✓</div>
+              }
+            </div>
+          }
+        </div>
+      }
+
+      <div class="step-actions">
+        <button id="btn-back-step1" class="btn-ghost" (click)="step.set(1)">← Back</button>
+        <button
+          id="btn-next-step3"
+          class="btn-primary"
+          [disabled]="!selectedOperator()"
+          (click)="goToStep3()">
+          Continue → Browse Plans
+        </button>
+      </div>
+    </div>
+  }
+
+  <!-- ─── STEP 3: Plan Selection ─── -->
+  @if (step() === 3) {
+    <div class="step-card">
+      <h2 class="step-title">📋 Choose a Plan</h2>
+      <p class="step-desc">{{ selectedOperator()?.name }} • {{ mobileNum() }}</p>
+
+      <!-- Recharge Type Toggle -->
+      <div class="type-toggle-container">
+        <div class="type-toggle">
+          <button 
+            class="toggle-item" 
+            [class.active]="rechargeType() === 'Prepaid'"
+            (click)="rechargeType.set('Prepaid')"
+            id="toggle-prepaid">
+            Prepaid
+          </button>
+          <button 
+            class="toggle-item" 
+            [class.active]="rechargeType() === 'Postpaid'"
+            (click)="rechargeType.set('Postpaid')"
+            id="toggle-postpaid">
+            Postpaid
+          </button>
+        </div>
+      </div>
+
+      <!-- Category filter -->
+      <div class="plan-filters">
+        @for (cat of planCategories; track cat) {
+          <button
+            class="filter-btn"
+            [class.active]="planCategory() === cat"
+            (click)="planCategory.set(cat)"
+            [id]="'filter-' + cat">
+            {{ cat }}
+          </button>
+        }
+      </div>
+
+      <!-- Search -->
+      <input
+        id="plan-search"
+        type="text"
+        class="form-control plan-search"
+        placeholder="Search by amount, validity, description..."
+        [value]="planSearch()"
+        (input)="planSearch.set($any($event.target).value)"
+      >
+
+      @if (filteredPlans().length === 0) {
+        <div class="empty-state">No plans match your filters.</div>
+      } @else {
+        <div class="plans-grid">
+          @for (plan of filteredPlans(); track plan.id) {
+            <div
+              class="plan-card"
+              [class.selected]="selectedPlan()?.id === plan.id"
+              (click)="selectPlan(plan)"
+              [id]="'plan-' + plan.id"
+              role="button">
+              <div class="plan-amount">₹{{ plan.amount }}</div>
+              <div class="plan-validity">
+                <span>🗓</span> {{ plan.validity }} Days
+              </div>
+              <div class="plan-desc">{{ plan.description }}</div>
+              @if (selectedPlan()?.id === plan.id) {
+                <div class="plan-selected-badge">✓ Selected</div>
+              }
+            </div>
+          }
+        </div>
+      }
+
+      <div class="step-actions">
+        <button id="btn-back-step2" class="btn-ghost" (click)="step.set(2)">← Back</button>
+        <button
+          id="btn-next-step4"
+          class="btn-primary"
+          [disabled]="!selectedPlan()"
+          (click)="step.set(4)">
+          Continue → Checkout
+        </button>
+      </div>
+    </div>
+  }
+
+  <!-- ─── STEP 4: Checkout ─── -->
+  @if (step() === 4) {
+    <div class="step-card checkout-card">
+      <h2 class="step-title">🛒 Checkout</h2>
+
+      <!-- Order summary -->
+      <div class="order-summary">
+        <h3 class="summary-title">Order Summary</h3>
+        <div class="summary-row">
+          <span class="summary-label">Mobile Number</span>
+          <span class="summary-value">+91 {{ mobileNum() }}</span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-label">Operator</span>
+          <span class="summary-value">{{ selectedOperator()?.name }}</span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-label">Plan</span>
+          <span class="summary-value">{{ selectedPlan()?.description }}</span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-label">Validity</span>
+          <span class="summary-value">{{ selectedPlan()?.validity }} Days</span>
+        </div>
+        <div class="summary-divider"></div>
+        <div class="summary-row total-row">
+          <span class="summary-label">Total Amount</span>
+          <span class="summary-total">₹{{ selectedPlan()?.amount }}</span>
+        </div>
+      </div>
+
+      <!-- Payment method -->
+      <h3 class="summary-title" style="margin-bottom:16px;">💳 Payment Method</h3>
+      <div class="payment-methods">
+        @for (pm of paymentMethods; track pm.id) {
+          <div
+            class="payment-card"
+            [class.selected]="paymentMethod() === pm.id"
+            (click)="paymentMethod.set(pm.id)"
+            [id]="'pm-' + pm.id"
+            role="button">
+            <span class="pm-icon">{{ pm.icon }}</span>
+            <div class="pm-info">
+              <div class="pm-label">{{ pm.label }}</div>
+              <div class="pm-desc">{{ pm.desc }}</div>
+            </div>
+            @if (paymentMethod() === pm.id) {
+              <div class="pm-check">✓</div>
+            }
+          </div>
+        }
+      </div>
+
+      <div class="step-actions">
+        <button id="btn-back-step3" class="btn-ghost" (click)="step.set(3)">← Back</button>
+        <button
+          id="btn-pay-now"
+          class="btn-primary pay-btn"
+          [disabled]="!paymentMethod() || loading()"
+          (click)="processRecharge()">
+          @if (loading()) {
+            <span class="spinner"></span> Processing…
+          } @else {
+            🔒 Pay ₹{{ selectedPlan()?.amount }} Now
+          }
+        </button>
+      </div>
+    </div>
+  }
+
+  <!-- ─── STEP 5: Success / Failure ─── -->
+  @if (step() === 5) {
+    <div class="step-card result-card">
+      @if (rechargeResult()?.status === 'SUCCESS') {
+        <div class="result-success">
+          <div class="result-icon-wrap success-glow">🎉</div>
+          <h2 class="result-title">Recharge Successful!</h2>
+          <p class="result-sub">Your recharge was processed instantly.</p>
+          <div class="result-details">
+            <div class="rd-row"><span>Transaction ID</span><span>#{{ rechargeResult()?.id }}</span></div>
+            <div class="rd-row"><span>Mobile</span><span>+91 {{ rechargeResult()?.mobileNumber }}</span></div>
+            <div class="rd-row"><span>Amount</span><span>₹{{ rechargeResult()?.amount }}</span></div>
+            <div class="rd-row"><span>Status</span><span class="badge badge-success">SUCCESS</span></div>
+            <div class="rd-row"><span>Time</span><span>{{ rechargeResult()?.createdAt | date:'d MMM y, h:mm a':'+0530' }}</span></div>
+          </div>
+          <div class="result-actions">
+            <button id="btn-recharge-again" class="btn-primary" (click)="resetFlow()">⚡ Recharge Again</button>
+            <a routerLink="/history" class="btn-ghost" id="btn-view-history">📋 View History</a>
+          </div>
+        </div>
+      } @else {
+        <div class="result-failure">
+          <div class="result-icon-wrap failure-glow">❌</div>
+          <h2 class="result-title">Recharge Failed</h2>
+          <p class="result-sub">{{ rechargeResult()?.message ?? 'Something went wrong.' }}</p>
+          <div class="result-actions">
+            <button id="btn-retry" class="btn-primary" (click)="step.set(4)">🔄 Try Again</button>
+            <button id="btn-back-home" class="btn-ghost" (click)="resetFlow()">🏠 Start Over</button>
+          </div>
+        </div>
+      }
+    </div>
+  }
+</div>

@@ -1,0 +1,72 @@
+<!-- Hamburger Menu Toggle -->
+<button class="mobile-menu-toggle" (click)="toggleMobileMenu()">
+  @if (isMobileMenuOpen()) {
+    <span>✖</span>
+  } @else {
+    <span>☰</span>
+  }
+</button>
+
+<!-- Mobile Overlay -->
+@if (isMobileMenuOpen()) {
+  <div class="mobile-overlay" (click)="closeMobileMenu()"></div>
+}
+
+<aside class="sidebar" [class.mobile-open]="isMobileMenuOpen()">
+  <!-- Logo -->
+  <div class="sidebar-logo" [routerLink]="dashboardLink()" style="cursor:pointer">
+    <div class="logo-icon">⚡</div>
+    <div class="logo-text">
+      <span class="gradient-text">Recharge</span><span>Nova</span>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="sidebar-nav">
+    @for (link of filteredNavLinks(); track link.path) {
+      <a
+        [routerLink]="link.path"
+        routerLinkActive="active"
+        class="nav-link"
+        [attr.id]="'nav-' + link.path.replace('/', '')"
+        (click)="closeMobileMenu()"
+      >
+        <span class="nav-icon">{{ link.icon }}</span>
+        <span class="nav-label">{{ link.label }}</span>
+      </a>
+    }
+  </nav>
+
+  <!-- Theme Toggle & Logout -->
+  <div class="sidebar-footer">
+    <button (click)="themeSvc.toggleTheme()" class="theme-toggle-btn" id="btn-theme-toggle">
+      @if (themeSvc.theme() === 'dark') {
+        <span>☀️</span> Light Mode
+      } @else {
+        <span>🌙</span> Dark Mode
+      }
+    </button>
+
+    <div class="user-pill">
+      @if (auth.currentUser()?.profilePictureUrl) {
+        <img [src]="auth.currentUser()!.profilePictureUrl" class="user-avatar-img" alt="Profile">
+      } @else {
+        <div class="user-avatar">{{ userInitial() }}</div>
+      }
+      <div class="user-info">
+        <div class="user-name">{{ auth.currentUser()?.name ?? 'User' }}</div>
+        <div class="user-role">{{ auth.currentUser()?.role ?? '' }}</div>
+      </div>
+    </div>
+    <button id="btn-logout" class="logout-btn" (click)="closeMobileMenu(); logout()">
+      <span>🚪</span> Logout
+    </button>
+  </div>
+</aside>
+
+@if (isLogoutModalVisible()) {
+  <app-logout-modal
+    (confirm)="onLogoutConfirm()"
+    (cancel)="onLogoutCancel()">
+  </app-logout-modal>
+}

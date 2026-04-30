@@ -1,0 +1,133 @@
+<div class="landing-root">
+
+  <!-- Fixed Navbar -->
+  <nav class="landing-nav">
+    <div class="nav-brand" (click)="onLogoClick()" style="cursor:pointer">
+      <div class="nav-logo-icon">⚡</div>
+      <span class="nav-logo-text"><span class="g">Recharge</span>Nova</span>
+    </div>
+    <div class="nav-links">
+      <a href="#features" class="nav-link-item">Features</a>
+      <a href="#how" class="nav-link-item">How it works</a>
+      <button (click)="themeSvc.toggleTheme()" class="theme-toggle-nav" id="nav-theme-toggle">
+        {{ themeSvc.theme() === 'dark' ? '☀️' : '🌙' }}
+      </button>
+      <a routerLink="/auth/login" id="nav-login" class="btn-ghost-sm">Sign In</a>
+      <a routerLink="/auth/register" id="nav-register" class="btn-primary-sm">Get Started</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-glow-1"></div>
+    <div class="hero-glow-2"></div>
+    <div class="hero-content">
+      <div class="hero-badge">🚀 Powered by Microservices Architecture</div>
+      <h1 class="hero-title">
+        India's Smartest<br>
+        <span class="g">Mobile Recharge</span><br>
+        Platform
+      </h1>
+      <p class="hero-sub">
+        Recharge any network instantly. Built on a modern Spring Boot microservices
+        backend with JWT security, real-time notifications, and lightning-fast payments.
+      </p>
+      <div class="hero-cta">
+        <a routerLink="/auth/register" id="hero-cta-register" class="btn-hero-primary">
+          ⚡ Start Recharging Free
+        </a>
+        <a routerLink="/auth/login" id="hero-cta-login" class="btn-hero-ghost">
+          Sign In →
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="h-stat">
+          <div class="h-val">{{ userCount() }}</div>
+          <div class="h-lbl">Active Users</div>
+        </div>
+        <div class="h-div"></div>
+        <div class="h-stat">
+          <div class="h-val">{{ operatorCount() }}</div>
+          <div class="h-lbl">Live Operators</div>
+        </div>
+        <div class="h-div"></div>
+        <div class="h-stat">
+          <div class="h-val">{{ planCount() }}</div>
+          <div class="h-lbl">Total Plans</div>
+        </div>
+        <div class="h-div"></div>
+        <div class="h-stat">
+          <div class="h-val">{{ rechargeCount() }}</div>
+          <div class="h-lbl">Recharges Done</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section" id="features">
+    <div class="section-head">
+      <div class="pill-badge">✨ Features</div>
+      <h2 class="sec-title">Everything you need, nothing you don't</h2>
+      <p class="sec-sub">Designed for users, engineered for scale</p>
+    </div>
+    <div class="features-grid">
+      @for (feat of features; track feat.title) {
+      <div class="feat-card">
+        <div class="feat-icon" [style.background]="feat.bg">{{ feat.icon }}</div>
+        <h3 class="feat-title">{{ feat.title }}</h3>
+        <p class="feat-desc">{{ feat.desc }}</p>
+      </div>
+      }
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="how-section" id="how">
+    <div class="section-head">
+      <div class="pill-badge">🔄 Process</div>
+      <h2 class="sec-title">Recharge in 4 simple steps</h2>
+    </div>
+    <div class="how-steps">
+      @for (step of steps; track step.num) {
+      <div class="how-step">
+        <div class="how-num">{{ step.num }}</div>
+        <div class="how-icon">{{ step.icon }}</div>
+        <h3 class="how-title">{{ step.title }}</h3>
+        <p class="how-desc">{{ step.desc }}</p>
+      </div>
+      }
+    </div>
+  </section>
+
+  <!-- Operators Section -->
+  <section class="tech-section">
+    <div class="section-head">
+      <div class="pill-badge">📡 Supported Networks</div>
+      <h2 class="sec-title">Recharge across all major operators</h2>
+    </div>
+    <div class="tech-grid">
+      @for (op of supportedOperators(); track op.name) {
+      <div class="tech-chip">
+        <span class="tc-icon">{{ op.icon }}</span>
+        <span class="tc-name">{{ op.name }}</span>
+      </div>
+      }
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="cta-glow"></div>
+    <h2 class="cta-title">Ready to recharge smarter?</h2>
+    <p class="cta-sub">Create your free account and start recharging in under 60 seconds.</p>
+    <div class="cta-btns">
+      <a routerLink="/auth/register" id="footer-cta-register" class="btn-hero-primary">
+        ⚡ Create Free Account
+      </a>
+      <a routerLink="/auth/login" id="footer-cta-login" class="btn-hero-ghost">
+        Sign In
+      </a>
+    </div>
+  </section>
+</div>

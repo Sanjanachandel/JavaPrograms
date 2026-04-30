@@ -1,0 +1,136 @@
+<div class="page-enter dashboard-page">
+
+  <!-- Header greeting -->
+  <div class="dash-header">
+    <div>
+      <h1 class="section-title">
+        Good {{ greeting() }}, {{ firstName() }}! 👋
+      </h1>
+      <p class="section-subtitle">Here's your recharge overview</p>
+    </div>
+    <a routerLink="/recharge" id="btn-new-recharge" class="btn-primary">
+      ⚡ New Recharge
+    </a>
+  </div>
+
+  <!-- Stat cards -->
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-icon" style="background: rgba(124,58,237,0.15); color: #a855f7;">⚡</div>
+      <div class="stat-body">
+        <div class="stat-value">{{ totalRecharges() }}</div>
+        <div class="stat-label">Total Recharges</div>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon" style="background: rgba(16,185,129,0.15); color: #10b981;">✅</div>
+      <div class="stat-body">
+        <div class="stat-value">{{ successCount() }}</div>
+        <div class="stat-label">Successful</div>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon" style="background: rgba(6,182,212,0.15); color: #06b6d4;">💰</div>
+      <div class="stat-body">
+        <div class="stat-value">₹{{ totalSpent() }}</div>
+        <div class="stat-label">Total Spent</div>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon" style="background: rgba(245,158,11,0.15); color: #f59e0b;">📱</div>
+      <div class="stat-body">
+        <div class="stat-value">{{ lastMobile() }}</div>
+        <div class="stat-label">Last Number</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content grid -->
+  <div class="dash-grid">
+
+    <!-- Recent recharges -->
+    <div class="dash-card recent-card">
+      <div class="card-header">
+        <h2 class="card-title">Recent Recharges</h2>
+        <a routerLink="/history" id="link-view-all" class="card-link">View all →</a>
+      </div>
+
+      @if (loading()) {
+        <div class="skeletons">
+          @for (s of [1,2,3]; track s) {
+            <div class="skeleton" style="height:64px; border-radius:12px;"></div>
+          }
+        </div>
+      } @else if (recentRecharges().length === 0) {
+        <div class="empty-state">
+          <div class="empty-icon">📭</div>
+          <p>No recharges yet.</p>
+          <a routerLink="/recharge" class="btn-primary" style="margin-top:16px;" id="btn-first-recharge">
+            ⚡ Make your first recharge
+          </a>
+        </div>
+      } @else {
+        <div class="recharge-list">
+          @for (r of recentRecharges(); track r.id) {
+            <div class="recharge-row">
+              <div class="recharge-left">
+                <div class="recharge-icon">📱</div>
+                <div>
+                  <div class="recharge-number">{{ r.mobileNumber }}</div>
+                  <div class="recharge-date">{{ r.createdAt | date:'d MMM y, h:mm a' }}</div>
+                </div>
+              </div>
+              <div class="recharge-right">
+                <div class="recharge-amount">₹{{ r.amount }}</div>
+                <span class="badge" [class]="statusBadge(r.status)">{{ r.status }}</span>
+              </div>
+            </div>
+          }
+        </div>
+      }
+    </div>
+
+    <!-- Quick Actions + User Info -->
+    <div class="dash-side">
+      <!-- Quick actions -->
+      <div class="dash-card quick-card">
+        <h2 class="card-title" style="margin-bottom:16px;">Quick Actions</h2>
+        <div class="quick-actions">
+          <a routerLink="/recharge" id="qa-recharge" class="quick-btn">
+            <span class="qa-icon">⚡</span>
+            <span>Recharge Now</span>
+          </a>
+          <a routerLink="/history" id="qa-history" class="quick-btn">
+            <span class="qa-icon">📋</span>
+            <span>View History</span>
+          </a>
+          <a routerLink="/profile" id="qa-profile" class="quick-btn">
+            <span class="qa-icon">👤</span>
+            <span>Edit Profile</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Account info -->
+      <div class="dash-card account-card">
+        <h2 class="card-title" style="margin-bottom:16px;">Account</h2>
+        <div class="account-info">
+          @if (auth.currentUser()?.profilePictureUrl) {
+            <img [src]="auth.currentUser()!.profilePictureUrl" class="account-avatar-img" alt="Profile">
+          } @else {
+            <div class="account-avatar">{{ firstName().charAt(0) }}</div>
+          }
+          <div class="account-details">
+            <div class="account-name">{{ auth.currentUser()?.name }}</div>
+            <div class="account-email">{{ auth.currentUser()?.email }}</div>
+            <div class="account-phone">📱 {{ auth.currentUser()?.phoneNumber }}</div>
+            <span class="badge badge-purple" style="margin-top:8px;">{{ auth.currentUser()?.role }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

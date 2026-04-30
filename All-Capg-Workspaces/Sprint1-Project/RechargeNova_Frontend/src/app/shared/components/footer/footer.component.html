@@ -1,0 +1,25 @@
+<footer class="footer" [class.with-sidebar]="isLoggedIn()">
+  <div class="footer-container">
+    <div class="footer-content-wrapper">
+      <div class="logo-box">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <defs>
+            <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#8b5cf6" />
+              <stop offset="100%" stop-color="#0ea5e9" />
+            </linearGradient>
+            <linearGradient id="boltGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#fbbf24" />
+              <stop offset="100%" stop-color="#ef4444" />
+            </linearGradient>
+          </defs>
+          <rect width="24" height="24" rx="6" fill="url(#bgGrad)" />
+          <g transform="translate(4.5, 4) scale(0.65)">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10" fill="url(#boltGrad)" />
+          </g>
+        </svg>
+      </div>
+      <p class="copyright-text">RechargeNova &copy; 2026. Premium FinTech Ecosystem.</p>
+    </div>
+  </div>
+</footer>

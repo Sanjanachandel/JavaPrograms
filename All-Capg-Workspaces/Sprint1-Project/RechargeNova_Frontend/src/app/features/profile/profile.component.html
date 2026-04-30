@@ -1,0 +1,102 @@
+<div class="page-enter profile-page">
+  <h1 class="section-title">👤 My Profile</h1>
+  <p class="section-subtitle">Manage your account information</p>
+
+  <div class="profile-grid">
+
+    <!-- Profile Card -->
+    <div class="profile-card glass-card">
+      <!-- Avatar Section -->
+      <div class="avatar-section">
+        <div class="avatar-container" (click)="fileInput.click()" title="Click to change picture" id="avatar-upload-btn">
+          @if (auth.currentUser()?.profilePictureUrl) {
+            <img [src]="auth.currentUser()!.profilePictureUrl" alt="Profile" class="avatar-img">
+          } @else {
+            <div class="avatar-initials">{{ initials() }}</div>
+          }
+          <div class="avatar-overlay">📷</div>
+        </div>
+        <input
+          #fileInput
+          type="file"
+          accept="image/*"
+          style="display:none"
+          id="file-upload"
+          (change)="onFileChange($event)"
+        >
+        <div class="avatar-info">
+          <div class="avatar-name">{{ auth.currentUser()?.name }}</div>
+          <div class="avatar-role">
+            <span class="badge badge-purple">{{ auth.currentUser()?.role }}</span>
+          </div>
+          <div class="avatar-since">Member since {{ memberSince() }}</div>
+        </div>
+      </div>
+
+      <!-- Info tiles -->
+      <div class="info-tiles">
+        <div class="info-tile">
+          <span class="info-icon">📧</span>
+          <div>
+            <div class="info-label">Email</div>
+            <div class="info-value">{{ auth.currentUser()?.email }}</div>
+          </div>
+        </div>
+        <div class="info-tile">
+          <span class="info-icon">📱</span>
+          <div>
+            <div class="info-label">Phone</div>
+            <div class="info-value">+91 {{ auth.currentUser()?.phoneNumber }}</div>
+          </div>
+        </div>
+        <div class="info-tile">
+          <span class="info-icon">🆔</span>
+          <div>
+            <div class="info-label">User ID</div>
+            <div class="info-value">#{{ auth.currentUser()?.id }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Account Stats Card -->
+    <div class="profile-card glass-card stats-card">
+      <h2 class="card-title">📊 Account Overview</h2>
+      <div class="account-stats">
+        <div class="acc-stat">
+          <div class="acc-icon" style="background:rgba(124,58,237,0.15);color:#a855f7;">⚡</div>
+          <div class="acc-info">
+            <div class="acc-label">Platform</div>
+            <div class="acc-val">RechargeNova v1.0</div>
+          </div>
+        </div>
+        <div class="acc-stat">
+          <div class="acc-icon" style="background:rgba(16,185,129,0.15);color:#10b981;">🔒</div>
+          <div class="acc-info">
+            <div class="acc-label">Security</div>
+            <div class="acc-val">JWT Protected</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Danger zone -->
+      <div class="danger-zone">
+        <h3 class="danger-title">⚠️ Danger Zone</h3>
+        <p class="danger-desc">Logging out will clear your session. You can log back in anytime.</p>
+        <button id="btn-logout-profile" class="logout-btn" (click)="logout()">
+          🚪 Logout from this device
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+@if (isLogoutModalVisible()) {
+  <app-logout-modal
+    (confirm)="onLogoutConfirm()"
+    (cancel)="onLogoutCancel()">
+  </app-logout-modal>
+}

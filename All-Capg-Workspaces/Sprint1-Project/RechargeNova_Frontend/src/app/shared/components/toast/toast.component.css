@@ -1,0 +1,57 @@
+.toast-container {
+  position: fixed;
+  top: 80px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.toast {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  min-width: 300px;
+  max-width: 420px;
+  animation: slideIn 0.3s ease;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.9rem;
+  color: #f1f5f9;
+}
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+.toast-success { background: rgba(16,185,129,0.2); border-color: rgba(16,185,129,0.4); }
+.toast-error   { background: rgba(239,68,68,0.2);  border-color: rgba(239,68,68,0.4); }
+.toast-info    { background: rgba(124,58,237,0.2); border-color: rgba(124,58,237,0.4); }
+.toast-icon { font-size: 1.1rem; }
+.toast-msg { flex: 1; }
+.toast-close {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.5);
+  cursor: pointer;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: color 0.2s;
+}
+.toast-close:hover { color: white; }
+
+/* Light Theme Overrides */
+:host-context(.light-theme) .toast {
+  color: #1e293b;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  border-color: rgba(0,0,0,0.05);
+}
+:host-context(.light-theme) .toast-success { background: #ecfdf5; border-color: #10b981; color: #065f46; }
+:host-context(.light-theme) .toast-error   { background: #fef2f2; border-color: #ef4444; color: #991b1b; }
+:host-context(.light-theme) .toast-info    { background: #f5f3ff; border-color: #7c3aed; color: #5b21b6; }
+:host-context(.light-theme) .toast-close   { color: #64748b; }
+:host-context(.light-theme) .toast-close:hover { color: #0f172a; }

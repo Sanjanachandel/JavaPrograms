@@ -1,0 +1,170 @@
+<div class="auth-wrapper">
+  <!-- Theme Toggle -->
+  <button (click)="themeSvc.toggleTheme()" class="floating-theme-toggle" title="Toggle Theme">
+    {{ themeSvc.theme() === 'dark' ? '☀️' : '🌙' }}
+  </button>
+
+  <!-- Left decorative panel -->
+  <div class="auth-decoration" aria-hidden="true">
+    <div class="deco-glow"></div>
+    <div class="deco-content">
+      <div class="deco-icon">⚡</div>
+      <h2 class="deco-title">India's Fastest<br>Mobile Recharge</h2>
+      <p class="deco-sub">Seamless recharges powered by a modern microservices platform.</p>
+      <div class="deco-features">
+        <div class="deco-feat"><span>🔒</span> JWT-secured payments</div>
+        <div class="deco-feat"><span>⚡</span> Instant confirmations</div>
+        <div class="deco-feat"><span>📊</span> Real-time history</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login / Forgot Form -->
+  <div class="auth-form-panel">
+    <div class="auth-card">
+      <div class="auth-header">
+        <button class="back-to-home-top" routerLink="/">← Back to Home</button>
+
+        <!-- Login Header -->
+        @if (mode() === 'LOGIN') {
+          <h1 class="auth-title">Welcome back</h1>
+          <p class="auth-subtitle">Sign in to your account to continue</p>
+        }
+        
+        <!-- Forgot Password Header -->
+        @if (mode() === 'FORGOT_EMAIL') {
+          <h1 class="auth-title">Forgot Password</h1>
+          <p class="auth-subtitle">Enter your email and we'll send you an OTP.</p>
+        }
+
+        <!-- Reset Password Header -->
+        @if (mode() === 'FORGOT_OTP') {
+          <h1 class="auth-title">Reset Password</h1>
+          <p class="auth-subtitle">Enter the OTP sent to {{ forgotEmailForm.value.email }}</p>
+        }
+      </div>
+
+      <!-- ── LOGIN FORM ── -->
+      @if (mode() === 'LOGIN') {
+        <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate class="auth-form" id="login-form">
+          <div class="form-group">
+            <label class="form-label" for="login-email">Email address</label>
+            <input
+              id="login-email"
+              type="email"
+              formControlName="email"
+              class="form-control"
+              [class.is-invalid]="isInvalid('email')"
+              placeholder="you@example.com"
+              autocomplete="email"
+            >
+            @if (isInvalid('email')) {
+              <span class="error-msg">{{ emailError }}</span>
+            }
+          </div>
+
+          <div class="form-group">
+            <div class="pw-header" style="display:flex;justify-content:space-between;align-items:center;">
+              <label class="form-label" for="login-password" style="margin-bottom:0;">Password</label>
+              <a href="javascript:void(0)" (click)="setMode('FORGOT_EMAIL')" tabindex="-1" class="auth-link" style="font-size:0.8rem;margin:0;">Forgot password?</a>
+            </div>
+            <div class="input-wrapper" style="margin-top:6px;">
+              <input
+                id="login-password"
+                [type]="showPassword() ? 'text' : 'password'"
+                formControlName="password"
+                class="form-control"
+                [class.is-invalid]="isInvalid('password')"
+                placeholder="••••••••"
+                autocomplete="current-password"
+              >
+              <button type="button" class="toggle-pw" (click)="showPassword.set(!showPassword())" id="toggle-password">
+                {{ showPassword() ? '🙈' : '👁' }}
+              </button>
+            </div>
+            @if (isInvalid('password')) {
+              <span class="error-msg">Password is required (min 6 chars)</span>
+            }
+          </div>
+
+          <button id="btn-login" type="submit" class="btn-primary w-full" [disabled]="loading()">
+            @if (loading()) { <span class="spinner"></span> Signing in… } @else { Sign In → }
+          </button>
+        </form>
+
+        <p class="auth-switch">
+          Don't have an account?
+          <a routerLink="/auth/register" id="link-register" class="auth-link">Create one</a>
+        </p>
+      }
+
+      <!-- ── FORGOT PASSWORD EMAIL FORM ── -->
+      @if (mode() === 'FORGOT_EMAIL') {
+        <form [formGroup]="forgotEmailForm" (ngSubmit)="onSendOtp()" class="auth-form">
+          <div class="form-group">
+            <label class="form-label" for="forgot-email">Registered Email</label>
+            <input
+              id="forgot-email"
+              type="email"
+              formControlName="email"
+              class="form-control"
+              [class.is-invalid]="forgotEmailForm.get('email')?.invalid && forgotEmailForm.get('email')?.touched"
+              placeholder="name@example.com"
+            >
+            @if (forgotEmailForm.get('email')?.invalid && forgotEmailForm.get('email')?.touched) {
+              <span class="error-msg">Valid email required</span>
+            }
+          </div>
+
+          <button type="submit" class="btn-primary w-full" [disabled]="loading()">
+            @if (loading()) { <span class="spinner"></span> Sending… } @else { Send OTP }
+          </button>
+        </form>
+        <p class="auth-switch">
+          <a href="javascript:void(0)" (click)="setMode('LOGIN')" class="auth-link" style="margin:0;">← Back to Login</a>
+        </p>
+      }
+
+      <!-- ── RESET PASSWORD OTP FORM ── -->
+      @if (mode() === 'FORGOT_OTP') {
+        <form [formGroup]="resetPasswordForm" (ngSubmit)="onResetPassword()" class="auth-form">
+          <div class="form-group">
+            <label class="form-label" for="reset-otp">OTP Code</label>
+            <input
+              id="reset-otp"
+              type="text"
+              formControlName="otp"
+              class="form-control text-center"
+              style="letter-spacing:4px; font-weight:700; font-size:1.1rem; text-align:center;"
+              placeholder="123456"
+              maxlength="6"
+            >
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="reset-new-pw">New Password</label>
+            <div class="input-wrapper">
+              <input
+                id="reset-new-pw"
+                [type]="showPassword() ? 'text' : 'password'"
+                formControlName="newPassword"
+                class="form-control"
+                placeholder="Min 6 characters"
+              >
+              <button type="button" class="toggle-pw" (click)="showPassword.set(!showPassword())">
+                {{ showPassword() ? '🙈' : '👁' }}
+              </button>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-primary w-full" [disabled]="loading()">
+            @if (loading()) { <span class="spinner"></span> Resetting… } @else { Reset Password }
+          </button>
+        </form>
+        <p class="auth-switch">
+          <a href="javascript:void(0)" (click)="setMode('LOGIN')" class="auth-link" style="margin:0;">Cancel</a>
+        </p>
+      }
+    </div>
+  </div>
+</div>
